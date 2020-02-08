@@ -15,9 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-
-I Modeling probabilities and nonlinearities
-
 What is an activation function?
 It’s a function applied to the neurons
 in a layer during prediction.
@@ -115,9 +112,6 @@ universities (and online classes) have entire courses dedicated to these kinds o
 
 ## 164
 
-
-I Modeling probabilities and nonlinearities
-
 Constraint 3: Good activation functions are nonlinear
 (they squiggle or turn).
 The third constraint requires a bit of recollection back to chapter 6. Remember sometimes
@@ -200,9 +194,6 @@ sigmoid in hidden layers.
 
 
 ## 166
-
-
-I Modeling probabilities and nonlinearities
 
 Standard output layer activation functions
 Choosing the best one depends on what you’re trying to predict.
@@ -384,9 +375,6 @@ MNIST digits."
 
 
 ## 168
-
-
-I Modeling probabilities and nonlinearities
 
 The core issue: Inputs have similarity
 Different numbers share characteristics. It’s good to let the
@@ -571,9 +559,6 @@ result in higher attenuation. But most people just stick with e.
 
 ## 170
 
-
-I Modeling probabilities and nonlinearities
-
 Activation installation instructions
 How do you add your favorite activation function to any layer?
 Now that we’ve covered a wide variety of activation functions and explained their usefulness in
@@ -669,9 +654,6 @@ multiplying it by the slope. It’s no different for sigmoid.
 
 
 ## 172
-
-
-I Modeling probabilities and nonlinearities
 
 Multiplying delta by the slope
 To compute layer_delta, multiply the backpropagated delta by
@@ -785,9 +767,6 @@ let’s install some better activation functions in the MNIST classification net
 
 ## 174
 
-
-I Modeling probabilities and nonlinearities
-
 Upgrading the MNIST network
 Let’s upgrade the MNIST network to reflect what you’ve learned.
 Theoretically, the tanh function should make for a better hidden-layer activation, and
@@ -870,6 +849,9 @@ if(j % 10 == 0):
 sys.stdout.write("\n"+ "I:" + str(j) + \
 " Test-Acc:"+str(test_correct_cnt/float(len(test_images)))+\
 " Train-Acc:" + str(correct_cnt/float(len(images))))
+
+
+
 I:0 Test-Acc:0.394 Train-Acc:0.156
 I:10 Test-Acc:0.6867 Train-Acc:0.723
 I:20 Test-Acc:0.7025 Train-Acc:0.732
@@ -885,60 +867,18 @@ I:110 Test-Acc:0.845 Train-Acc:0.891
 I:120 Test-Acc:0.8481 Train-Acc:0.90
 I:130 Test-Acc:0.8505 Train-Acc:0.90
 I:140 Test-Acc:0.8526 Train-Acc:0.90
-
-I:150
-I:160
-I:170
-I:180
-I:190
-I:200
-I:210
-I:220
-I:230
-I:240
-I:250
-I:260
-I:270
-I:280
-I:290
-
-Test-Acc:0.8555 Train-Acc:0.914
-Test-Acc:0.8577 Train-Acc:0.925
-Test-Acc:0.8596 Train-Acc:0.918
-Test-Acc:0.8619 Train-Acc:0.933
-Test-Acc:0.863 Train-Acc:0.933
-Test-Acc:0.8642 Train-Acc:0.926
-Test-Acc:0.8653 Train-Acc:0.931
-Test-Acc:0.8668 Train-Acc:0.93
-Test-Acc:0.8672 Train-Acc:0.937
-Test-Acc:0.8681 Train-Acc:0.938
-Test-Acc:0.8687 Train-Acc:0.937
-Test-Acc:0.8684 Train-Acc:0.945
-Test-Acc:0.8703 Train-Acc:0.951
-Test-Acc:0.8699 Train-Acc:0.949
-Test-Acc:0.8701 Train-Acc:0.94
-
-
-
-## 
-
-## neural learning about edges and corners:
-intro to convolutional neural networks
-
-In this chapter
-•	
-
-Reusing weights in multiple places
-
-•	
-
-The convolutional layer
-
-The pooling operation used in convolutional neural
-networks is a big mistake, and the fact that it works
-so well is a disaster.
-—Geoffrey Hinton, from "Ask Me Anything" on Reddit
-
-
-
-## 178
+I:150 Test-Acc:0.8555 Train-Acc:0.914
+I:160 Test-Acc:0.8577 Train-Acc:0.925
+I:170 Test-Acc:0.8596 Train-Acc:0.918
+I:180 Test-Acc:0.8619 Train-Acc:0.933
+I:190 Test-Acc:0.863 Train-Acc:0.933
+I:200 Test-Acc:0.8642 Train-Acc:0.926
+I:210 Test-Acc:0.8653 Train-Acc:0.931
+I:220 Test-Acc:0.8668 Train-Acc:0.93
+I:230 Test-Acc:0.8672 Train-Acc:0.937
+I:240 Test-Acc:0.8681 Train-Acc:0.938
+I:250 Test-Acc:0.8687 Train-Acc:0.937
+I:260 Test-Acc:0.8684 Train-Acc:0.945
+I:270 Test-Acc:0.8703 Train-Acc:0.951
+I:280 Test-Acc:0.8699 Train-Acc:0.949
+I:290 Test-Acc:0.8701 Train-Acc:0.94

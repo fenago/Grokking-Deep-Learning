@@ -16,10 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-
-
-I Learning signal and ignoring noise
-
 Three-layer network on MNIST
 Let’s return to the MNIST dataset and attempt to classify it with
 the new network.
@@ -665,40 +661,3 @@ and training speed of almost any neural architecture. In the following chapters,
 from sets of tools that are universally applicable to nearly all neural networks, to specialpurpose architectures that are advantageous for modeling specific types of phenomena
 in data.
 
-
-
-## modeling probabilities and nonlinearities:
-activation functions
-
-In this chapter
-•	
-
-What is an activation function?
-
-•	
-
-Standard hidden activation functions
-
-	—Sigmoid
-	—Tanh
-•	
-
-Standard output activation functions
-
-	—Softmax
-•	
-
-Activation function installation instructions
-
-I know that 2 and 2 make 4—& should be glad to prove
-it too if I could—though I must say if by any sort of
-process I could convert 2 & 2 into five it would give me
-much greater pleasure.
-—George Gordon Byron, letter to Annabella Milbanke,
-November 10, 1813
-
-
-
-9
-
-## 162

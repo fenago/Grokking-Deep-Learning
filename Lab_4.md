@@ -17,8 +17,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-I Building your first deep neural network
-
 The streetlight problem
 This toy problem considers how a network learns entire datasets.
 Consider yourself approaching a street corner in a foreign country. As you approach, you
@@ -75,8 +73,6 @@ and searching for correlation. This is what you’re going to train a neural net
 
 ## 102
 
-
-I Building your first deep neural network
 
 Preparing the data
 Neural networks don’t read streetlights.
@@ -171,8 +167,6 @@ simultaneous state of every light at a particular moment in time. Again, this is
 
 ## 104
 
-
-I Building your first deep neural network
 
 Good data matrices perfectly mimic the outside world.
 The data matrix doesn’t have to be all 1s and 0s. What if the streetlights were on dimmers
@@ -322,8 +316,6 @@ STOP
 
 ## 106
 
-
-I Building your first deep neural network
 
 Creating a matrix or two in Python
 Import the matrices into Python.
@@ -478,8 +470,6 @@ the new dataset, the neural network shown here is the same as the ones built pre
 ## 108
 
 
-I Building your first deep neural network
-
 Learning the whole dataset
 The neural network has been learning only one streetlight. Don’t
 we want it to learn them all?
@@ -587,8 +577,6 @@ training on each example, one at a time.
 
 ## 110
 
-
-I Building your first deep neural network
 
 Neural networks learn correlation
 What did the last neural network learn?
@@ -751,8 +739,6 @@ positives, so on average the weight will move toward 1.
 
 ## 112
 
-
-I Building your first deep neural network
 Weight pressure
 
 Training data
@@ -912,8 +898,6 @@ generalize instead of just memorize. You’ll see this again.
 
 ## 114
 
-
-I Building your first deep neural network
 
 Edge case: Conflicting pressure
 Sometimes correlation fights itself.
@@ -1137,8 +1121,6 @@ are equally balanced between positive and negative pressure. What do you do?
 ## 116
 
 
-I Building your first deep neural network
-
 Learning indirect correlation
 If your data doesn’t have correlation, create intermediate data
 that does!
@@ -1202,8 +1184,6 @@ exactly what you’re going to do.
 
 ## 118
 
-
-I Building your first deep neural network
 
 Stacking neural networks: A review briefly mentioned stacked neural networks.
 Let’s review.
@@ -1294,8 +1274,6 @@ layer_0
 
 ## 120
 
-
-I Building your first deep neural network
 
 Backpropagation: Why does this work?
 The weighted average delta
@@ -1406,8 +1384,6 @@ expensive version of one weighted sum.
 ## 122
 
 
-I Building your first deep neural network
-
 Why the neural network still doesn’t work
 If you trained the three-layer network as it is now,
 it wouldn’t converge.
@@ -1492,8 +1468,6 @@ need nonlinearities.
 
 ## 124
 
-
-I Building your first deep neural network
 
 A quick break
 That last part probably felt a little abstract, and that’s totally OK.
@@ -1610,8 +1584,6 @@ layer_0
 
 ## 126
 
-
-I Building your first deep neural network
 
 Backpropagation in code
 You can learn the amount that each weight contributes
@@ -1732,8 +1704,6 @@ layer_0
 
 ## 128
 
-
-I Building your first deep neural network
 
 One iteration of backpropagation
 b
@@ -1949,8 +1919,6 @@ to the error.
 ## 130
 
 
-I Building your first deep neural network
-
 Putting it all together
 Here’s the self-sufficient program you should be able to run
 (runtime output follows).
@@ -2048,45 +2016,3 @@ deep neural networks.
 Toward that end, I must issue the same challenge I did in chapter 5: memorize the previous
 code. You’ll need to be very familiar with each of the operations in the code in order for the
 following chapters to be readable. Don’t progress past this point until you can build a threelayer neural network from memory!
-
-
-
-## 
-
-## how to picture neural networks:
-in your head and on paper
-
-In this chapter
-•	
-
-Correlation summarization
-
-•	
-
-Simplified visualization
-
-•	
-
-Seeing the network predict
-
-•	
-
-Visualizing using letters instead of pictures
-
-•	
-
-Linking variables
-
-•	
-
-The importance of visualization tools
-
-Numbers have an important story to tell. They rely on
-you to give them a clear and convincing voice.
-—Stephen Few, IT innovator, teacher, and consultant
-
-
-
-7
-
-## 134
