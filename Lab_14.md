@@ -1,5 +1,5 @@
 
-fundamental concepts:
+## fundamental concepts:
 how do machines learn?
 
 In this chapter
@@ -33,7 +33,7 @@ speech, Cloud Computing Platform conference, 2016
 
 2
 
-10
+## 10
 
 
 I Fundamental concepts
@@ -65,7 +65,7 @@ industry, helping to prepare you for either.
 
 
 
-What is machine learning?
+## What is machine learning?
 
 What is machine learning?
 A field of study that gives computers the ability to learn without being
@@ -106,7 +106,7 @@ predict the output dataset given only the input dataset. Such an ability would b
 
 
 
-12
+## 12
 
 
 I Fundamental concepts
@@ -154,7 +154,7 @@ data that requires logical analysis. This is the power of supervised machine lea
 
 
 
-Unsupervised machine learning
+## Unsupervised machine learning
 
 Unsupervised machine learning
 Unsupervised learning groups your data.
@@ -205,7 +205,7 @@ why these clusters are useful for supervised learning.
 
 
 
-14
+## 14
 
 
 I Fundamental concepts
@@ -243,7 +243,7 @@ error, whereas nonparametric models tend to count. Let’s look closer.
 
 
 
-Supervised parametric learning
+## Supervised parametric learning
 
 Supervised parametric learning
 Oversimplified: Trial-and-error learning using knobs
@@ -280,7 +280,7 @@ supervised parametric learning into its three steps.
 
 
 
-16
+## 16
 
 
 I Fundamental concepts
@@ -338,7 +338,7 @@ away
 
 
 
-Unsupervised parametric learning
+## Unsupervised parametric learning
 
 Unsupervised parametric learning
 Unsupervised parametric learning uses a very similar approach. Let’s walk through the
@@ -411,7 +411,7 @@ adjust parameters to transform the input data into its subscribing group(s).
 
 
 
-18
+## 18
 
 
 I Fundamental concepts
@@ -461,7 +461,7 @@ interesting and powerful class of algorithm.
 
 
 
-### Summary
+## ### Summary
 
 
 ### Summary
@@ -482,9 +482,9 @@ let’s jump in!
 
 
 
-
+## 
 
-introduction to neural prediction:
+## introduction to neural prediction:
 forward propagation
 
 In this chapter
@@ -522,4 +522,4 @@ novelist, and screenwriter
 
 3
 
-22
+## 22

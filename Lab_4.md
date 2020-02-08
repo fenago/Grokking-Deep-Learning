@@ -42,7 +42,7 @@ WALK
 
 
 
-The streetlight problem
+## The streetlight problem
 
 People walked, so something about this light changed the signal. The only thing you know
 for sure is that the far-right light doesn’t seem to indicate one way or another. Perhaps it’s
@@ -73,7 +73,7 @@ and searching for correlation. This is what you’re going to train a neural net
 
 
 
-102
+## 102
 
 
 I Building your first deep neural network
@@ -108,7 +108,7 @@ if you swapped which dataset was in which group. For some problems, this works.
 
 
 
-Matrices and the matrix relationship
+## Matrices and the matrix relationship
 
 Matrices and the matrix relationship
 Translate the streetlight into math.
@@ -169,7 +169,7 @@ simultaneous state of every light at a particular moment in time. Again, this is
 
 
 
-104
+## 104
 
 
 I Building your first deep neural network
@@ -255,7 +255,7 @@ examples (rows) and lights (columns). Note that Matrix A * 10 == Matrix B
 
 
 
-Matrices and the matrix relationship
+## Matrices and the matrix relationship
 
 Matrices A and B both contain the same underlying pattern.
 The important takeaway is that an infinite number of matrices exist that perfectly reflect the
@@ -320,7 +320,7 @@ STOP
 
 
 
-106
+## 106
 
 
 I Building your first deep neural network
@@ -389,7 +389,7 @@ walk_vs_stop
 
 
 
-Building a neural network
+## Building a neural network
 
 Building a neural network
 You’ve been learning about neural networks for several chapters now. You have a new
@@ -475,7 +475,7 @@ the new dataset, the neural network shown here is the same as the ones built pre
 
 
 
-108
+## 108
 
 
 I Building your first deep neural network
@@ -552,7 +552,7 @@ Error:0.000533736773285
 
 
 
-Full, batch, and stochastic gradient descent
+## Full, batch, and stochastic gradient descent
 
 Full, batch, and stochastic gradient descent
 Stochastic gradient descent updates weights one example
@@ -585,7 +585,7 @@ training on each example, one at a time.
 
 
 
-110
+## 110
 
 
 I Building your first deep neural network
@@ -622,7 +622,7 @@ weights. Where does the pressure come from? Why is it different for different we
 
 
 
-Up and down pressure
+## Up and down pressure
 
 Up and down pressure
 It comes from the data.
@@ -749,7 +749,7 @@ positives, so on average the weight will move toward 1.
 
 
 
-112
+## 112
 
 
 I Building your first deep neural network
@@ -875,7 +875,7 @@ of gradient descent and just remember that learning rewards correlation with lar
 
 
 
-Edge case: Overfitting
+## Edge case: Overfitting
 
 Edge case: Overfitting
 Sometimes correlation happens accidentally.
@@ -910,7 +910,7 @@ generalize instead of just memorize. You’ll see this again.
 
 
 
-114
+## 114
 
 
 I Building your first deep neural network
@@ -1037,7 +1037,7 @@ the middle weight downward.
 
 
 
-Edge case: Conflicting pressure
+## Edge case: Conflicting pressure
 
 It doesn’t always work out like this.
 In some ways, you kind of got lucky. If the middle node hadn’t been so perfectly correlated,
@@ -1134,7 +1134,7 @@ are equally balanced between positive and negative pressure. What do you do?
 
 
 
-116
+## 116
 
 
 I Building your first deep neural network
@@ -1170,7 +1170,7 @@ of like cheating.
 
 
 
-Creating correlation
+## Creating correlation
 
 Creating correlation
 Here’s a picture of the new neural network. You basically stack two neural networks on top
@@ -1200,7 +1200,7 @@ exactly what you’re going to do.
 
 
 
-118
+## 118
 
 
 I Building your first deep neural network
@@ -1235,7 +1235,7 @@ accurate predictions.
 
 
 
-Backpropagation: Long-distance error attribution
+## Backpropagation: Long-distance error attribution
 
 Backpropagation: Long-distance error attribution
 The weighted average error
@@ -1292,7 +1292,7 @@ delta
 
 layer_0
 
-120
+## 120
 
 
 I Building your first deep neural network
@@ -1352,7 +1352,7 @@ layer_0
 
 
 
-Linear vs. nonlinear
+## Linear vs. nonlinear
 
 Linear vs. nonlinear
 This is probably the hardest concept in the book.
@@ -1403,7 +1403,7 @@ expensive version of one weighted sum.
 
 
 
-122
+## 122
 
 
 I Building your first deep neural network
@@ -1455,7 +1455,7 @@ This is called conditional correlation or sometimes correlation.
 
 
 
-The secret to sometimes correlation
+## The secret to sometimes correlation
 
 The secret to sometimes correlation
 Turn off the node when the value would be below 0.
@@ -1490,7 +1490,7 @@ need nonlinearities.
 
 
 
-124
+## 124
 
 
 I Building your first deep neural network
@@ -1528,7 +1528,7 @@ yourself relax and trust the things you’ve already learned.
 
 
 
-Your first deep neural network
+## Your first deep neural network
 
 Your first deep neural network
 Here’s how to make the prediction.
@@ -1608,7 +1608,7 @@ layer_0
 
 
 
-126
+## 126
 
 
 I Building your first deep neural network
@@ -1669,7 +1669,7 @@ purpose, as you’ll see in a moment.
 
 
 
-Backpropagation in code
+## Backpropagation in code
 
 Remember, the goal is error attribution. It’s about figuring out how much each weight
 contributed to the final error. In the first (two-layer) neural network, you calculated a delta
@@ -1730,7 +1730,7 @@ delta
 
 layer_0
 
-128
+## 128
 
 
 I Building your first deep neural network
@@ -1835,7 +1835,7 @@ layer_2_delta=(layer_2-walk_stop[0:1])
 
 
 
-One iteration of backpropagation
+## One iteration of backpropagation
 
 d
 
@@ -1946,7 +1946,7 @@ to the error.
 
 
 
-130
+## 130
 
 
 I Building your first deep neural network
@@ -2020,7 +2020,7 @@ Error:1.50556226651e-05
 
 
 
-Why do deep networks matter?
+## Why do deep networks matter?
 
 Why do deep networks matter?
 What’s the point of creating “intermediate datasets” that
@@ -2051,9 +2051,9 @@ following chapters to be readable. Don’t progress past this point until you ca
 
 
 
-
+## 
 
-how to picture neural networks:
+## how to picture neural networks:
 in your head and on paper
 
 In this chapter
@@ -2089,4 +2089,4 @@ you to give them a clear and convincing voice.
 
 7
 
-134
+## 134

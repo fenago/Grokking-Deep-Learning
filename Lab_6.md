@@ -72,7 +72,7 @@ x (input)
 
 
 
-What is an activation function?
+## What is an activation function?
 
 Constraint 2: Good activation functions are monotonic,
 never changing direction.
@@ -113,7 +113,7 @@ study of this subject, look more into convex versus non-convex optimization; man
 universities (and online classes) have entire courses dedicated to these kinds of questions.
 
 
-164
+## 164
 
 
 I Modeling probabilities and nonlinearities
@@ -157,7 +157,7 @@ become popular because they’re so easy to compute at the expense of their expr
 
 
 
-Standard hidden-layer activation functions
+## Standard hidden-layer activation functions
 
 Standard hidden-layer activation functions
 Of the infinite possible functions, which ones are most
@@ -199,7 +199,7 @@ sigmoid in hidden layers.
 
 
 
-166
+## 166
 
 
 I Modeling probabilities and nonlinearities
@@ -241,7 +241,7 @@ individual probabilities separately for each output node.
 
 
 
-Standard output layer activation functions
+## Standard output layer activation functions
 
 Configuration 3: Predicting which-one probabilities (softmax)
 By far the most common use case in neural networks is predicting a single label out of
@@ -383,7 +383,7 @@ MNIST digits.”
 
 
 
-168
+## 168
 
 
 I Modeling probabilities and nonlinearities
@@ -430,7 +430,7 @@ better in both theory and practice.
 
 
 
-softmax computation
+## softmax computation
 
 softmax computation
 softmax raises each input value exponentially and then
@@ -569,7 +569,7 @@ result in higher attenuation. But most people just stick with e.
 
 
 
-170
+## 170
 
 
 I Modeling probabilities and nonlinearities
@@ -621,7 +621,7 @@ x (input)
 
 
 
-Activation installation instructions
+## Activation installation instructions
 
 Thus, when you backpropagate, in order to generate layer_1_delta, multiply the
 backpropagated delta from layer_2 (layer_2_delta.dot(weights_1_2.T)) by the
@@ -668,7 +668,7 @@ multiplying it by the slope. It’s no different for sigmoid.
 
 
 
-172
+## 172
 
 
 I Modeling probabilities and nonlinearities
@@ -722,7 +722,7 @@ to corrupt intelligence that has been reinforced many times.
 
 
 
-Converting output to slope (derivative)
+## Converting output to slope (derivative)
 
 Converting output to slope (derivative)
 Most great activations can convert their output to their slope.
@@ -783,7 +783,7 @@ let’s install some better activation functions in the MNIST classification net
 
 
 
-174
+## 174
 
 
 I Modeling probabilities and nonlinearities
@@ -831,7 +831,7 @@ return temp / np.sum(temp, axis=1, keepdims=True)
 
 
 
-Upgrading the MNIST network
+## Upgrading the MNIST network
 
 alpha, iterations, hidden_size = (2, 300, 100)
 pixels_per_image, num_labels = (784, 10)
@@ -920,9 +920,9 @@ Test-Acc:0.8701 Train-Acc:0.94
 
 
 
-
+## 
 
-neural learning about edges and corners:
+## neural learning about edges and corners:
 intro to convolutional neural networks
 
 In this chapter
@@ -941,4 +941,4 @@ so well is a disaster.
 
 
 
-178
+## 178

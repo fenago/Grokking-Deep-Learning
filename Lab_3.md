@@ -107,7 +107,7 @@ delta = pred - true
 
 
 
-Gradient descent learning with multiple inputs
+## Gradient descent learning with multiple inputs
 
 d
 
@@ -188,7 +188,7 @@ print("Weight Deltas:" + str(weight_deltas))
 
 
 
-82
+## 82
 
 
 I Learning multiple weights at a time
@@ -271,7 +271,7 @@ generate). Now you have three. How do you generate three weight_deltas?
 
 
 
-Gradient descent with multiple inputs explained
+## Gradient descent with multiple inputs explained
 
 How do you turn a single delta (on the node)
 into three weight_delta values?
@@ -333,7 +333,7 @@ weight_delta values? Well, because each weight has a unique input and a shared d
 
 
 
-84
+## 84
 
 
 I Learning multiple weights at a time
@@ -413,7 +413,7 @@ weight_deltas = ele_mul(delta,input)
 
 
 
-Gradient descent with multiple inputs explained
+## Gradient descent with multiple inputs explained
 
 f
 
@@ -482,7 +482,7 @@ literally the same process as before, repeated across multiple weights instead o
 
 
 
-86
+## 86
 
 
 I Learning multiple weights at a time
@@ -581,7 +581,7 @@ higher than the others and thus, a higher derivative.
 
 
 
-Let’s watch several steps of learning
+## Let’s watch several steps of learning
 
 c
 
@@ -688,7 +688,7 @@ significant difference in slope forced me to set alpha lower than I wanted (0.01
 
 
 
-88
+## 88
 
 
 I Learning multiple weights at a time
@@ -787,7 +787,7 @@ weight
 
 
 
-Freezing one weight: What does it do?
+## Freezing one weight: What does it do?
 
 This tells you what the graphs really are. In
 truth, these are 2D slices of a four-dimensional
@@ -877,7 +877,7 @@ error
 
 
 
-90
+## 90
 
 
 I Learning multiple weights at a time
@@ -972,7 +972,7 @@ for i in range(len(true)):
 
 
 
-Gradient descent learning with multiple outputs
+## Gradient descent learning with multiple outputs
 
 d
 
@@ -1081,7 +1081,7 @@ print("Weight Deltas:" + str(weight_deltas))
 
 
 
-92
+## 92
 
 
 I Learning multiple weights at a time
@@ -1199,7 +1199,7 @@ for i in range(len(true)):
 
 
 
-Gradient descent with multiple inputs and outputs
+## Gradient descent with multiple inputs and outputs
 
 d
 
@@ -1311,7 +1311,7 @@ weight_deltas[i][j]
 
 
 
-94
+## 94
 
 
 I Learning multiple weights at a time
@@ -1352,7 +1352,7 @@ image (784 pixels long).
 
 
 
-What do these weights learn?
+## What do these weights learn?
 
 Inputs
 
@@ -1437,7 +1437,7 @@ mean to modify a bunch of weights to learn a pattern in aggregate?
 
 
 
-96
+## 96
 
 
 I Learning multiple weights at a time
@@ -1537,7 +1537,7 @@ quick review.
 
 
 
-Visualizing dot products (weighted sums)
+## Visualizing dot products (weighted sums)
 
 Visualizing dot products (weighted sums)
 Recall how dot products work. They take two vectors, multiply them together (elementwise),
@@ -1578,7 +1578,7 @@ Predictions
 
 
 
-98
+## 98
 
 
 I Learning multiple weights at a time

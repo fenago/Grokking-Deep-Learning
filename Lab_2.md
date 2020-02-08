@@ -53,7 +53,7 @@ in the next step, learn.
 
 
 
-Learn
+## Learn
 
 Learn
 Learning tells each weight how it can change to reduce the error.
@@ -67,7 +67,7 @@ you’ll move the weight according to that number, and you’ll be finished.
 
 
 
-50
+## 50
 
 
 
@@ -129,7 +129,7 @@ why squaring is valuable?
 
 
 
-Why measure error?
+## Why measure error?
 
 Why measure error?
 Measuring error simplifies the problem.
@@ -170,7 +170,7 @@ when you average them.
 
 
 
-52
+## 52
 
 
 
@@ -246,7 +246,7 @@ wouldn't make sense.
 
 
 
-What’s the simplest form of neural learning?
+## What’s the simplest form of neural learning?
 
 d
 
@@ -333,7 +333,7 @@ slightly more difficult prediction so you can see this searching in action!
 
 
 
-54
+## 54
 
 
 
@@ -391,7 +391,7 @@ predicts 0.8!
 
 
 
-Characteristics of hot and cold learning
+## Characteristics of hot and cold learning
 
 Characteristics of hot and cold learning
 It’s simple.
@@ -435,7 +435,7 @@ repeatedly make predictions?
 
 
 
-56
+## 56
 
 
 
@@ -494,7 +494,7 @@ where the pure error isn’t sufficient to make a good modification to weight.
 
 
 
-Calculating both direction and amount from error
+## Calculating both direction and amount from error
 
 What is stopping?
 Stopping is the first (and simplest) effect on the pure error caused by multiplying it by
@@ -540,7 +540,7 @@ those with multiple inputs and outputs).
 
 
 
-58
+## 58
 
 
 
@@ -629,7 +629,7 @@ network’s prediction was 0.85, so the network was too low by 0.15. Thus, delta
 
 
 
-One iteration of gradient descent
+## One iteration of gradient descent
 
 The primary difference between gradient descent and this implementation is the new variable
 delta. It’s the raw amount that the node was too high or too low. Instead of computing
@@ -693,7 +693,7 @@ change (small increase) as hot and cold learning.
 
 
 
-60
+## 60
 
 
 
@@ -732,7 +732,7 @@ error = ((0.5 * weight) - 0.8) ** 2
 
 
 
-Learning is just reducing error
+## Learning is just reducing error
 
 The secret
 For any input and goal_pred, an exact relationship is defined between error and weight,
@@ -758,7 +758,7 @@ bowl. You can use this slope to help the neural network reduce the error.
 
 
 
-62
+## 62
 
 
 
@@ -824,7 +824,7 @@ weight = 0.88
 
 
 
-Let’s watch several steps of learning
+## Let’s watch several steps of learning
 
 Overshot again! Let’s go back, but only a little.
 
@@ -882,7 +882,7 @@ Delta:0.0074088 Weight Delta:0.00814968
 
 
 
-64
+## 64
 
 
 
@@ -923,7 +923,7 @@ mentioned a few pages ago). This won’t do, either.
 
 
 
-Why does this work? What is weight_delta, really?
+## Why does this work? What is weight_delta, really?
 
 What’s left? The only variable remaining is weight. Adjusting it doesn’t change your perception
 of the world, doesn’t change your goal, and doesn’t destroy your error measure. Changing
@@ -956,7 +956,7 @@ about exactly that.
 
 
 
-66
+## 66
 
 
 
@@ -1001,7 +1001,7 @@ As it turns out, there’s a method for doing this for any formula. You’ll use
 
 
 
-A box with rods poking out of it
+## A box with rods poking out of it
 
 A box with rods poking out of it
 Picture yourself sitting in front of a cardboard box that has two circular rods sticking
@@ -1039,7 +1039,7 @@ exactly what we were looking for.
 
 
 
-68
+## 68
 
 
 
@@ -1102,7 +1102,7 @@ weight
 
 
 
-What you really need to know
+## What you really need to know
 
 What you really need to know
 With derivatives, you can pick any two variables in any formula,
@@ -1141,7 +1141,7 @@ Enough about derivatives. Let’s get back to gradient descent.
 
 
 
-70
+## 70
 
 
 
@@ -1201,7 +1201,7 @@ It’s like gravity.
 
 
 
-Look familiar?
+## Look familiar?
 
 Look familiar?
 weight = 0.0
@@ -1268,7 +1268,7 @@ weight = 0.88
 
 
 
-72
+## 72
 
 
 
@@ -1325,7 +1325,7 @@ about how to combat this phenomenon.
 
 
 
-Visualizing the overcorrections
+## Visualizing the overcorrections
 
 Visualizing the overcorrections
 A big weight increase
@@ -1392,7 +1392,7 @@ weight = 1.3
 
 
 
-74
+## 74
 
 
 
@@ -1431,7 +1431,7 @@ it smaller?
 
 
 
-Introducing alpha
+## Introducing alpha
 
 Introducing alpha
 It’s the simplest way to prevent overcorrecting weight updates.
@@ -1456,7 +1456,7 @@ that attempt to counter for this, but gradient descent is still very popular.
 
 
 
-76
+## 76
 
 
 
@@ -1510,7 +1510,7 @@ now, try various alphas until you get one that seems to work pretty well. Play w
 
 
 
-Memorizing
+## Memorizing
 
 Memorizing
 It’s time to really learn this stuff.

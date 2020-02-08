@@ -63,7 +63,7 @@ sentence in a useful way (a way that can be compared with other vectors).
 
 
 
-Do comparisons really matter?
+## Do comparisons really matter?
 
 Do comparisons really matter?
 Why should you care about whether you can compare two
@@ -121,7 +121,7 @@ the average strategy.
 
 
 
-212
+## 212
 
 
 
@@ -197,7 +197,7 @@ negative and positive embeddings cluster together.
 Tokenized
 reviews
 
-How is information stored in these embeddings?
+## How is information stored in these embeddings?
 
 How is information stored in these embeddings?
 When you average word embeddings, average shapes remain.
@@ -254,7 +254,7 @@ and the noise created by any particular word gets averaged away.
 
 
 
-214
+## 214
 
 
 I Neural networks that write like Shakespeare
@@ -297,7 +297,7 @@ previous section).
 
 
 
-The limitations of bag-of-words vectors
+## The limitations of bag-of-words vectors
 
 The limitations of bag-of-words vectors
 Order becomes irrelevant when you average word embeddings.
@@ -346,7 +346,7 @@ identity matrix, the result will be [3,5].
 [0,0,1,0]
 [0,0,0,1]
 
-216
+## 216
 
 
 I Neural networks that write like Shakespeare
@@ -424,7 +424,7 @@ order of the words would change the resulting embedding. Let’s see this in Pyt
 
 
 
-Matrices that change absolutely nothing
+## Matrices that change absolutely nothing
 
 Matrices that change absolutely nothing
 Let’s create sentence embeddings using identity matrices in Python.
@@ -496,7 +496,7 @@ No other matrix has this guarantee.
 
 
 
-218
+## 218
 
 
 I Neural networks that write like Shakespeare
@@ -545,7 +545,7 @@ network
 
 
 
-Learning to create useful sentence vectors
+## Learning to create useful sentence vectors
 
 Learning to create useful sentence vectors
 Create the sentence vector, make a prediction, and modify the
@@ -629,7 +629,7 @@ be allowed to be learned in the network.
 
 
 
-220
+## 220
 
 
 I Neural networks that write like Shakespeare
@@ -699,7 +699,7 @@ all vocabulary
 
 0.11111111
 
-How do you backpropagate into this?
+## How do you backpropagate into this?
 
 How do you backpropagate into this?
 It might seem trickier, but they’re the same steps you
@@ -756,7 +756,7 @@ as in chapter 11
 Again, can
 ignore the “1”
 
-222
+## 222
 
 
 I Neural networks that write like Shakespeare
@@ -796,7 +796,7 @@ starting words. Along the way, you’ll see the importance of allowing the recur
 
 
 
-Setting things up
+## Setting things up
 
 Setting things up
 Before you can create matrices, you need to learn how many
@@ -860,7 +860,7 @@ output weights
 
 
 
-224
+## 224
 
 
 I Neural networks that write like Shakespeare
@@ -915,7 +915,7 @@ update steps.
 
 
 
-Backpropagation with arbitrary length
+## Backpropagation with arbitrary length
 
 Backpropagation with arbitrary length
 You’ll backpropagate using the same logic described earlier.
@@ -970,7 +970,7 @@ next section and updating the weights using the gradients you backpropagated.
 
 
 
-226
+## 226
 
 
 I Neural networks that write like Shakespeare
@@ -1028,7 +1028,7 @@ print("Perplexity:" + str(np.exp(loss/len(sent))))
 
 
 
-Execution and output analysis
+## Execution and output analysis
 
 Execution and output analysis
 You’ll update weights using the same logic described earlier.
@@ -1071,7 +1071,7 @@ next section.
 
 
 
-228
+## 228
 
 
 I Neural networks that write like Shakespeare
@@ -1140,7 +1140,7 @@ in my opinion, creates educational analysis for the ways in which it fails.
 
 
 
-### Summary
+## ### Summary
 
 
 ### Summary
@@ -1173,9 +1173,9 @@ ICLR 2017), https://arxiv.org/abs/1702.04521.
 
 
 
-
+## 
 
-introducing automatic optimization:
+## introducing automatic optimization:
 let’s build a deep learning framework
 
 In this chapter
@@ -1222,4 +1222,4 @@ with appropriate respect.
 
 
 
-2
+## 2

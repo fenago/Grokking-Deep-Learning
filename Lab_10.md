@@ -56,7 +56,7 @@ layers and loss functions.
 
 
 
-Introduction to tensors
+## Introduction to tensors
 
 Introduction to tensors
 Tensors are an abstract form of vectors and matrices.
@@ -96,7 +96,7 @@ class with the appropriate functionality.
 
 
 
-234
+## 234
 
 
 I Introducing automatic optimization
@@ -142,7 +142,7 @@ defaults to None). Thus, when the two tensors x and y are added together, z has 
 
 
 
-Introduction to automatic gradient computation (autograd)
+## Introduction to automatic gradient computation (autograd)
 
 creators, x and y. creation_op is a related feature that stores the instructions creators
 used in the creation process. Thus, performing z = x + y creates a computation graph with
@@ -193,7 +193,7 @@ Output
 
 
 
-236
+## 236
 
 
 I Introducing automatic optimization
@@ -236,7 +236,7 @@ you’re chasing down an optimization bug that’s keeping you from getting that
 
 
 
-Tensors that are used multiple times
+## Tensors that are used multiple times
 
 Tensors that are used multiple times
 The basic autograd has a rather pesky bug. Let’s squish it!
@@ -289,7 +289,7 @@ We need to change the way gradients are written.
 
 
 
-238
+## 238
 
 
 I Introducing automatic optimization
@@ -363,7 +363,7 @@ gradients
 from several
 children
 
-Upgrading autograd to support multiuse tensors
+## Upgrading autograd to support multiuse tensors
 
 if(self.creation_op == "add"):
 self.creators[0].backward(self.grad, self)
@@ -412,7 +412,7 @@ various ways. Try calling .backprop() twice.
 
 
 
-240
+## 240
 
 
 I Introducing automatic optimization
@@ -459,7 +459,7 @@ has self.autograd == True only if self.autograd == other.autograd == True.
 
 
 
-Adding support for negation
+## Adding support for negation
 
 Adding support for negation
 Let’s modify the support for addition to support negation.
@@ -500,7 +500,7 @@ need them. Let’s add some more!
 
 
 
-242
+## 242
 
 
 I Introducing automatic optimization
@@ -553,7 +553,7 @@ return Tensor(self.data.transpose())
 
 
 
-Adding support for additional functions
+## Adding support for additional functions
 
 def mm(self, x):
 if(self.autograd):
@@ -612,7 +612,7 @@ need to perform .expand(dim=1, copies=4) to the gradient when you backpropagate 
 
 
 
-244
+## 244
 
 
 I Introducing automatic optimization
@@ -672,7 +672,7 @@ forward propagation), but the code is better organized.
 
 
 
-Adding support for additional functions
+## Adding support for additional functions
 
 d LEARN: backpropagating from layer_2 to layer_1
 Inputs
@@ -777,7 +777,7 @@ weights_0_1 -= alpha * weight_delta_0_1
 
 
 
-246
+## 246
 
 
 I Introducing automatic optimization
@@ -835,7 +835,7 @@ appropriate weight matrix and perform the weight update appropriately.
 
 
 
-Using autograd to train a neural network
+## Using autograd to train a neural network
 
 import numpy
 np.random.seed(0)
@@ -886,7 +886,7 @@ that for loop at the end). Let’s try making this its own class as well.
 
 
 
-248
+## 248
 
 
 I Introducing automatic optimization
@@ -934,7 +934,7 @@ optim.step()
 
 Learn
 
-Adding support for layer types
+## Adding support for layer types
 
 Adding support for layer types
 You may be familiar with layer types in Keras or PyTorch.
@@ -971,7 +971,7 @@ as the SGD class created in the previous section).
 
 
 
-250
+## 250
 
 
 I Introducing automatic optimization
@@ -1016,7 +1016,7 @@ Learn
 
 
 
-Loss-function layers
+## Loss-function layers
 
 Loss-function layers
 Some layers have no weights.
@@ -1062,7 +1062,7 @@ ensure that the functionality executes in the correct order.
 
 
 
-252
+## 252
 
 
 I Introducing automatic optimization
@@ -1098,7 +1098,7 @@ you call .backward(). It’s not, strictly speaking, necessary—but it’s hand
 
 
 
-Nonlinearity layers
+## Nonlinearity layers
 
 Nonlinearity layers
 Let’s add nonlinear functions to Tensor and then create some
@@ -1144,7 +1144,7 @@ return input.sigmoid()
 
 
 
-254
+## 254
 
 
 I Introducing automatic optimization
@@ -1194,7 +1194,7 @@ probability distribution over labels.
 
 
 
-The embedding layer
+## The embedding layer
 
 The embedding layer
 An embedding layer translates indices into activations.
@@ -1314,7 +1314,7 @@ of indices turns into a 3D matrix of embeddings (rows). This is perfect!
 
 
 
-256
+## 256
 
 
 I Introducing automatic optimization
@@ -1393,7 +1393,7 @@ print(x.grad)
 2.]
 1.]]
 
-The embedding layer (revisited)
+## The embedding layer (revisited)
 
 The embedding layer (revisited)
 Now you can finish forward propagation using the new
@@ -1451,7 +1451,7 @@ This example was to show the embedding working.
 
 
 
-258
+## 258
 
 
 I Introducing automatic optimization
@@ -1493,7 +1493,7 @@ return input.cross_entropy(target)
 
 
 
-The cross-entropy layer
+## The cross-entropy layer
 
 import numpy
 np.random.seed(0)
@@ -1544,7 +1544,7 @@ This has to do with a shortcut in the gradient math.
 
 
 
-260
+## 260
 
 
 I Introducing automatic optimization
@@ -1592,7 +1592,7 @@ hidden to hidden (which updates each hidden vector based on the previous), and o
 
 
 
-The recurrent neural network layer
+## The recurrent neural network layer
 
 a hidden-to-output layer that learns to make predictions based on the hidden vector. This
 RNNCell implementation includes all three. The self.w_ih layer is the input-to-hidden layer,
@@ -1639,7 +1639,7 @@ data = np.array(indices)
 
 
 
-262
+## 262
 
 
 I Introducing automatic optimization
@@ -1693,7 +1693,7 @@ Loss:
 
 
 
-### Summary
+## ### Summary
 
 
 batch_size = 1
@@ -1734,9 +1734,9 @@ that feels most familiar.
 
 
 
-
+## 
 
-learning to write like Shakespeare:
+## learning to write like Shakespeare:
 long short-term memory
 
 In this chapter
@@ -1766,4 +1766,4 @@ A Midsummer Night’s Dream
 
 
 
-266
+## 266

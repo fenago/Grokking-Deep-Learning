@@ -60,7 +60,7 @@ as a layer it’s called a convolutional layer.
 
 
 
-The convolutional layer
+## The convolutional layer
 
 The convolutional layer
 Lots of very small linear layers are reused in every position,
@@ -99,7 +99,7 @@ as input to the next layer. Convolutional layers usually have many kernels.
 
 
 
-180
+## 180
 
 
 I Neural learning about edges and corners
@@ -156,7 +156,7 @@ to overfit to training data and increasing its ability to generalize.
 
 
 
-A simple implementation in NumPy
+## A simple implementation in NumPy
 
 A simple implementation in NumPy
 Just think mini-linear layers, and you already know what you
@@ -203,7 +203,7 @@ kernel_output = flattened_input.dot(kernels)
 
 
 
-182
+## 182
 
 
 I Neural learning about edges and corners
@@ -250,7 +250,7 @@ return section.reshape(-1,1,row_to-row_from, col_to-col_from)
 
 
 
-A simple implementation in NumPy
+## A simple implementation in NumPy
 
 for j in range(iterations):
 correct_cnt = 0
@@ -304,7 +304,7 @@ row_start+kernel_rows,
 
 
 
-184
+## 184
 
 
 
@@ -368,7 +368,7 @@ might still be in the previous AI winter even at the time of writing.
 
 
 
-### Summary
+## ### Summary
 
 
 ### Summary
@@ -406,9 +406,9 @@ networks could use repeatedly throughout their architecture.
 
 
 
-
+## 
 
-neural networks that understand language:
+## neural networks that understand language:
 king – man + woman == ?
 
 In this chapter
@@ -454,4 +454,4 @@ are fast, accurate, and stupid.
 
 
 
-188
+## 188

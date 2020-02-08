@@ -55,7 +55,7 @@ we celebrate?
 
 
 
-Three-layer network on MNIST
+## Three-layer network on MNIST
 
 import sys, numpy as np
 from keras.datasets import mnist
@@ -106,7 +106,7 @@ I:349 Error:0.108 Correct:1.0
 
 
 
-148
+## 148
 
 
 I Learning signal and ignoring noise
@@ -151,7 +151,7 @@ network only images it hasn’t seen before). This is the score that matters.
 
 
 
-Memorization vs. generalization
+## Memorization vs. generalization
 
 Memorization vs. generalization
 Memorizing 1,000 images is easier than generalizing to all images.
@@ -204,7 +204,7 @@ I:349 Train-Err:0.108 Train-Acc:1.0 Test-Err:0.653 Test-Acc:0.7073
 
 
 
-150
+## 150
 
 
 I Learning signal and ignoring noise
@@ -242,7 +242,7 @@ learned the noise in the dataset instead of making decisions based only on the t
 
 
 
-Where overfitting comes from
+## Where overfitting comes from
 
 Where overfitting comes from
 What causes neural networks to overfit?
@@ -271,7 +271,7 @@ a large amount of noise comes in the fine-grained detail of an image, and most o
 
 
 
-152
+## 152
 
 
 I Learning signal and ignoring noise
@@ -303,7 +303,7 @@ control training. You use a validation set instead.
 
 
 
-Industry standard regularization: Dropout
+## Industry standard regularization: Dropout
 
 Industry standard regularization: Dropout
 The method: Randomly turn off neurons (set them to 0)
@@ -341,7 +341,7 @@ expressive power. Neat, eh?
 
 
 
-154
+## 154
 
 
 I Learning signal and ignoring noise
@@ -379,7 +379,7 @@ noise would tend to cancel out, revealing only what they all learned in common: 
 
 
 
-Dropout in code
+## Dropout in code
 
 Dropout in code
 Here’s how to use dropout in the real world.
@@ -420,7 +420,7 @@ despite dropout.
 
 
 
-156
+## 156
 
 
 import numpy, sys
@@ -486,7 +486,7 @@ np.argmax(test_labels[i:i+1]))
 
 
 
-Dropout evaluated on MNIST
+## Dropout evaluated on MNIST
 
 Dropout evaluated on MNIST
 If you remember from before, the neural network (without dropout) previously reached a
@@ -533,7 +533,7 @@ running quite a bit faster because you trained for something that was much more 
 
 
 
-158
+## 158
 
 
 I Learning signal and ignoring noise
@@ -588,7 +588,7 @@ Thus, averaging them makes for a smoother learning process.
 
 
 
-Batch gradient descent
+## Batch gradient descent
 
 import numpy as np
 np.random.seed(1)
@@ -640,7 +640,7 @@ layer_2 = np.dot(layer_1, weights_1_2)
 
 
 
-160
+## 160
 
 
 I Learning signal and ignoring noise
@@ -667,7 +667,7 @@ in data.
 
 
 
-modeling probabilities and nonlinearities:
+## modeling probabilities and nonlinearities:
 activation functions
 
 In this chapter
@@ -701,4 +701,4 @@ November 10, 1813
 
 9
 
-162
+## 162

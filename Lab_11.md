@@ -60,7 +60,7 @@ stochastic gradient descent optimizer.
 
 
 
-The need for truncated backpropagation
+## The need for truncated backpropagation
 
 The need for truncated backpropagation
 Backpropagating through 100,000 characters is intractable.
@@ -104,7 +104,7 @@ becomes another tunable parameter (like batch size or alpha).
 
 
 
-268
+## 268
 
 
 I Learning to write like Shakespeare
@@ -150,7 +150,7 @@ you that part, as if batch_size was set to 8 (for readability):
 
 
 
-Truncated backpropagation
+## Truncated backpropagation
 
 print(raw[0:5])
 print(indices[0:5])
@@ -322,7 +322,7 @@ time. I thought I’d spend a couple of pages explaining it.
 
 
 
-270
+## 270
 
 
 I Learning to write like Shakespeare
@@ -379,7 +379,7 @@ Iter:99 - Batch 61/195 - Loss:1.0533843281265225 I af the mands your
 
 
 
-A sample of the output
+## A sample of the output
 
 A sample of the output
 By sampling from the predictions of the model,
@@ -434,7 +434,7 @@ ever wo formall, have abon, with a good lorges ever word.
 
 
 
-272
+## 272
 
 
 I Learning to write like Shakespeare
@@ -514,7 +514,7 @@ keep the network from learning. Let’s take a closer look at RNN backpropagatio
 
 
 
-A toy example of RNN backpropagation
+## A toy example of RNN backpropagation
 
 A toy example of RNN backpropagation
 To see vanishing/exploding gradients firsthand,
@@ -592,7 +592,7 @@ Relu Gradients
 
 
 
-274
+## 274
 
 
 I Learning to write like Shakespeare
@@ -643,7 +643,7 @@ u)
 
 
 
-Some intuition about LSTM gates
+## Some intuition about LSTM gates
 
 Some intuition about LSTM gates
 LSTM gates are semantically similar to reading/writing
@@ -677,7 +677,7 @@ short, c can learn to transport information over long distances, so it doesn’t
 
 
 
-276
+## 276
 
 
 I Learning to write like Shakespeare
@@ -780,7 +780,7 @@ return (h, c)
 
 
 
-Upgrading the character language model
+## Upgrading the character language model
 
 Upgrading the character language model
 Let’s swap out the vanilla RNN with the new LSTM cell.
@@ -830,7 +830,7 @@ min_loss = 1000
 
 
 
-278
+## 278
 
 
 I Learning to write like Shakespeare
@@ -880,7 +880,7 @@ optim.alpha *= 0.99
 
 
 
-Tuning the LSTM character language model
+## Tuning the LSTM character language model
 
 Tuning the LSTM character language model
 I spent about two days tuning this model, and
@@ -930,7 +930,7 @@ I the sentastar thamy this not thame.
 
 
 
-280
+## 280
 
 
 I Learning to write like Shakespeare
@@ -948,7 +948,7 @@ time to come.
 
 
 
-deep learning on unseen data:
+## deep learning on unseen data:
 introducing federated learning
 
 In this chapter
@@ -985,4 +985,4 @@ Friends don’t spy; true friendship is about privacy, too.
 
 
 
-282
+## 282

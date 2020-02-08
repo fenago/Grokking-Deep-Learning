@@ -48,7 +48,7 @@ basics of deep learning’s approach to this field.
 
 
 
-Natural language processing (NLP)
+## Natural language processing (NLP)
 
 Natural language processing (NLP)
 NLP is divided into a collection of tasks or challenges.
@@ -87,7 +87,7 @@ human-like logic in machines: the foundation of thought.
 
 
 
-190
+## 190
 
 
 I Neural networks that understand language
@@ -134,7 +134,7 @@ let’s take on the challenge of topic classification.
 
 
 
-IMDB movie reviews dataset
+## IMDB movie reviews dataset
 
 IMDB movie reviews dataset
 You can predict whether people post positive or
@@ -173,7 +173,7 @@ would have significant correlation with sentiment. Let’s explore this further.
 
 
 
-192
+## 192
 
 
 I Neural networks that understand language
@@ -280,7 +280,7 @@ either sum the vector for “cat” three times (resulting in [3,0,0,0]) or just
 
 
 
-Predicting movie reviews
+## Predicting movie reviews
 
 Predicting movie reviews
 With the encoding strategy and the previous network,
@@ -326,7 +326,7 @@ target_dataset.append(0)
 
 
 
-194
+## 194
 
 
 I Neural networks that understand language
@@ -412,7 +412,7 @@ cat
 
 
 
-Intro to an embedding layer
+## Intro to an embedding layer
 
 After running the previous code, run this code.
 import numpy as np
@@ -473,7 +473,7 @@ print("Test Accuracy:" + str(correct / float(total)))
 
 
 
-196
+## 196
 
 
 I Neural networks that understand language
@@ -528,7 +528,7 @@ weights_0_1
 
 
 
-Neural architecture
+## Neural architecture
 
 Neural architecture
 How did the choice of architecture affect
@@ -568,7 +568,7 @@ great first step for knowing whether an architecture is likely to find that patt
 
 
 
-198
+## 198
 
 
 I Neural networks that understand language
@@ -632,7 +632,7 @@ if and only if it has similar weights connecting it to the next and/or previous 
 
 
 
-Comparing word embeddings
+## Comparing word embeddings
 
 Comparing word embeddings
 How can you visualize weight similarity?
@@ -693,7 +693,7 @@ consistently attempts to convince the hidden layers to be similar based on which
 be predicted.
 
 
-200
+## 200
 
 
 I Neural networks that understand language
@@ -754,7 +754,7 @@ was white as snow.
 
 
 
-Filling in the blank
+## Filling in the blank
 
 Filling in the blank
 Learn richer meanings for words by having
@@ -802,7 +802,7 @@ random.shuffle(input_dataset)
 
 
 
-202
+## 202
 
 
 I Neural networks that understand language
@@ -854,7 +854,7 @@ Progress:0.99998 [('terrible', -0.0), ('horrible', -2.846300248788519),
 
 
 
-Meaning is derived from loss
+## Meaning is derived from loss
 
 Meaning is derived from loss
 With this new neural network, you can subjectively see that the word embeddings cluster
@@ -930,7 +930,7 @@ the umbrella of constructing what’s called a loss function.
 
 
 
-204
+## 204
 
 
 I Neural networks that understand language
@@ -996,7 +996,7 @@ print(similar('terrible'))
 
 
 
-Meaning is derived from loss
+## Meaning is derived from loss
 
 The choice of loss function determines the
 neural network’s knowledge.
@@ -1029,7 +1029,7 @@ evaluation (such as mean squared error or cross entropy).
 
 
 
-206
+## 206
 
 
 I Neural networks that understand language
@@ -1091,7 +1091,7 @@ analogy(['elizabeth','he'],['she'])
 
 
 
-Word analogies
+## Word analogies
 
 Word analogies
 Linear compression of an existing property in the data
@@ -1163,7 +1163,7 @@ compression of these co-occurrence statistics will behave similarly.
 
 
 
-208
+## 208
 
 
 I Neural networks that understand language
@@ -1184,7 +1184,7 @@ increasingly more complicated strategies in future chapters. Good luck!
 
 
 
-neural networks that write like Shakespeare:
+## neural networks that write like Shakespeare:
 recurrent layers for variable-length data
 
 In this chapter
@@ -1232,4 +1232,4 @@ of Recurrent Neural Networks,” http://mng.bz/V PW
 
 
 
-210
+## 210

@@ -37,7 +37,7 @@ complexity of neural networks. Let’s create a name for this idea: the correlat
 
 
 
-Correlation summarization
+## Correlation summarization
 
 Correlation summarization
 This is the key to sanely moving forward to more advanced
@@ -73,7 +73,7 @@ over, updating the weights accordingly.
 
 
 
-136
+## 136
 
 
 I How to picture neural networks
@@ -131,7 +131,7 @@ weights_0_1
 
 layer_0
 
-The simplified visualization
+## The simplified visualization
 
 The simplified visualization
 Neural networks are like LEGO bricks, and each brick
@@ -188,7 +188,7 @@ even further.
 
 
 
-138
+## 138
 
 
 I How to picture neural networks
@@ -241,7 +241,7 @@ rest of this book discussing new architectures.
 
 
 
-Let’s see this network predict
+## Let’s see this network predict
 
 1
 
@@ -324,7 +324,7 @@ weights_0_1
 
 1
 
-140
+## 140
 
 
 
@@ -383,7 +383,7 @@ weights_0_1
 
 l0
 
-Linking the variables
+## Linking the variables
 
 Linking the variables
 The letters can be combined to indicate functions
@@ -428,7 +428,7 @@ have the right dimensions.
 
 
 
-142
+## 142
 
 
 I How to picture neural networks
@@ -462,7 +462,7 @@ layer_0
 
 
 
-The importance of visualization tools
+## The importance of visualization tools
 
 The importance of visualization tools
 We’re going to be studying new architectures.
@@ -489,9 +489,9 @@ looking for. See you there!
 
 
 
-
+## 
 
-learning signal and ignoring noise:
+## learning signal and ignoring noise:
 introduction to regularization and batching
 
 In this chapter
@@ -510,4 +510,4 @@ computer scientist, and polymath
 
 8
 
-146
+## 146

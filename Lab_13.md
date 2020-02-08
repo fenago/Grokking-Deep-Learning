@@ -55,7 +55,7 @@ is one example where datasets are often locked up tight, making research challen
 
 
 
-Federated learning
+## Federated learning
 
 Federated learning
 You don’t have to have access to a dataset in order
@@ -105,7 +105,7 @@ return indices
 
 
 
-284
+## 284
 
 
 I Deep learning on unseen data
@@ -149,7 +149,7 @@ test_target.append([0])
 
 
 
-Learning to detect spam
+## Learning to detect spam
 
 def train(model, input_data, target_data, batch_size=500, iterations=5):
 n_batches = int(len(input_data) / batch_size)
@@ -198,7 +198,7 @@ Loss:0.008068268387986223
 
 
 
-286
+## 286
 
 
 I Deep learning on unseen data
@@ -254,7 +254,7 @@ Starting Training Round...
 
 
 
-Hacking into federated learning
+## Hacking into federated learning
 
 Hacking into federated learning
 Let’s use a toy example to see how to still learn
@@ -297,7 +297,7 @@ the weight update?
 
 
 
-288
+## 288
 
 
 I Deep learning on unseen data
@@ -336,7 +336,7 @@ homomorphic encryption.
 
 
 
-Homomorphic encryption
+## Homomorphic encryption
 
 Homomorphic encryption
 You can perform arithmetic on encrypted values.
@@ -385,7 +385,7 @@ the model owner, who decrypts it with the private_key.
 
 
 
-290
+## 290
 
 
 I Deep learning on unseen data
@@ -433,7 +433,7 @@ str(test(model, test_data, test_target)*100))
 
 
 
-### Summary
+## ### Summary
 
 
 Now you can run the new training scheme, which has an added step. Alice, Bob, and Sue
