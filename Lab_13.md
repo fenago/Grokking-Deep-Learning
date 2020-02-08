@@ -15,7 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-Chapter 15
 
 I Deep learning on unseen data
 
@@ -54,7 +53,7 @@ revenue from that data. There are some problem domains where the sensitivity and
 regulatory constraints surrounding the data have been a headwind to progress. Healthcare
 is one example where datasets are often locked up tight, making research challenging.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Federated learning
 
@@ -106,11 +105,10 @@ idxs.append(w2i[word])
 indices.append(idxs)
 return indices
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 284
 
-Chapter 15
 
 I Deep learning on unseen data
 
@@ -151,7 +149,7 @@ test_target.append([1])
 test_data.append(test_ham_idx[i%len(test_ham_idx)])
 test_target.append([0])
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Learning to detect spam
 
@@ -202,11 +200,10 @@ Loss:0.037140416860871446
 Loss:0.008068268387986223
 % Correct on Test Set: 99.45
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 286
 
-Chapter 15
 
 I Deep learning on unseen data
 
@@ -259,7 +256,7 @@ Starting Training Round...
 	 Average Everyone's New Models
 	 % Correct on Test Set: 98.8
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Hacking into federated learning
 
@@ -304,11 +301,10 @@ probably his favorite food, too). What’s to be done? How can you use
 federated learning if it’s so easy to tell what the training data was from
 the weight update?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 288
 
-Chapter 15
 
 I Deep learning on unseen data
 
@@ -344,7 +340,7 @@ way that no one can see anyone’s gradient but their own. The class of problems
 this is called secure aggregation, and in order to do it, you’ll need one more (very cool) tool:
 homomorphic encryption.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Homomorphic encryption
 
@@ -395,11 +391,10 @@ their weight updates. Then, Bob, Alice, and Sue (who don’t have the private ke
 to each other and accumulate all their gradients into a single, final update that’s sent back to
 the model owner, who decrypts it with the private_key.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 290
 
-Chapter 15
 
 I Deep learning on unseen data
 
@@ -444,7 +439,7 @@ model.weight.data = new
 print("\t% Correct on Test Set: " + \
 str(test(model, test_data, test_target)*100))
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Summary
 

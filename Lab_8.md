@@ -16,7 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -47,7 +46,7 @@ natural language processing (NLP). This field is dedicated exclusively to the au
 understanding of human language (previously not using deep learning). We’ll discuss the
 basics of deep learning’s approach to this field.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Natural language processing (NLP)
 
@@ -88,11 +87,10 @@ because language is the bedrock of conscious logic and communication in humans. 
 such, methods by which machines can use and understand language form the foundation of
 human-like logic in machines: the foundation of thought.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 190
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -136,7 +134,7 @@ In order to know what input format makes input/output correlation the most obvio
 network, we need to know what the input/output dataset looks like. To explore this topic,
 let’s take on the challenge of topic classification.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 IMDB movie reviews dataset
 
@@ -177,11 +175,10 @@ the rating tends to decrease.
 Perhaps this property is more general! Perhaps words by themselves (even out of context)
 would have significant correlation with sentiment. Let’s explore this further.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 192
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -285,7 +282,7 @@ multiple options if words occur multiple times. If the phrase was “cat cat cat
 either sum the vector for “cat” three times (resulting in [3,0,0,0]) or just take the unique
 “cat” a single time (resulting in [1,0,0,0]). The latter typically works better for language.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Predicting movie reviews
 
@@ -333,11 +330,10 @@ target_dataset.append(1)
 else:
 target_dataset.append(0)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 194
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -420,7 +416,7 @@ sat
 
 cat
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Intro to an embedding layer
 
@@ -483,11 +479,10 @@ correct += 1
 total += 1
 print("Test Accuracy:" + str(correct / float(total)))
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 196
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -539,7 +534,7 @@ weights_1_2
 
 weights_0_1
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Neural architecture
 
@@ -581,11 +576,10 @@ reason, the network is very unlikely to create a hidden neuron that understands 
 Testing whether a layer is the same or different based on a certain language pattern is a
 great first step for knowing whether an architecture is likely to find that pattern using the
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 198
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -646,7 +640,7 @@ weight values, will also have similar meaning. Abstractly, in
 terms of neural networks, a neuron has similar meaning to other neurons in the same layer
 if and only if it has similar weights connecting it to the next and/or previous layers.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Comparing word embeddings
 
@@ -709,11 +703,10 @@ layer_1 get grouped according to output label.
 The key takeaway is a gut instinct about this phenomenon of the correlation summarization. It
 consistently attempts to convince the hidden layers to be similar based on which label should
 be predicted.
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 200
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -771,7 +764,7 @@ the word “anvil” or “wool”? Let’s see if the neural network can figure
 Mary had a little lamb whose __________
 was white as snow.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Filling in the blank
 
@@ -821,11 +814,10 @@ input_dataset.append(sent_indices)
 concatenated = np.array(concatenated)
 random.shuffle(input_dataset)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 202
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -874,7 +866,7 @@ Progress:0.99998 [('terrible', -0.0), ('horrible', -2.846300248788519),
 ('superb', -3.6092947961276645), ('phenomenal', -3.660172529098085),
 ('masterful', -3.6856112636664564), ('marvelous', -3.9306620801551664),
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Meaning is derived from loss
 
@@ -952,11 +944,10 @@ can also adjust how the network measures error, the size and types of layers it 
 types of regularization to apply. In deep learning research, all of these techniques fall under
 the umbrella of constructing what’s called a loss function.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 204
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -1019,7 +1010,7 @@ print(similar('terrible'))
 ('marvelous', -4.0470804427),
 ('dire', -4.178749691835959)]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Meaning is derived from loss
 
@@ -1054,11 +1045,10 @@ more complicated (and that’s OK). Just remember, if something is going wrong, 
 is in the loss function, which includes both the forward prediction and the raw error
 evaluation (such as mean squared error or cross entropy).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 206
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -1117,7 +1107,7 @@ analogy(['elizabeth','he'],['she'])
 ('fred', -193.69940566948),
 ('there', -193.7189421836)]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Word analogies
 
@@ -1191,11 +1181,10 @@ and adding in the female ones yields something close to “queen.” The most im
 takeaway is that this is more about the properties of language than deep learning. Any linear
 compression of these co-occurrence statistics will behave similarly.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 208
 
-Chapter 11
 
 I Neural networks that understand language
 
@@ -1212,7 +1201,7 @@ As with the other chapters, I encourage you to build the examples in this chapte
 scratch. Although it may seem as though this chapter stands on its own, the lessons in lossfunction creation and tuning are invaluable and will be extremely important as you tackle
 increasingly more complicated strategies in future chapters. Good luck!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 neural networks that write like Shakespeare:
 recurrent layers for variable-length data
@@ -1262,7 +1251,7 @@ of Recurrent Neural Networks,” http://mng.bz/V PW
 
 209
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 12
 

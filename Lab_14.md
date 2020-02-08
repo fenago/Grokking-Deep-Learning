@@ -29,13 +29,12 @@ speech, Cloud Computing Platform conference, 2016
 
 9
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 2
 
 10
 
-Chapter 2
 
 I Fundamental concepts
 
@@ -64,7 +63,7 @@ technology are used to solve a wide variety of problems in industry. This book s
 focus on teaching the fundamentals of deep learning behind both cutting-edge research and
 industry, helping to prepare you for either.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 What is machine learning?
 
@@ -107,11 +106,10 @@ is attempting to imitate the pattern between the two datasets in such a way that
 one dataset to predict the other. For any of these examples, imagine if you had the power to
 predict the output dataset given only the input dataset. Such an ability would be profound.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 12
 
-Chapter 2
 
 I Fundamental concepts
 
@@ -156,7 +154,7 @@ For the rest of this book, you’ll be creating algorithms that can take input d
 observable, recordable, and, by extension, knowable and transform it into valuable output
 data that requires logical analysis. This is the power of supervised machine learning.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Unsupervised machine learning
 
@@ -209,11 +207,10 @@ can you figure out how it clustered the words? (Answer: 1 == cute and 2 == delic
 we’ll unpack how other forms of unsupervised learning are also just a form of clustering and
 why these clusters are useful for supervised learning.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 14
 
-Chapter 2
 
 I Fundamental concepts
 
@@ -248,7 +245,7 @@ hole. Some humans (such as babies) just jam it into all the holes until it fits 
 for the hole with an equal number (nonparametric). Parametric models tend to use trial and
 error, whereas nonparametric models tend to count. Let’s look closer.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Supervised parametric learning
 
@@ -291,11 +288,10 @@ configuration. This is in contrast to nonparametric learning, which is often cou
 and (more or less) adds new knobs when it finds something new to count. Let’s break down
 supervised parametric learning into its three steps.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 16
 
-Chapter 2
 
 I Fundamental concepts
 
@@ -350,7 +346,7 @@ away
 
 # fans
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Unsupervised parametric learning
 
@@ -425,11 +421,10 @@ telling us the probability that the input data is a member of that group. There 
 of variety in how these models train and their resulting properties, but at a high level they
 adjust parameters to transform the input data into its subscribing group(s).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 18
 
-Chapter 2
 
 I Fundamental concepts
 
@@ -476,7 +471,7 @@ numbers used to model a pattern. As it happens, deep learning is a class of para
 models. We won’t discuss nonparametric models further in this book, but they’re an
 interesting and powerful class of algorithm.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Summary
 
@@ -497,9 +492,9 @@ as a whole and your place in it. In the next chapter, you’ll build your first 
 and all subsequent chapters will be project based. So, pull out your Jupyter notebook, and
 let’s jump in!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 introduction to neural prediction:
 forward propagation
@@ -537,7 +532,7 @@ novelist, and screenwriter
 
 21
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 3
 

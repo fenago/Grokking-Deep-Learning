@@ -15,7 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -59,7 +58,7 @@ and the RNN hidden state to be of size 512. The output weights are initialized a
 a rule, but I found it worked a bit better). Finally, you initialize the cross-entropy loss and
 stochastic gradient descent optimizer.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The need for truncated backpropagation
 
@@ -105,11 +104,10 @@ You don’t! You backpropagate for a fixed number of steps into the past and the
 is called truncated backpropagation, and it’s the industry standard. The length you backprop
 becomes another tunable parameter (like batch size or alpha).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 268
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -152,7 +150,7 @@ batch_size and n_batches. This is so that when you group it into tensors, it’s
 lines reshape the dataset so each column is a section of the initial indices array. I’ll show
 you that part, as if batch_size was set to 8 (for readability):
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Truncated backpropagation
 
@@ -326,11 +324,10 @@ Don’t worry if this doesn’t make sense to you yet. It doesn’t have much to
 theory; it’s just a particularly complex part of setting up RNNs that you’ll run into from time to
 time. I thought I’d spend a couple of pages explaining it.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 270
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -384,7 +381,7 @@ Iter:1 - Batch 191/195 - Loss:20.588816924127116 mhnethet tttttt t t t
 ....
 Iter:99 - Batch 61/195 - Loss:1.0533843281265225 I af the mands your
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 A sample of the output
 
@@ -441,11 +438,10 @@ There was courter hower how, my goth Plish lo res
 Toures
 ever wo formall, have abon, with a good lorges ever word.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 272
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -522,7 +518,7 @@ Backpropagation tends to lead to either extremely large or extremely small value
 values can cause divergence (lots of not-a-numbers [NaNs]), whereas extremely small values
 keep the network from learning. Let’s take a closer look at RNN backpropagation.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 A toy example of RNN backpropagation
 
@@ -602,11 +598,10 @@ Relu Gradients
 ...
 [9765625. 9765625.]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 274
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -654,7 +649,7 @@ self.ho.forward(prev_hidden)).sigmoid()
 self.hc.forward(prev_hidden)).tanh()
 u)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Some intuition about LSTM gates
 
@@ -690,11 +685,10 @@ information is transported using c, and h is only a localized interpretation of 
 making an output prediction and constructing gate activations at the following timestep. In
 short, c can learn to transport information over long distances, so it doesn’t matter if h can’t.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 276
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -794,7 +788,7 @@ h.data[:,0] += 1
 c.data[:,0] += 1
 return (h, c)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Upgrading the character language model
 
@@ -846,11 +840,10 @@ target_batches = target_batched_indices[:n_bptt*bptt]
 target_batches = target_batches.reshape(n_bptt, bptt, batch_size)
 min_loss = 1000
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 278
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -897,7 +890,7 @@ log += " - " + s
 sys.stdout.write(log)
 optim.alpha *= 0.99
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Tuning the LSTM character language model
 
@@ -949,11 +942,10 @@ the seaventlace peake,
 I sentlentony my thent:
 I the sentastar thamy this not thame.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 280
 
-Chapter 14
 
 I Learning to write like Shakespeare
 
@@ -967,7 +959,7 @@ are or have recently been the state of the art in a wide variety of tasks and, a
 embeddings and convolutional layers, will undoubtedly be one of our go-to tools for a long
 time to come.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 deep learning on unseen data:
 introducing federated learning
@@ -1006,7 +998,7 @@ Friends don’t spy; true friendship is about privacy, too.
 
 281
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 15
 

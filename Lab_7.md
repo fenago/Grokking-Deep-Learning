@@ -15,7 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-Chapter 10
 
 I Neural learning about edges and corners
 
@@ -59,7 +58,7 @@ to make the model smaller (because there are fewer actual parameters to store). 
 famous and widely used structure in neural networks is called a convolution, and when used
 as a layer it’s called a convolutional layer.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The convolutional layer
 
@@ -100,11 +99,10 @@ scan back to the left, repeating until it has made a prediction in every possibl
 within the image. The result will be a smaller square of kernel predictions, which are used
 as input to the next layer. Convolutional layers usually have many kernels.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 180
 
-Chapter 10
 
 I Neural learning about edges and corners
 
@@ -158,7 +156,7 @@ weights to datapoints on which those weights
 are being trained. This has a powerful impact on the network, drastically reducing its ability
 to overfit to training data and increasing its ability to generalize.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 A simple implementation in NumPy
 
@@ -207,11 +205,10 @@ kernels = np.random.random((kernel_rows*kernel_cols,num_kernels))
 ...
 kernel_output = flattened_input.dot(kernels)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 182
 
-Chapter 10
 
 I Neural learning about edges and corners
 
@@ -255,7 +252,7 @@ def get_image_section(layer,row_from, row_to, col_from, col_to):
 section = layer[:,row_from:row_to,col_from:col_to]
 return section.reshape(-1,1,row_to-row_from, col_to-col_from)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 A simple implementation in NumPy
 
@@ -309,7 +306,7 @@ sect = get_image_section(layer_0,
 row_start,
 row_start+kernel_rows,
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 183
 
@@ -318,7 +315,6 @@ Licensed to Ernesto Lee <socrates73@gmail.com>
 
 
 
-Chapter 10
 
 I Neural learning about edges and corners
 col_start,
@@ -376,7 +372,7 @@ neural networks (and, by extension, the popularization of the phrase deep learni
 be overstressed that this invention was a landmark moment for the field; without it, we
 might still be in the previous AI winter even at the time of writing.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Summary
 
@@ -414,9 +410,9 @@ in those places. I fully expect that more deep learning discoveries will continu
 on this idea, because it’s challenging to discover new, higher-level abstract ideas that neural
 networks could use repeatedly throughout their architecture.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 neural networks that understand language:
 king – man + woman == ?
@@ -464,7 +460,7 @@ are fast, accurate, and stupid.
 
 187
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 11
 

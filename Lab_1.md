@@ -139,10 +139,8 @@ Note that neural networks don’t predict just positive numbers—they can also 
 numbers and even take negative numbers as input. Perhaps you want to predict the probability
 that people will wear coats today. If the temperature is –10 degrees Celsius, then a negative
 weight will predict a high probability that people will wear their coats.
-–10
-–8.9
-89
-Temperature Probability
+
+![](./images_3/12.png)
 
 Making a prediction with multiple inputs
 Neural networks can combine intelligence from
@@ -153,117 +151,23 @@ a good predictor, all by itself?” If so, you’re onto something. What if you 
 more information (at one time) than just the average number of toes per player? In that case,
 the network should, in theory, be able to make more-accurate predictions. Well, as it turns out, a
 network can accept multiple input datapoints at a time. Take a look at the next prediction:
-Input data
-enters here
-(three at a time).
-b An empty network with multiple inputs
-Predictions
-come out here.
-weights = [0.1, 0.2, 0]
-def neural_network(input, weights):
-pred = w_sum(input,weights)
-return pred
-.1
-.2
-.0
-win
-loss
-# toes
-# fans
-win?
-c Inserting one input datapoint
-One row
-of data
-(first game)
-.1
-.2
-.0
-8.5
-65%
-1.2
-toes = [8.5, 9.5, 9.9, 9.0]
-wlrec = [0.65, 0.8, 0.8, 0.9]
-nfans = [1.2, 1.3, 0.5, 1.0]
-input = [toes[0],wlrec[0],nfans[0]]
-pred = neural_network(input,weights)
-This dataset is the current status at the beginning of
-each game for the first four games in a season:
-toes = current average number of toes per player
-wlrec = current games won (percent)
-nfans = fan count (in millions).
-Input corresponds to every entry
-for the first game of the season.
 
-d Performing a weighted sum of inputs
-.1
-.2
-.0
-8.5
-65%
-1.2
-def neural_network(input, weights):
-pred = w_sum(input,weights)
-return pred
-def w_sum(a,b):
-assert(len(a) == len(b))
-output = 0
-for i in range(len(a)):
-output += (a[i] * b[i])
-return output
-Inputs Weights Local predictions
-(8.50 * 0.1) = 0.85 = toes prediction
-(0.65 * 0.2) = 0.13 = wlrec prediction
-(1.20 * 0.0) = 0.00 = fans prediction
-toes prediction + wlrec prediction + fans prediction = final prediction
-0.85 + 0.13 + 0.00 = 0.98
-.85
-.13
-.0
-e Depositing the prediction
-.1
-.2
-.0
-8.5
-65%
-1.2
-0.98
-toes = [8.5, 9.5, 9.9, 9.0]
-wlrec = [0.65, 0.8, 0.8, 0.9]
-nfans = [1.2, 1.3, 0.5, 1.0]
-input = [toes[0],wlrec[0],nfans[0]]
-pred = neural_network(input,weights)
-print(pred)
-Prediction
-Input corresponds to every entry
-for the first game of the season.
+![](./images_3/13.png)
+
+![](./images_3/14.png)
 
 Multiple inputs: What does this neural network do?
 It multiplies three inputs by three knob weights and sums them.
 This is a weighted sum.
+
 At the end of the previous section, you came to realize the limiting factor of your simple
 neural network: it was only a volume knob on one datapoint. In the example, that datapoint
 was a baseball team’s average number of toes per player. You learned that in order to make
 accurate predictions, you need to build neural networks that can combine multiple inputs at
 the same time. Fortunately, neural networks are perfectly capable of doing so.
-Input data
-enters here
-(three at a
-time).
-b An empty network with multiple inputs
-Predictions
-come out here.
-weights = [0.1, 0.2, 0]
-def neural_network(input, weights):
-pred = w_sum(input,weights)
-return pred
-.1
-.2
-.0
-win
-loss
-# toes
-# fans
-win?
+
+![](./images_3/15.png)
+
 This new neural network can accept multiple inputs at a time per prediction. This allows the
 network to combine various forms of information to make better-informed decisions. But
 the fundamental mechanism for using weights hasn’t changed. You still take each input and

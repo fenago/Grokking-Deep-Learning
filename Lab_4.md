@@ -16,7 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -41,7 +40,7 @@ light could be correlated with walking.” There’s no way to know. Let’s tak
 
 WALK
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The streetlight problem
 
@@ -74,11 +73,10 @@ As hypothesized, there is a perfect correlation between the middle (crisscross) 
 whether it’s safe to walk. You learned this pattern by observing all the individual datapoints
 and searching for correlation. This is what you’re going to train a neural network to do.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 102
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -110,7 +108,7 @@ To prepare this data for the neural network, you need to first split it into the
 (what you know and what you want to know). Note that you could attempt to go backward
 if you swapped which dataset was in which group. For some problems, this works.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Matrices and the matrix relationship
 
@@ -173,11 +171,10 @@ So, a column contains every state in which a thing was recorded. In this case, a
 contains every on/off state recorded for a particular light. Each row contains the
 simultaneous state of every light at a particular moment in time. Again, this is common.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 104
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -270,7 +267,7 @@ Matrix (B) is valid. It adequately captures the relationships between various tr
 examples (rows) and lights (columns). Note that Matrix A * 10 == Matrix B
 (A * 10 == B). This means these matrices are scalar multiples of each other.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Matrices and the matrix relationship
 
@@ -359,11 +356,10 @@ STOP
 
 0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 106
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -429,7 +425,7 @@ streetlights
 
 walk_vs_stop
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Building a neural network
 
@@ -517,11 +513,10 @@ NumPy makes these operations easy. When you put a + between two vectors, it does
 you expect: it adds the two vectors together. Other than these nice NumPy operators and
 the new dataset, the neural network shown here is the same as the ones built previously.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 108
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -595,7 +590,7 @@ Error:0.962870177672
 Error:0.000614343567483
 Error:0.000533736773285
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Full, batch, and stochastic gradient descent
 
@@ -630,11 +625,10 @@ We’ll discuss this more later in the book, but for now, recognize that the pre
 example created a neural network that can learn the entire streetlights dataset by
 training on each example, one at a time.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 110
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -668,7 +662,7 @@ training example asserts either up pressure or down pressure on the weights. On 
 there was more up pressure for the middle weight and more down pressure for the other
 weights. Where does the pressure come from? Why is it different for different weights?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Up and down pressure
 
@@ -797,11 +791,10 @@ is 0, so that weight won’t be changed. Notice that the far-left weight has two
 one positive, so on average the weight will move toward 0. The middle weight has three
 positives, so on average the weight will move toward 1.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 112
 
-Chapter 6
 
 I Building your first deep neural network
 Weight pressure
@@ -924,7 +917,7 @@ extremely valuable approximation, allowing you to temporarily overlook all the c
 of gradient descent and just remember that learning rewards correlation with larger weights
 (or more generally, learning finds correlation between the two datasets).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Edge case: Overfitting
 
@@ -961,11 +954,10 @@ Key takeaway
 The greatest challenge you’ll face with deep learning is convincing your neural network to
 generalize instead of just memorize. You’ll see this again.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 114
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1089,7 +1081,7 @@ In this case, because the middle weight has consistent signal to absorb all the 
 you want to predict 1 becomes very small, but the error to predict 0 becomes large, pushing
 the middle weight downward.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Edge case: Conflicting pressure
 
@@ -1188,11 +1180,10 @@ pressure because other nodes would start solving for either the positive or nega
 predictions, drawing the balanced node to favor up or down. But in this case, all the inputs
 are equally balanced between positive and negative pressure. What do you do?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 116
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1225,7 +1216,7 @@ Because the input dataset doesn’t correlate with the output dataset, you’ll 
 dataset to create an intermediate dataset that does have correlation with the output. It’s kind
 of like cheating.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Creating correlation
 
@@ -1257,16 +1248,14 @@ in a particular way. Furthermore, gradient descent still works because you can c
 much each weight contributes to the error and adjust it to reduce the error to 0. And that’s
 exactly what you’re going to do.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 118
 
-Chapter 6
 
 I Building your first deep neural network
 
-Stacking neural networks: A review
-Chapter 3 briefly mentioned stacked neural networks.
+Stacking neural networks: A review briefly mentioned stacked neural networks.
 Let’s review.
 When you look at the following architecture, the prediction occurs exactly as you might
 expect when I say, “Stack neural networks.” The output of the first lower network (layer_0
@@ -1294,7 +1283,7 @@ chapter 5, the cached/normalized error measure is called delta. In this case, yo
 to figure out how to know the delta values at layer_1 so they can help layer_2 make
 accurate predictions.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Backpropagation: Long-distance error attribution
 
@@ -1351,13 +1340,12 @@ are actually weighted
 versions of the layer_2
 delta
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 layer_0
 
 120
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1414,7 +1402,7 @@ delta
 
 layer_0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Linear vs. nonlinear
 
@@ -1467,11 +1455,10 @@ the moment) doesn’t give you any more power.
 Two consecutive weighted sums is just a more
 expensive version of one weighted sum.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 122
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1520,7 +1507,7 @@ always be x% correlated to one input and y% correlated to another input. Instead
 x% correlated to one input only when it wants to be, but other times not be correlated at all.
 This is called conditional correlation or sometimes correlation.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The secret to sometimes correlation
 
@@ -1557,11 +1544,10 @@ later). It says, “Without the nonlinearity, two matrix multiplications might a
 explanation, although not the most concise answer, is an intuitive explanation of why you
 need nonlinearities.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 124
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1596,7 +1582,7 @@ Neural networks look for correlation between input and output, and you no longer
 worry about how that happens. You just know it does. Now we’re building on that idea. Let
 yourself relax and trust the things you’ve already learned.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Your first deep neural network
 
@@ -1678,11 +1664,10 @@ layer_1
 weights_0_1
 layer_0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 126
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1740,7 +1725,7 @@ same as in previous pages. The relu2deriv function returns 1 when output > 0; ot
 it returns 0. This is the slope (the derivative) of the relu function. It serves an important
 purpose, as you’ll see in a moment.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Backpropagation in code
 
@@ -1801,13 +1786,12 @@ are actually weighted
 versions of the layer_2
 delta
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 layer_0
 
 128
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -1909,7 +1893,7 @@ layer_2_delta=(layer_2-walk_stop[0:1])
 
 0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 One iteration of backpropagation
 
@@ -2022,11 +2006,10 @@ for layer_1 (weighted by the weights in between them). You then turn off (set to
 that weren’t participating in the forward prediction, because they couldn’t have contributed
 to the error.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 130
 
-Chapter 6
 
 I Building your first deep neural network
 
@@ -2097,7 +2080,7 @@ Error:0.0064670549571
 Error:0.000329266900075
 Error:1.50556226651e-05
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Why do deep networks matter?
 
@@ -2130,9 +2113,9 @@ Toward that end, I must issue the same challenge I did in chapter 5: memorize th
 code. You’ll need to be very familiar with each of the operations in the code in order for the
 following chapters to be readable. Don’t progress past this point until you can build a threelayer neural network from memory!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 how to picture neural networks:
 in your head and on paper
@@ -2168,7 +2151,7 @@ you to give them a clear and convincing voice.
 
 133
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 7
 

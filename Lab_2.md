@@ -15,7 +15,7 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -51,7 +51,7 @@ missed, what direction you missed, or what you should do to fix the error. It mo
 says “big miss,” “little miss,” or “perfect prediction.” What to do about the error is captured
 in the next step, learn.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Learn
 
@@ -67,11 +67,11 @@ At the end of the day, it results in computing a number for each weight. That nu
 represents how that weight should be higher or lower in order to reduce the error. Then
 you’ll move the weight according to that number, and you’ll be finished.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 50
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -129,7 +129,7 @@ ones. Good parents are like this, too: they practically ignore errors if they’
 (breaking the lead on your pencil) but may go nuclear for big errors (crashing the car). See
 why squaring is valuable?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Why measure error?
 
@@ -172,11 +172,11 @@ perfectly, when you missed by 1,000 each time! That would be really bad. Thus, y
 error of each prediction to always be positive so they don’t accidentally cancel each other out
 when you average them.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 52
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -248,7 +248,7 @@ positive by multiplying it
 by itself. Negative error
 wouldn't make sense.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 What’s the simplest form of neural learning?
 
@@ -337,11 +337,11 @@ perfectly). As with all other forms of search, you might not find exactly what y
 for, and even if you do, it may take some time. Next, we’ll use hot and cold learning for a
 slightly more difficult prediction so you can see this searching in action!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 54
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -395,7 +395,7 @@ Error:1.07995057925e-27 Prediction:0.8
 The last step correctly
 predicts 0.8!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Characteristics of hot and cold learning
 
@@ -422,6 +422,8 @@ will eventually overshoot by some number less than step_amount. When it does, it
 start alternating back and forth between each side of goal_prediction. Set step_amount to 0.2
 to see this in action. If you set step_amount to 10, you’ll really break it. When I try this, I see the
 following output. It never remotely comes close to 0.8!
+
+```
 Error:0.3025 Prediction:0.25
 Error:19.8025 Prediction:5.25
 Error:0.3025 Prediction:0.25
@@ -429,6 +431,7 @@ Error:19.8025 Prediction:5.25
 Error:0.3025 Prediction:0.25
 ....
 .... repeating infinitely...
+```
 
 The real problem is that even though you know the correct direction to move weight, you don’t know
 the correct amount. Instead, you pick a fixed one at random (step_amount). Furthermore, this amount
@@ -438,11 +441,11 @@ step_ amount is arbitrary, which can prevent you from learning the correct weigh
 What if you had a way to compute both direction and amount for each weight without having to
 repeatedly make predictions?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 56
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -497,7 +500,7 @@ amount you want to change weight. They do so by addressing three major edge case
 
 where the pure error isn’t sufficient to make a good modification to weight.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Calculating both direction and amount from error
 
@@ -543,17 +546,18 @@ Next, you’ll see it in its more native environment. Some terminology will be d
 code it in a way that makes it more obviously applicable to other kinds of networks (such as
 those with multiple inputs and outputs).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 57
 
 58
 
-Chapter 4
+
 
 I Introduction to neural learning
 
-One iteration of gradient descent
+<span style="color:red;"> One iteration of gradient descent</span>
+
 This performs a weight update on a single training example
 (input->true) pair.
 b
@@ -633,7 +637,7 @@ delta = pred - goal_pred
 delta is a measurement of how much this node missed. The true prediction is 1.0, and the
 network’s prediction was 0.85, so the network was too low by 0.15. Thus, delta is negative 0.15.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 One iteration of gradient descent
 
@@ -699,15 +703,15 @@ lets you control how fast the network learns. If it learns too fast, it can upda
 aggressively and overshoot. (More on this later.) Note that the weight update made the same
 change (small increase) as hot and cold learning.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 60
 
-Chapter 4
+
 
 I Introduction to neural learning
 
-Learning is just reducing error
+## Learning is just reducing error
 You can modify weight to reduce error.
 Putting together the code from the previous pages, we now have the following:
 weight, goal_pred, input = (0.0, 0.8, 0.5)
@@ -738,7 +742,7 @@ computes error directly. Remember that input and goal_prediction are fixed at 0.
 variables names with the values, the secret becomes clear:
 error = ((0.5 * weight) - 0.8) ** 2
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Learning is just reducing error
 
@@ -766,11 +770,11 @@ Key takeaway
 The slope points to the bottom of the bowl (lowest error) no matter where you are in the
 bowl. You can use this slope to help the neural network reduce the error.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 62
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -832,7 +836,7 @@ c
 
 weight = 0.88
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Let’s watch several steps of learning
 
@@ -892,11 +896,11 @@ Delta:-0.03528 Weight Delta:-0.038808
 Error:5.489031744e-05 Prediction:0.8074088
 Delta:0.0074088 Weight Delta:0.00814968
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 64
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -933,7 +937,7 @@ changing how you calculate error in the first place. The error calculation is me
 it doesn’t actually give a good measure of how much you missed (with the right properties
 mentioned a few pages ago). This won’t do, either.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Why does this work? What is weight_delta, really?
 
@@ -968,11 +972,11 @@ Now that you know what you’re allowed to change, how do you go about doing the
 That’s the good stuff. That’s the machine learning, right? In the next section, we’re going to talk
 about exactly that.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 66
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1013,7 +1017,7 @@ This formula is the exact relationship between these two variables, and now you�
 figure out how to change one variable to move the other variable in a particular direction.
 As it turns out, there’s a method for doing this for any formula. You’ll use it to reduce error.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 A box with rods poking out of it
 
@@ -1053,11 +1057,11 @@ opposite direction by the same amount. Thus, given a function, the derivative re
 direction and the amount that one variable changes if you change the other variable. This is
 exactly what we were looking for.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 68
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1116,7 +1120,7 @@ Slope
 
 weight
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 What you really need to know
 
@@ -1157,11 +1161,11 @@ sensitivity (when they move in opposite directions), and zero sensitivity (when 
 regardless of what you do to the other). For example, y = 0 * x. Move x, and y is always 0.
 Enough about derivatives. Let’s get back to gradient descent.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 70
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1217,7 +1221,7 @@ seem intuitive. You move the weight value opposite the gradient value, which red
 0. By opposite, I mean you increase the weight when you have a negative gradient, and vice versa.
 It’s like gravity.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Look familiar?
 
@@ -1286,11 +1290,11 @@ c
 
 weight = 0.88
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 72
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1343,7 +1347,7 @@ positive and negative to positive, getting farther away from the true answer at 
 other words, every update to the weight overcorrects. In the next section, you’ll learn more
 about how to combat this phenomenon.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Visualizing the overcorrections
 
@@ -1412,11 +1416,11 @@ d
 
 weight = 1.3
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 74
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1451,7 +1455,7 @@ input is huge, small changes in the weight will cause changes in the prediction.
 very sensitive to the weight. In other words, the derivative is really big. How do you make
 it smaller?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Introducing alpha
 
@@ -1478,11 +1482,11 @@ alpha is too high, and you decrease it. If learning is happening too slowly, the
 is too low, and you increase it. There are other methods than simple gradient descent
 that attempt to counter for this, but gradient descent is still very popular.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 76
 
-Chapter 4
+
 
 I Introduction to neural learning
 
@@ -1532,7 +1536,7 @@ magnitude of alpha (10, 1, 0.1, 0.01, 0.001, 0.0001) and then tweak it from ther
 works best. It’s more art than science. There are more advanced ways to get to later, but for
 now, try various alphas until you get one that seems to work pretty well. Play with it.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Memorizing
 

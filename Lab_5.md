@@ -17,7 +17,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -54,7 +53,7 @@ To begin, go ahead and train the network, as shown next. You should see the same
 as those listed. Alas, the network learned to perfectly predict the training data. Should
 we celebrate?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Three-layer network on MNIST
 
@@ -107,11 +106,10 @@ sys.stdout.write("\r"+ \
 ....
 I:349 Error:0.108 Correct:1.0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 148
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -153,7 +151,7 @@ data the network was not trained on. This number is important because it simulat
 well the neural network will perform if you try to use it in the real world (which gives the
 network only images it hasn’t seen before). This is the score that matters.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Memorization vs. generalization
 
@@ -208,11 +206,10 @@ I:330 Train-Err:0.110 Train-Acc:0.999 Test-Err:0.637 Test-Acc:0.7125
 I:340 Train-Err:0.109 Train-Acc:1.0 Test-Err:0.645 Test-Acc:0.71
 I:349 Train-Err:0.108 Train-Acc:1.0 Test-Err:0.653 Test-Acc:0.7073
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 150
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -247,7 +244,7 @@ network to fail on many of the testing examples.
 A more official definition of a neural network that overfits is a neural network that has
 learned the noise in the dataset instead of making decisions based only on the true signal.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Where overfitting comes from
 
@@ -278,11 +275,10 @@ the noise (other stuff irrelevant to the classification)? One way is early stopp
 a large amount of noise comes in the fine-grained detail of an image, and most of the signal
 (for objects) is found in the general shape and perhaps color of the image.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 152
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -311,7 +307,7 @@ second test dataset called a validation set. In some circumstances, if you used 
 knowing when to stop, you could overfit to the test set. As a general rule, you don’t use it to
 control training. You use a validation set instead.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Industry standard regularization: Dropout
 
@@ -351,11 +347,10 @@ behaves like a small neural network. But when you do this randomly over potentia
 millions of different subnetworks, the sum total of the entire network still maintains its
 expressive power. Neat, eh?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 154
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -390,7 +385,7 @@ each tend to latch onto different noise but similar broad signal. Thus, when the
 mistakes, they will often make differing mistakes. If you allowed them to vote equally, their
 noise would tend to cancel out, revealing only what they all learned in common: the signal.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Dropout in code
 
@@ -433,11 +428,10 @@ by multiplying layer_1 by (1 / the percentage of turned on nodes). In this case,
 which equals 2. This way, the volume of layer_1 is the same between training and testing,
 despite dropout.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 156
 
-Chapter 8
 
 import numpy, sys
 np.random.seed(1)
@@ -500,7 +494,7 @@ np.argmax(test_labels[i:i+1]))
 						
 " Train-Acc:" + str(correct_cnt/ float(len(images))))
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Dropout evaluated on MNIST
 
@@ -549,11 +543,10 @@ network to train on the training data. It’s like running a marathon with weigh
 legs. It’s harder to train, but when you take off the weights for the big race, you end up
 running quite a bit faster because you trained for something that was much more difficult.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 158
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -605,7 +598,7 @@ weight update consistently creates this kind of phenomenon during training. As i
 individual training examples are very noisy in terms of the weight updates they generate.
 Thus, averaging them makes for a smoother learning process.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Batch gradient descent
 
@@ -659,11 +652,10 @@ layer_0 = test_images[i:i+1]
 layer_1 = relu(np.dot(layer_0,weights_0_1))
 layer_2 = np.dot(layer_1, weights_1_2)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 160
 
-Chapter 8
 
 I Learning signal and ignoring noise
 
@@ -686,7 +678,7 @@ and training speed of almost any neural architecture. In the following chapters,
 from sets of tools that are universally applicable to nearly all neural networks, to specialpurpose architectures that are advantageous for modeling specific types of phenomena
 in data.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 modeling probabilities and nonlinearities:
 activation functions
@@ -720,7 +712,7 @@ November 10, 1813
 
 161
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 9
 

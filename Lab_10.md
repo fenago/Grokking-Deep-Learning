@@ -16,7 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 32
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -57,7 +56,7 @@ taking care of backpropagation and weight updates automatically. Most frameworks
 make the forward propagation code easier by providing high-level interfaces to common
 layers and loss functions.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Introduction to tensors
 
@@ -99,11 +98,10 @@ information in a NumPy array (self.data), and it supports one tensor operation
 (addition). Adding more operations is relatively simple: create more functions on the tensor
 class with the appropriate functionality.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 234
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -146,7 +144,7 @@ This method introduces two new concepts. First, each tensor gets two new attribu
 creators is a list containing any tensors used in the creation of the current tensor (which
 defaults to None). Thus, when the two tensors x and y are added together, z has two
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Introduction to automatic gradient computation (autograd)
 
@@ -199,11 +197,10 @@ print(a.grad)
 Output
 [1 1 1 1 1]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 236
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -243,7 +240,7 @@ training as it should (even if it appears to be training somewhat).
 All that is to say, really dive into this chapter. You’ll be glad you did when it’s 2:00 a.m. and
 you’re chasing down an optimization bug that’s keeping you from getting that juicy state-ofthe-art score.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Tensors that are used multiple times
 
@@ -298,11 +295,10 @@ But the current implementation of Tensor merely overwrites each derivative with 
 previous. First, d applies its gradient, and then it gets overwritten with the gradient from e.
 We need to change the way gradients are written.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 238
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -368,7 +364,7 @@ if(self.creators is not None and
 (self.all_children_grads_accounted_for() or
 grad_origin is None)):
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Accumulates
 gradients
@@ -424,11 +420,10 @@ neural networks in a standard framework. Before moving on, take a moment to play
 and get familiar with this code. Try deleting different parts and seeing how it breaks in
 various ways. Try calling .backprop() twice.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 240
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -472,7 +467,7 @@ for that variable (for self.creators[0] or self.creators[1], respectively). Also
 first line of __add__() that the tensor created (which is later the tensor running.backward())
 has self.autograd == True only if self.autograd == other.autograd == True.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Adding support for negation
 
@@ -515,11 +510,10 @@ have a flipped sign as well. Furthermore, you don’t have to change anything ab
 general backpropagation system to make this work. You can create new functions as you
 need them. Let’s add some more!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 242
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -569,7 +563,7 @@ creators=[self],
 creation_op="transpose")
 return Tensor(self.data.transpose())
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Adding support for additional functions
 
@@ -630,11 +624,10 @@ array([[[1, 1, 1, 1],
 Thus, when you perform .sum(dim=1) on a tensor with four entries in that dimension, you
 need to perform .expand(dim=1, copies=4) to the gradient when you backpropagate it.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 244
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -691,7 +684,7 @@ In the following image, this happens at the line layer_1_delta=layer_2_delta.dot
 (highlighted in bold). You’re doing the exact same operations as before (in reverse order of
 forward propagation), but the code is better organized.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Adding support for additional functions
 
@@ -798,11 +791,10 @@ weight_delta_0_1 = layer_0.T.dot(layer_1_delta)
 weights_1_2 -= alpha * weight_delta_1_2
 weights_0_1 -= alpha * weight_delta_0_1
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 246
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -857,7 +849,7 @@ You have to forward propagate in such a way that layer_1, layer_2, and diff exis
 variables, because you need them later. You then have to backpropagate each gradient to its
 appropriate weight matrix and perform the weight update appropriately.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Using autograd to train a neural network
 
@@ -910,11 +902,10 @@ weight update. This is a bit of foreshadowing for the next piece of functionalit
 have an autograd system, stochastic gradient descent becomes trivial to implement (it’s just
 that for loop at the end). Let’s try making this its own class as well.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 248
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -957,7 +948,7 @@ loss = ((pred - target)*(pred - target)).sum(0)
 loss.backward(Tensor(np.ones_like(loss.data)))
 optim.step()
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Learn
 
@@ -998,11 +989,10 @@ more-complicated layer types (such as layers containing other layers). All you n
 override get_parameters() to control what tensors are later passed to the optimizer (such
 as the SGD class created in the previous section).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 250
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1044,7 +1034,7 @@ print(loss)
 
 Learn
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Loss-function layers
 
@@ -1092,11 +1082,10 @@ last several code examples all do the exact same computation. It’s just that a
 all the backpropagation, and the forward propagation steps are packaged in nice classes to
 ensure that the functionality executes in the correct order.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 252
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1129,7 +1118,7 @@ One more thing before we move on. I’m adding a nice convenience function to
 Tensor.backward() that makes it so you don’t have to pass in a gradient of 1s the first time
 you call .backward(). It’s not, strictly speaking, necessary—but it’s handy.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Nonlinearity layers
 
@@ -1177,11 +1166,10 @@ super().__init__()
 def forward(self, input):
 return input.sigmoid()
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 254
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1228,7 +1216,7 @@ need three new layer types: an embedding layer that learns word embeddings, an R
 layer that can learn to model sequences of inputs, and a softmax layer that can predict a
 probability distribution over labels.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The embedding layer
 
@@ -1350,11 +1338,10 @@ Notice how, when you pass a matrix of integers into a NumPy matrix, it returns t
 matrix, but with each integer replaced with the row the integer specified. Thus a 2D matrix
 of indices turns into a 3D matrix of embeddings (rows). This is perfect!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 256
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1412,7 +1399,7 @@ print(x.grad)
 2.
 1.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 0.
 1.
@@ -1490,11 +1477,10 @@ the prediction 0 and 1. In theory, indices 1 and 2 could correspond to
 words (or some other input object), and in the final example, they will.
 This example was to show the embedding working.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 258
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1533,7 +1519,7 @@ super().__init__()
 def forward(self, input, target):
 return input.cross_entropy(target)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The cross-entropy layer
 
@@ -1586,11 +1572,10 @@ the gradient of softmax and negative log likelihood together in a cross-entropy 
 than to forward propagate and backpropagate them separately in two different modules.
 This has to do with a shortcut in the gradient math.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 260
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1635,7 +1620,7 @@ variable to the forward function. RNNs also have several different weight matric
 that maps input vectors to hidden vectors (processing input data), one that maps from
 hidden to hidden (which updates each hidden vector based on the previous), and optionally
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The recurrent neural network layer
 
@@ -1684,11 +1669,10 @@ idx.append(word2index[w])
 indices.append(idx)
 data = np.array(indices)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 262
 
-Chapter 13
 
 I Introducing automatic optimization
 
@@ -1739,7 +1723,7 @@ Loss:
 0.13845863915406884 % Correct: 0.37
 0.135574472565278 % Correct: 0.37
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Summary
 
@@ -1780,9 +1764,9 @@ The framework that’s most similar to the one built here is PyTorch, and I high
 recommend diving into it when you complete this book. It will likely be the framework
 that feels most familiar.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 learning to write like Shakespeare:
 long short-term memory
@@ -1814,7 +1798,7 @@ A Midsummer Night’s Dream
 
 265
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 14
 

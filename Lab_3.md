@@ -17,7 +17,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -106,7 +105,7 @@ delta
 
 delta = pred - true
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Gradient descent learning with multiple inputs
 
@@ -189,11 +188,10 @@ print("Weight Deltas:" + str(weight_deltas))
 0.2 - (-.091 * 0.01) = 0.2009 = weights[1]
 -0.1 - (-.168 * 0.01) = -0.098 = weights[2]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 82
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -273,7 +271,7 @@ a prediction and calculate error and delta in identical ways. But the following 
 remains: when you had only one weight, you had only one input (one weight_delta to
 generate). Now you have three. How do you generate three weight_deltas?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Gradient descent with multiple inputs explained
 
@@ -337,11 +335,10 @@ each weight_delta is a sort of input-modified version of delta.
 This brings us back to the original question: how do you turn one (node) delta into three
 weight_delta values? Well, because each weight has a unique input and a shared delta, you
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 84
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -418,7 +415,7 @@ weight_deltas = ele_mul(delta,input)
 0.65 * 0.14 = –.09 => weight_deltas[1]
 1.2 * 0.14 = –.17 => weight_deltas[2]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Gradient descent with multiple inputs explained
 
@@ -489,11 +486,10 @@ The last step is also nearly identical to the single-input network. Once you hav
 weight_delta values, you multiply them by alpha and subtract them from the weights. It’s
 literally the same process as before, repeated across multiple weights instead of a single one.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 86
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -589,7 +585,7 @@ steeper than the others. Why is weight_delta steeper for a than the others if th
 same output delta and error measure? Because a has an input value that’s significantly
 higher than the others and thus, a higher derivative.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Let’s watch several steps of learning
 
@@ -698,11 +694,10 @@ encourage learning across all weights despite dataset characteristics such as th
 significant difference in slope forced me to set alpha lower than I wanted (0.01 instead of
 0.1). Try setting alpha to 0.1: do you see how a causes it to diverge?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 88
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -798,7 +793,7 @@ for iter in range(3):
 
 weight
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Freezing one weight: What does it do?
 
@@ -890,11 +885,10 @@ lowest point on this big error plane, where the lowest point refers to the lowes
 Interesting, eh? We’ll come back to this idea later, so file it away for now.
 error
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 90
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -986,7 +980,7 @@ for i in range(len(true)):
 		 error[i] = (pred[i] - true[i]) ** 2
 		 delta[i] = pred[i] - true[i]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Gradient descent learning with multiple outputs
 
@@ -1097,11 +1091,10 @@ for i in range(len(weights)):
 print("Weights:" + str(weights))
 print("Weight Deltas:" + str(weight_deltas))
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 92
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -1216,7 +1209,7 @@ for i in range(len(true)):
 		 error[i] = (pred[i] - true[i]) ** 2
 		 delta = pred[i] - true[i]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Gradient descent with multiple inputs and outputs
 
@@ -1330,11 +1323,10 @@ weights[i][j] -= alpha * \
 							
 weight_deltas[i][j]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 94
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -1372,7 +1364,7 @@ images into a vector of 1 × 784. You’ll take the first row of pixels and conc
 with the second row, and the third row, and so on, until you have one list of pixels per
 image (784 pixels long).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 What do these weights learn?
 
@@ -1459,11 +1451,10 @@ Over the course of training, the network will adjust the weights between the inp
 prediction nodes so that error falls toward 0 in training. But what does this do? What does it
 mean to modify a bunch of weights to learn a pattern in aggregate?
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 96
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -1560,7 +1551,7 @@ knows the shape of a 2 and of a 1.
 Why does it turn out this way? This takes us back to the lesson on dot products. Let’s have a
 quick review.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Visualizing dot products (weighted sums)
 
@@ -1603,11 +1594,10 @@ Predictions
 
 0.01
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 98
 
-Chapter 5
 
 I Learning multiple weights at a time
 
@@ -1619,4 +1609,3 @@ function and a delta, gradient descent can show you how to move the weights to r
 error. We’ll spend the rest of this book exploring different types of weight combinations and
 error functions for which gradient descent is useful. The next chapter is no exception.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>

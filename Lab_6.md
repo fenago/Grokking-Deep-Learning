@@ -15,7 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -71,7 +70,7 @@ x (input)
 
 x (input)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 What is an activation function?
 
@@ -114,11 +113,10 @@ theoretically make progress.”
 Unfortunately, the phenomenon the pessimist identified is more important. For an advanced
 study of this subject, look more into convex versus non-convex optimization; many
 universities (and online classes) have entire courses dedicated to these kinds of questions.
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 164
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -159,7 +157,7 @@ so you don’t want it to be too slow to compute. Many recent activation functio
 become popular because they’re so easy to compute at the expense of their expressiveness
 (relu is a great example of this).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Standard hidden-layer activation functions
 
@@ -203,11 +201,10 @@ sigmoid in hidden layers.
 
 (Image: Wolfram Alpha)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 166
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -246,7 +243,7 @@ greatly from problem to problem, but it’s good to keep in mind.
 In these instances, it’s best to use the sigmoid activation function, because it models
 individual probabilities separately for each output node.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Standard output layer activation functions
 
@@ -392,11 +389,10 @@ else. Where softmax asks, “Which digit seems like the best fit for this input?
 “You better believe that it’s only digit 9 and doesn’t have anything in common with the other
 MNIST digits.”
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 168
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -440,7 +436,7 @@ also nice that a softmax’s probabilities always sum to 1. You can interpret an
 prediction as a global probability that the prediction is a particular label. softmax works
 better in both theory and practice.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 softmax computation
 
@@ -583,11 +579,10 @@ To adjust how aggressively it does this, use numbers slightly higher or lower th
 exponentiating. Lower numbers will result in lower attenuation, and higher numbers will
 result in higher attenuation. But most people just stick with e.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 170
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -636,7 +631,7 @@ change in its input.
 
 x (input)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Activation installation instructions
 
@@ -685,11 +680,10 @@ any effect. Remember, the end goal is to adjust weights to reduce error. This st
 the network to leave weights alone if adjusting them will have little to no effect. It does so by
 multiplying it by the slope. It’s no different for sigmoid.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 172
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -740,7 +734,7 @@ a lot in one direction (for similar training examples) confidently predict a hig
 value. These nonlinearities help make it harder for occasional erroneous training examples
 to corrupt intelligence that has been reinforced many times.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Converting output to slope (derivative)
 
@@ -803,11 +797,10 @@ Note that the delta computation for softmax is special because it’s used only 
 layer. There’s a bit more going on (theoretically) than we have time to discuss here. For now,
 let’s install some better activation functions in the MNIST classification network.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 174
 
-Chapter 9
 
 I Modeling probabilities and nonlinearities
 
@@ -852,7 +845,7 @@ def softmax(x):
 temp = np.exp(x)
 return temp / np.sum(temp, axis=1, keepdims=True)
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Upgrading the MNIST network
 
@@ -943,9 +936,9 @@ Test-Acc:0.8703 Train-Acc:0.951
 Test-Acc:0.8699 Train-Acc:0.949
 Test-Acc:0.8701 Train-Acc:0.94
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 neural learning about edges and corners:
 intro to convolutional neural networks
@@ -966,7 +959,7 @@ so well is a disaster.
 
 177
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 10
 

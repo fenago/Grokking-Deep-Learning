@@ -16,7 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -62,7 +61,7 @@ fact that three-quarters of the words are the same, in the same order. Although 
 approach shows some promise, it’s far from ideal in terms of representing the meaning of a
 sentence in a useful way (a way that can be compared with other vectors).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Do comparisons really matter?
 
@@ -122,12 +121,11 @@ might perceive to be complex relationships between words. Before moving on, I th
 be extremely beneficial to take the word embeddings from chapter 11 and play around with
 the average strategy.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 212
 
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -196,7 +194,7 @@ between the two words “boring” and “awful,” you receive back three very 
 There appears to be interesting statistical information within these vectors, such that
 negative and positive embeddings cluster together.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Tokenized
 reviews
@@ -258,11 +256,10 @@ different positions convey meaning (as discussed in chapter 11). When you take a
 curve over the words in a sentence, the most dominant meanings of the sentence hold true,
 and the noise created by any particular word gets averaged away.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 214
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -302,7 +299,7 @@ sentence vectors can be useful, because the sentence vector will retain the most
 patterns present across the word vectors being summed (such as the negative spike in the
 previous section).
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The limitations of bag-of-words vectors
 
@@ -343,7 +340,7 @@ purpose: performing vector-matrix multiplication with any vector will
 return the original vector. If I multiply the vector [3,5] by the top
 identity matrix, the result will be [3,5].
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 [1,0]
 [0,1]
@@ -357,7 +354,6 @@ Licensed to Ernesto Lee <socrates73@gmail.com>
 
 216
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -432,7 +428,7 @@ Yes, this is wasteful computation, but that’s about to change. The main thing 
 here is that if the matrices used were any matrix other than the identity matrix, changing the
 order of the words would change the resulting embedding. Let’s see this in Python.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Matrices that change absolutely nothing
 
@@ -506,11 +502,10 @@ No other matrix has this guarantee.
 
 17.]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 218
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -556,7 +551,7 @@ network
 
 ["great"]
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Learning to create useful sentence vectors
 
@@ -642,11 +637,10 @@ be reused to transition from “Sox” -> “defeat.” Whatever logic the netwo
 transition will be reused in the next, and only logic that’s useful at every predictive step will
 be allowed to be learned in the network.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 220
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -711,7 +705,7 @@ all vocabulary
 
 0.11111111
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 0.11111111
 
@@ -767,7 +761,7 @@ identity -= np.outer(layer_0,layer_1_delta) * alpha
 identity -= np.outer(layer_1,layer_2_delta) * alpha
 sent2output -= np.outer(layer_2,pred_delta) * alpha
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Can ignore the “1”
 as in chapter 11
@@ -776,7 +770,6 @@ ignore the “1”
 
 222
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -813,7 +806,7 @@ For now, you’ll train the network to attempt to finish each sentence when give
 starting words. Along the way, you’ll see the importance of allowing the recurrent matrix
 (previously the identity matrix) to learn.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Setting things up
 
@@ -879,11 +872,10 @@ One-hot lookups
 Embedding ->
 output weights
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 224
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -935,7 +927,7 @@ going on in each part of this list, because if it’s unfamiliar to you in the f
 pass, it will be very difficult to know what’s going on during the backpropagation and weight
 update steps.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Backpropagation with arbitrary length
 
@@ -992,11 +984,10 @@ can make it seem a bit foreign at first. Spend some time linking what’s writte
 back to each line of the “Red Sox defeat Yankees” example, and you should be ready for the
 next section and updating the weights using the gradients you backpropagated.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 226
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -1051,7 +1042,7 @@ layer['hidden_delta']) * alpha / float(len(sent))
 if(iter % 1000 == 0):
 print("Perplexity:" + str(np.exp(loss/len(sent))))
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Execution and output analysis
 
@@ -1096,11 +1087,10 @@ useful because it gives a sense for the kinds of characteristics the model takes
 kinds of things does it get right? What kinds of mistakes does it make? You’ll see in the
 next section.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 228
 
-Chapter 12
 
 I Neural networks that write like Shakespeare
 
@@ -1166,7 +1156,7 @@ perfectly. After all, if I gave you the words “sandra moved to the,” could y
 correct next word? More context is needed to solve this task, but the fact that it’s unsolvable,
 in my opinion, creates educational analysis for the ways in which it fails.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Summary
 
@@ -1199,9 +1189,9 @@ And with that, let’s dive into LSTMs!
 * See, for example, “Frustratingly Short Attention Spans in Neural Language Modeling” by Michał Daniluk et al. (paper presented at
 ICLR 2017), https://arxiv.org/abs/1702.04521.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 introducing automatic optimization:
 let’s build a deep learning framework
@@ -1250,7 +1240,7 @@ with appropriate respect.
 
 231
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 13
 

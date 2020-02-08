@@ -1,12 +1,10 @@
 
-Chapter 7
 
 I How to picture neural networks
 
 It’s time to simplify
 It’s impractical to think about everything all the time.
-Mental tools can help.
-Chapter 6 finished with a code example that was quite impressive. Just the neural network
+Mental tools can help. Chapter 6 finished with a code example that was quite impressive. Just the neural network
 contained 35 lines of incredibly dense code. Reading through it, it’s clear there’s a lot going
 on; and that code includes over 100 pages of concepts that, when combined, can predict
 whether it’s safe to cross the street.
@@ -37,7 +35,7 @@ Holding onto this idea of correlation instead of the previous smaller ideas is i
 to learning deep learning. Otherwise, it would be easy to become overwhelmed with the
 complexity of neural networks. Let’s create a name for this idea: the correlation summarization.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Correlation summarization
 
@@ -75,11 +73,10 @@ signal.” It’s like a giant game of telephone—at the end of the game, every
 of its neurons need to be higher and lower, and the local correlation summarization takes
 over, updating the weights accordingly.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 136
 
-Chapter 7
 
 I How to picture neural networks
 
@@ -132,7 +129,7 @@ layer_1
 
 weights_0_1
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 layer_0
 
@@ -193,11 +190,10 @@ everything that went into it. But
 we aren’t finished: we can simplify
 even further.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 138
 
-Chapter 7
 
 I How to picture neural networks
 
@@ -247,7 +243,7 @@ Much of the research into neural networks is about finding new architectures tha
 correlation faster and generalize better to unseen data. We’ll spend the vast majority of the
 rest of this book discussing new architectures.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 Let’s see this network predict
 
@@ -316,7 +312,7 @@ the matrix has four columns, four weighted sums will be
 generated. The weightings of each sum are performed
 depending on the values of the matrix.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 weights_1_2
 .5
@@ -337,7 +333,6 @@ weights_0_1
 140
 
 
-Chapter 7
 
 I How to picture neural networks
 
@@ -390,7 +385,7 @@ W0
 
 weights_0_1
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 l0
 
@@ -439,11 +434,10 @@ l2 = relu(l0W0)W1
 formula is the assumption that the vectors and matrices
 have the right dimensions.
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 142
 
-Chapter 7
 
 I How to picture neural networks
 
@@ -474,7 +468,7 @@ weights_0_1
 
 layer_0
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 The importance of visualization tools
 
@@ -503,9 +497,9 @@ because of their ability to locate certain types of correlations. So, for the ne
 we’ll explore how to modify neural networks to specifically find the correlation you’re
 looking for. See you there!
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
+
 
 learning signal and ignoring noise:
 introduction to regularization and batching
@@ -524,7 +518,7 @@ computer scientist, and polymath
 
 145
 
-Licensed to Ernesto Lee <socrates73@gmail.com>
+
 
 8
 
