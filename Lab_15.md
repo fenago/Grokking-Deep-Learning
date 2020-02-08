@@ -1,544 +1,531 @@
 
-fundamental concepts:
-how do machines learn?
+Chapter 7
 
-In this chapter
-•	
+I How to picture neural networks
 
-What are deep learning, machine learning, and
-artificial intelligence?
+It’s time to simplify
+It’s impractical to think about everything all the time.
+Mental tools can help.
+Chapter 6 finished with a code example that was quite impressive. Just the neural network
+contained 35 lines of incredibly dense code. Reading through it, it’s clear there’s a lot going
+on; and that code includes over 100 pages of concepts that, when combined, can predict
+whether it’s safe to cross the street.
+I hope you’re continuing to rebuild these examples from memory in each chapter. As
+the examples get larger, this exercise becomes less about remembering specific letters
+of code and more about remembering concepts and then rebuilding the code based on
+those concepts.
+In this chapter, this construction of efficient concepts in your mind is exactly what I want
+to talk about. Even though it’s not an architecture or experiment, it’s perhaps the most
+important value I can give you. In this case, I want to show how I summarize all the little
+lessons in an efficient way in my mind so that I can do things like build new architectures,
+debug experiments, and use an architecture on new problems and new datasets.
 
-•	
-
-What are parametric models and nonparametric
-models?
-
-•	
-
-What are supervised learning and unsupervised
-learning?
-
-•	
-
-How can machines learn?
-
-Machine learning will cause every successful IPO win
-in five years.
-—Eric Schmidt, Google executive chairman, keynote
-speech, Cloud Computing Platform conference, 2016
-
-9
-
-Licensed to Ernesto Lee <socrates73@gmail.com>
-
-2
-
-10
-
-Chapter 2
-
-I Fundamental concepts
-
-What is deep learning?
-Deep learning is a subset of methods for machine learning.
-Deep learning is a subset of machine learning, which is a field dedicated to the study and
-development of machines that can learn (sometimes with the goal of eventually attaining
-general artificial intelligence).
-In industry, deep learning is used to solve practical tasks in a variety of fields such as
-computer vision (image), natural language processing (text), and automatic speech
-recognition (audio). In short, deep learning is a subset of methods in the machine learning
-toolbox, primarily using artificial neural networks, which are a class of algorithm loosely
-inspired by the human brain.
-
-Machine
-learning
-
-Deep
-learning
-Artificial
-intelligence
-
-Notice in this figure that not all of deep learning is focused around pursuing generalized
-artificial intelligence (sentient machines as in the movies). Many applications of this
-technology are used to solve a wide variety of problems in industry. This book seeks to
-focus on teaching the fundamentals of deep learning behind both cutting-edge research and
-industry, helping to prepare you for either.
+Let’s start by reviewing the concepts you’ve learned so far.
+This book began with small lessons and then built layers of abstraction on top of them.
+We began by talking about the ideas behind machine learning in general. Then we
+progressed to how individual linear nodes (or neurons) learned, followed by horizontal
+groups of neurons (layers) and then vertical groups (stacks of layers). Along the way,
+we discussed how learning is actually just reducing error to 0, and we used calculus
+to discover how to change each weight in the network to help move the error in the
+direction of 0.
+Next, we discussed how neural networks search for (and sometimes create) correlation
+between the input and output datasets. This last idea allowed us to overlook the
+previous lessons on how individual neurons behaved because it concisely summarizes
+the previous lessons. The sum total of the neurons, gradients, stacks of layers, and so on
+lead to a single idea: neural networks find and create correlation.
+Holding onto this idea of correlation instead of the previous smaller ideas is important
+to learning deep learning. Otherwise, it would be easy to become overwhelmed with the
+complexity of neural networks. Let’s create a name for this idea: the correlation summarization.
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-What is machine learning?
+Correlation summarization
 
-11
+135
 
-What is machine learning?
-A field of study that gives computers the ability to learn without being
-explicitly programmed.
-			
-—Attributed to Arthur Samuel
+Correlation summarization
+This is the key to sanely moving forward to more advanced
+neural networks.
+Correlation summarization
+Neural networks seek to find direct and indirect correlation between an input layer and
+an output layer, which are determined by the input and output datasets, respectively.
 
-Given that deep learning is a subset of machine learning, what is machine learning? Most
-generally, it is what its name implies. Machine learning is a subfield of computer science
-wherein machines learn to perform tasks for which they were not explicitly programmed.
-In short, machines observe a pattern and attempt to imitate it in some way that can be either
-direct or indirect.
-Machine
-learning
+At the 10,000-foot level, this is what all neural networks do. Given that a neural network is
+really just a series of matrices connected by layers, let’s zoom in slightly and consider what
+any particular weight matrix is doing.
+Local correlation summarization
+Any given set of weights optimizes to learn how to correlate its input layer with what the
+output layer says it should be.
 
-~=
+When you have only two layers (input and output), the weight matrix knows what the
+output layer says it should be based on the output dataset. It looks for correlation between
+the input and output datasets because they’re captured in the input and output layers. But
+this becomes more nuanced when you have multiple layers, remember?
+Global correlation summarization
+What an earlier layer says it should be can be determined by taking what a later layer says it
+should be and multiplying it by the weights in between them. This way, later layers can tell
+earlier layers what kind of signal they need, to ultimately find correlation with the output. This
+cross-communication is called backpropagation.
 
-Monkey see,
-monkey do
-
-I mention direct and indirect imitation as a parallel to the two main types of machine
-learning: supervised and unsupervised. Supervised machine learning is the direct imitation
-of a pattern between two datasets. It’s always attempting to take an input dataset and
-transform it into an output dataset. This can be an incredibly powerful and useful capability.
-Consider the following examples (input datasets in bold and output datasets in italic):
-•	 Using the pixels of an image to detect the presence or absence of a cat
-•	 Using the movies you’ve liked to predict more movies you may like
-•	 Using someone’s words to predict whether they’re happy or sad
-•	 Using weather sensor data to predict the probability of rain
-•	 Using car engine sensors to predict the optimal tuning settings
-•	 Using news data to predict tomorrow’s stock price
-•	 Using an input number to predict a number double its size
-•	 Using a raw audio file to predict a transcript of the audio
-These are all supervised machine learning tasks. In all cases, the machine learning algorithm
-is attempting to imitate the pattern between the two datasets in such a way that it can use
-one dataset to predict the other. For any of these examples, imagine if you had the power to
-predict the output dataset given only the input dataset. Such an ability would be profound.
+When global correlation teaches each layer what it should be, local correlation can optimize
+weights locally. When a neuron in the final layer says, “I need to be a little higher,” it then
+proceeds to tell all the neurons in the layer immediately preceding it, “Hey, previous layer,
+send me higher signal.” They then tell the neurons preceding them, “Hey. Send us higher
+signal.” It’s like a giant game of telephone—at the end of the game, every layer knows which
+of its neurons need to be higher and lower, and the local correlation summarization takes
+over, updating the weights accordingly.
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-12
+136
 
-Chapter 2
+Chapter 7
 
-I Fundamental concepts
+I How to picture neural networks
 
-Supervised machine learning
-Supervised learning transforms datasets.
-Supervised learning is a method for transforming one dataset into another. For example, if
-you had a dataset called Monday Stock Prices that recorded the price of every stock on every
-Monday for the past 10 years, and a second dataset called Tuesday Stock Prices recorded
-over the same time period, a supervised learning algorithm might try to use one to predict
-the other.
-Monday
-stock prices
+The previously overcomplicated visualization
+While simplifying the mental picture, let’s simplify the
+visualization as well.
+At this point, I expect the visualization of neural networks in your head is something like
+the picture shown here (because that’s the one we used). The input dataset is in layer_0,
+connected by a weight matrix (a bunch of lines) to layer_1, and so on. This was a useful tool
+to learn the basics of how collections of weights and layers come together to learn a function.
+But moving forward, this picture has too much detail. Given the correlation summarization,
+you already know you no longer need to worry about how individual weights are updated.
+Later layers already know how to communicate to earlier layers and tell them, “Hey, I
+need higher signal” or “Hey, I need lower signal.” Truth be told, you don’t really care about
+the weight values anymore, only that they’re behaving as they should, properly capturing
+correlation in a way that generalizes.
+To reflect this change, let’s update the visualization on paper. We’ll also do a few other
+things that will make sense later. As you know, the neural network is a series of weight
+matrices. When you’re using the network, you also end up creating vectors corresponding
+to each layer.
+In the figure, the weight
+matrices are the lines going
+from node to node, and the
+vectors are the strips of nodes.
+For example, weights_1_2
+is a matrix, weights_0_1 is
+a matrix, and layer_1 is a
+vector.
+In later chapters, we’ll arrange
+vectors and matrices in
+increasingly creative ways,
+so instead of all this detail
+showing each node connected
+by each weight (which gets
+hard to read if we have, say,
+500 nodes in layer_1), let’s
+instead think in general
+terms. Let’s think of them
+as vectors and matrices of
+arbitrary size.
 
-Supervised
-learning
+layer_2
 
-Tuesday
-stock prices
+weights_1_2
 
-If you successfully trained the supervised machine learning algorithm on 10 years of
-Mondays and Tuesdays, then you could predict the stock price on any Tuesday in the future
-given the stock price on the immediately preceding Monday. I encourage you to stop and
-consider this for a moment.
-Supervised machine learning is the bread and butter of applied artificial intelligence (also
-known as narrow AI). It’s useful for taking what you know as input and quickly transforming
-it into what you want to know. This allows supervised machine learning algorithms to
-extend human intelligence and capabilities in a seemingly endless number of ways.
-The majority of work using machine learning results in the training of a supervised classifier
-of some kind. Even unsupervised machine learning (which you’ll learn more about in a
-moment) is typically done to aid in the development of an accurate supervised machine
-learning algorithm.
-What you
-know
+relu nodes are
+on this layer.
 
-Supervised
-learning
+layer_1
 
-What you want
-to know
-
-For the rest of this book, you’ll be creating algorithms that can take input data that is
-observable, recordable, and, by extension, knowable and transform it into valuable output
-data that requires logical analysis. This is the power of supervised machine learning.
+weights_0_1
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Unsupervised machine learning
+layer_0
 
-13
+The simplified visualization
 
-Unsupervised machine learning
-Unsupervised learning groups your data.
-Unsupervised learning shares a property in common with supervised learning: it transforms
-one dataset into another. But the dataset that it transforms into is not previously known or
-understood. Unlike supervised learning, there is no “right answer” that you’re trying to get
-the model to duplicate. You just tell an unsupervised algorithm to “find patterns in this data
-and tell me about them.”
-For example, clustering a dataset into groups is a type of unsupervised learning. Clustering
-transforms a sequence of datapoints into a sequence of cluster labels. If it learns 10 clusters,
-it’s common for these labels to be the numbers 1–10. Each datapoint will be assigned to a
-number based on which cluster it’s in. Thus, the dataset turns from a bunch of datapoints
-into a bunch of labels. Why are the labels numbers? The algorithm doesn’t tell you what the
-clusters are. How could it know? It just says, “Hey scientist! I found some structure. It looks
-like there are groups in your data. Here they are!”
-List of
-datapoints
+137
 
-Unsupervised
-learning
+The simplified visualization
+Neural networks are like LEGO bricks, and each brick
+is a vector or matrix.
+Moving forward, we’ll build new neural network architectures in the same way people build
+new structures with LEGO pieces. The great thing about the correlation summarization is
+that all the bits and pieces that lead to it (backpropagation, gradient descent, alpha, dropout,
+mini-batching, and so on) don’t depend on a particular configuration of the LEGOs. No
+matter how you piece together the series of matrices, gluing them together with layers, the
+neural network will try to learn the pattern in the data by modifying the weights between
+wherever you put the input layer and the output layer.
+To reflect this, we’ll build all the neural networks
+with the pieces shown at right. The strip is a vector,
+the box is a matrix, and the circles are individual
+weights. Note that the box can be viewed as a
+“vector of vectors,” horizontally or vertically.
+(1 × 1)
 
-List of cluster
-labels
+layer_2
 
-I have good news! This idea of clustering is something you can reliably hold onto in your
-mind as the definition of unsupervised learning. Even though there are many forms
-of unsupervised learning, all forms of unsupervised learning can be viewed as a form of
-clustering. You’ll discover more on this later in the book.
-puppies
-pizza
-kittens
-hot dog
-burger
+(4 × 1)
 
-Unsupervised
-learning
+weights_1_2
+
+Vector
+
+Numbers
+
+Matrix
+
+(1 × 4)
+
+layer_1
+
+(3 × 4)
+
+weights_0_1
+
+(1 × 3)
+
+layer_0
+
+The big takeaway
+The picture at left still gives you all
+the information you need to build
+a neural network. You know the
+shapes and sizes of all the layers
+and matrices. The detail from before
+isn’t necessary when you know
+the correlation summarization and
+everything that went into it. But
+we aren’t finished: we can simplify
+even further.
+
+Licensed to Ernesto Lee <socrates73@gmail.com>
+
+138
+
+Chapter 7
+
+I How to picture neural networks
+
+Simplifying even further
+The dimensionality of the matrices is determined by the layers.
+In the previous section, you may have noticed a pattern. Each matrix’s dimensionality
+(number of rows and columns) has a direct relationship to the dimensionality of the layers
+before and after them. Thus, we can simplify the
+visualization even further.
+Consider the visualization shown at right. We still
+have all the information needed to build a neural
+network. We can infer that weights_0_1 is a (3 ×
+4) matrix because the previous layer (layer_0) has
+three dimensions and the next layer (layer_1) has
+four dimensions. Thus, in order for the matrix to be
+big enough to have a single weight connecting each
+node in layer_0 to each node in layer_1, it must
+be a (3 × 4) matrix.
+
+layer_2
+
+weights_1_2
+
+layer_1
+
+weights_0_1
+
+This allows us to start thinking about the neural
+networks using the correlation summarization. All
+this neural network will to do is adjust the weights
+layer_0
+to find correlation between layer_0 and layer_2.
+It will do this using all the methods mentioned so
+far in this book. But the different configurations of
+weights and layers between the input and output layers have a strong impact on whether the
+network is successful in finding correlation (and/or how fast it finds correlation).
+The particular configuration of layers and weights in a neural network is called its
+architecture, and we’ll spend the majority of the rest of this book discussing the pros and
+cons of various architectures. As the correlation summarization reminds us, the neural
+network adjusts weights to find correlation between the input and output layers, sometimes
+even inventing correlation in the hidden layers. Different architectures channel signal to
+make correlation easier to discover.
+Good neural architectures channel signal so that correlation is easy to discover. Great
+architectures also filter noise to help prevent overfitting.
+
+Much of the research into neural networks is about finding new architectures that can find
+correlation faster and generalize better to unseen data. We’ll spend the vast majority of the
+rest of this book discussing new architectures.
+
+Licensed to Ernesto Lee <socrates73@gmail.com>
+
+Let’s see this network predict
+
+139
 
 1
-2
+
+Let’s see this network predict
+Let’s picture data from the streetlight example
+flowing through the system.
+
+weights_1_2
+
+In figure 1, a single datapoint from the streetlight dataset is
+selected. layer_0 is set to the correct values.
+
+weights_0_1
 1
-2
-2
 
-Check out this example. Even though the algorithm didn’t tell what the clusters are named,
-can you figure out how it clustered the words? (Answer: 1 == cute and 2 == delicious.) Later,
-we’ll unpack how other forms of unsupervised learning are also just a form of clustering and
-why these clusters are useful for supervised learning.
+In figure 2, four different weighted sums of layer_0 are
+performed. The four weighted sums are performed by
+weights_0_1. As a reminder, this process is called vectormatrix multiplication. These four values are deposited into
+the four positions of layer_1 and passed through the relu
+function (setting negative values to 0). To be clear, the third
+value from the left in layer_1 would have been negative, but
+the relu function sets it to 0.
+
+0
+
+1
+
+2
+weights_1_2
+.5
+
+.2
+
+0
+
+.9
+
+weights_0_1
+1
+
+0
+
+1
+
+3
+
+As shown in figure 3, final step performs a weighted average of
+
+layer_1, again using the vector-matrix multiplication process.
+
+.9
+
+This yields the number 0.9, which is the network’s
+final prediction.
+
+Review: Vector-matrix multiplication
+Vector-matrix multiplication performs multiple weighted
+sums of a vector. The matrix must have the same number
+of rows as the vector has values, so that each column
+in the matrix performs a unique weighted sum. Thus, if
+the matrix has four columns, four weighted sums will be
+generated. The weightings of each sum are performed
+depending on the values of the matrix.
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-14
+weights_1_2
+.5
 
-Chapter 2
+.2
 
-I Fundamental concepts
+0
 
-Parametric vs. nonparametric learning
-Oversimplified: Trial-and-error learning vs. counting
-and probability
-The last two pages divided all machine learning algorithms into two groups: supervised and
-unsupervised. Now, we’re going to discuss another way to divide the same machine learning
-algorithms into two groups: parametric and nonparametric. So, if we think about our little
-machine learning cloud, it has two settings:
+.9
 
-Supervised
+weights_0_1
+1
 
-Parametric
+0
 
-Unsupervised
+1
 
-Nonparametric
+140
 
-As you can see, there are really four different types of algorithms to choose from. An
-algorithm is either unsupervised or supervised, and either parametric or nonparametric.
-Whereas the previous section on supervision is about the type of pattern being learned,
-parametricism is about the way the learning is stored and often, by extension, the
-method for learning. First, let’s look at the formal definitions of parametricism versus
-nonparametricism. For the record, there’s still some debate around the exact difference.
-A parametric model is characterized by having a fixed number of parameters, whereas
-a nonparametric model’s number of parameters is infinite (determined by data).
 
-As an example, let’s say the problem is to fit a square peg into the correct (square)
-hole. Some humans (such as babies) just jam it into all the holes until it fits somewhere
-(parametric). A teenager, however, may count the number of sides (four) and then search
-for the hole with an equal number (nonparametric). Parametric models tend to use trial and
-error, whereas nonparametric models tend to count. Let’s look closer.
+Chapter 7
+
+I How to picture neural networks
+
+Visualizing using letters instead of pictures
+All these pictures and detailed explanations are actually
+a simple piece of algebra.
+Just as we defined simpler pictures for the matrix
+and vector, we can perform the same visualization
+in the form of letters.
+How do you visualize a matrix using math? Pick
+a capital letter. I try to pick one that’s easy to
+remember, such as W for “weights.” The little 0
+means it’s probably one of several Ws. In this case,
+the network has two. Perhaps surprisingly, I could
+have picked any capital letter. The little 0 is an extra
+that lets me call all my weight matrices W so I can
+tell them apart. It’s your visualization; make it easy
+to remember.
+How do you visualize a vector using math? Pick a
+lowercase letter. Why did I choose the letter l? Well,
+because I have a bunch of vectors that are layers,
+I thought l would be easy to remember. Why did
+I choose to call it l-zero? Because I have multiple
+layers, it seems nice to make all them ls and number
+them instead of having to think of new letters for
+every layer. There’s no wrong answer here.
+If that’s how to visualize matrices and vectors
+in math, what do all the pieces in the network
+look like? At right, you can see a nice selection of
+variables pointing to their respective sections of the
+neural network. But defining them doesn’t show
+how they relate. Let’s combine the variables via
+vector-matrix multiplication.
+
+W0
+
+Matrix
+
+l0
+Vector
+
+l2
+
+W1
+
+weights_1_2
+
+l1
+W0
+
+weights_0_1
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-Supervised parametric learning
+l0
 
-15
+Linking the variables
 
-Supervised parametric learning
-Oversimplified: Trial-and-error learning using knobs
-Supervised parametric learning machines are machines with a fixed number of knobs (that’s
-the parametric part), wherein learning occurs by turning the knobs. Input data comes in, is
-processed based on the angle of the knobs, and is transformed into a prediction.
-Data
-01010111011000110
-01101101100011001
-10010011100101010
+141
 
-Machine
+Linking the variables
+The letters can be combined to indicate functions
+and operations.
+Vector-matrix multiplication is simple. To visualize that two letters are being multiplied by
+each other, put them next to each other. For example:
+Algebra
+
+Translation
+
+l0W0
+
+“Take the layer 0 vector and perform vectormatrix multiplication with the weight matrix 0.”
+
+l1W1
+
+“Take the layer 1 vector and perform vectormatrix multiplication with the weight matrix 1.”
+
+You can even throw in arbitrary functions like relu using notation that looks almost exactly
+like the Python code. This is crazy-intuitive stuff.
+
+l1 = relu(l0W0)
+
+“To create the layer 1 vector, take the layer 0 vector
+and perform vector-matrix multiplication with the
+weight matrix 0; then perform the relu function on
+the output (setting all negative numbers to 0).”
+
+l2 = l1W1
+
+“To create the layer 2 vector, take the layer 1 vector
+and perform vector-matrix multiplication with the
+weight matrix 1.”
+
+If you notice, the layer 2 algebra contains layer 1 as an input variable. This means you
+can represent the entire neural network in one expression by chaining them together.
+Thus, all the logic in the forward propagation step can
+be contained in this one formula. Note: baked into this
+l2 = relu(l0W0)W1
+formula is the assumption that the vectors and matrices
+have the right dimensions.
+
+Licensed to Ernesto Lee <socrates73@gmail.com>
+
+142
+
+Chapter 7
+
+I How to picture neural networks
+
+Everything side by side
+Let’s see the visualization, algebra formula,
+and Python code in one place.
+I don’t think much dialogue is necessary on this page. Take a minute and look at each piece
+of forward propagation through these four different ways of seeing it. It’s my hope that you’ll
+truly grok forward propagation and understand the architecture by seeing it from different
+perspectives, all in one place.
+layer_2 = relu(layer_0.dot(weights_0_1)).dot(weights_1_2)
+
+l2 = relu(l0W0)W1
+
+Inputs
+
+Hiddens
 
 Prediction
 
-98%
+layer_2
 
-Learning is accomplished by turning the knobs to different angles. If you’re trying to predict
-the probability that the Red Sox will win the World Series, then this model would first take
-data (such as sports stats like win/loss record or average number of toes per player) and
-make a prediction (such as 98% chance). Next, the model would observe whether or not
-the Red Sox actually won. After it knew whether they won, the learning algorithm would
-update the knobs to make a more accurate prediction the next time it sees the same
-or similar input data.
-Perhaps it would “turn up” the “win/loss record” knob if the team’s win/loss record was a
-good predictor. Inversely, it might “turn down” the “average number of toes” knob if that
-datapoint wasn’t a good predictor. This is how parametric models learn!
-Note that the entirety of what the model has learned can be captured in the positions
-of the knobs at any given time. You can also think of this type of learning model as a
-search algorithm. You’re “searching” for the appropriate knob configuration by trying
-configurations, adjusting them, and retrying.
-Note further that the notion of trial and error isn’t the formal definition, but it’s a common
-(with exceptions) property to parametric models. When there is an arbitrary (but
-fixed) number of knobs to turn, some level of searching is required to find the optimal
-configuration. This is in contrast to nonparametric learning, which is often count based
-and (more or less) adds new knobs when it finds something new to count. Let’s break down
-supervised parametric learning into its three steps.
+weights_1_2
+
+layer_1
+
+weights_0_1
+
+layer_0
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-16
+The importance of visualization tools
 
-Chapter 2
+143
 
-I Fundamental concepts
+The importance of visualization tools
+We’re going to be studying new architectures.
+In the following chapters, we’ll be taking these vectors and matrices and combining them
+in some creative ways. My ability to describe each architecture for you is entirely dependent
+on our having a mutually agreed-on language for describing them. Thus, please don’t move
+beyond this chapter until you can clearly see how forward propagation manipulates these
+vectors and matrices, and how these various forms of describing them are articulated.
+Key takeaway
+Good neural architectures channel signal so that correlation is easy to discover. Great
+architectures also filter noise to help prevent overfitting.
 
-Step 1: Predict
-To illustrate supervised parametric learning, let’s continue with the sports analogy of trying
-to predict whether the Red Rox will win the World Series. The first step, as mentioned, is to
-gather sports statistics, send them through the machine, and make a prediction about the
-probability that the Red Sox will win.
-Data
-
-Machine
-
-Location: away
-Opponent: Yankees
-# toes: 250
-# players: 25
-# fans: 25,000
-
-Prediction
-
-98%
-
-Step 2: Compare to the truth pattern
-The second step is to compare the prediction (98%) with the pattern you care about
-(whether the Red Sox won). Sadly, they lost, so the comparison is
-Pred: 98% > Truth: 0%
-
-This step recognizes that if the model had predicted 0%, it would have perfectly predicted the
-upcoming loss of the team. You want the machine to be accurate, which leads to step 3.
-
-Step 3: Learn the pattern
-This step adjusts the knobs by studying both how much
-the model missed by (98%) and what the input data was
-(sports stats) at the time of prediction. This step then turns
-the knobs to make a more accurate prediction given the
-input data.
-In theory, the next time this step saw the same sports stats,
-the prediction would be lower than 98%. Note that each
-knob represents the prediction’s sensitivity to different types
-of input data. That’s what you’re changing when you “learn.”
-
-Adjusting sensitivity
-by turning knobs
-
-win
-loss
-
-home/
-away
-
-# toes
-
-# fans
-
-Licensed to Ernesto Lee <socrates73@gmail.com>
-
-Unsupervised parametric learning
-
-17
-
-Unsupervised parametric learning
-Unsupervised parametric learning uses a very similar approach. Let’s walk through the
-steps at a high level. Remember that unsupervised learning is all about grouping data.
-Unsupervised parametric learning uses knobs to group data. But in this case, it usually
-has several knobs for each group, each of which maps
-the input data’s affinity to that particular group (with
-Home or away
-# fans
-exceptions and nuance—this is a high-level description).
-Let’s look at an example that assumes you want to divide
-home
-100k
-away
-50k
-the data into three groups.
-In the dataset, I’ve identified three clusters in the data that
-you might want the parametric model to find. They’re
-indicated via formatting as group 1, group 2, and group
-3. Let’s propagate the first datapoint through a trained
-unsupervised model, as shown next. Notice that it maps
-most strongly to group 1.
-
-home
-home
-away
-away
-away
-
-100k
-99k
-50k
-10k
-11k
-
-Group membership
-probability
-# fans
-group 1
-
-Datapoint
-home/away
-home
-
-# fans
-100k
-
-94%
-home
-away
-# fans
-
-group 2
-
-1%
-home
-away
-# fans
-
-group 3
-
-5%
-home
-away
-
-Each group’s machine attempts to transform the input data to a number between 0 and 1,
-telling us the probability that the input data is a member of that group. There is a great deal
-of variety in how these models train and their resulting properties, but at a high level they
-adjust parameters to transform the input data into its subscribing group(s).
-
-Licensed to Ernesto Lee <socrates73@gmail.com>
-
-18
-
-Chapter 2
-
-I Fundamental concepts
-
-Nonparametric learning
-Oversimplified: Counting-based methods
-Nonparametric learning is a class of algorithm wherein the number of parameters is based
-on data (instead of predefined). This lends itself to methods that generally count in one way
-or another, thus increasing the number of parameters based on the number of items being
-counted within the data. In the supervised setting, for example, a nonparametric model
-might count the number of times a particular color of streetlight causes cars to “go.” After
-counting only a few examples, this model would then be able to predict that middle lights
-always (100%) cause cars to go, and right lights only sometimes (50%) cause cars to go.
-Stop
-
-Go
-
-Go
-
-Go
-
-Stop
-
-Stop
-
-Notice that this model would have three parameters: three counts indicating the number
-of times each colored light turned on and cars would go (perhaps divided by the number
-of total observations). If there were five lights, there would be five counts (five parameters).
-What makes this simple model nonparametric is this trait wherein the number of parameters
-changes based on the data (in this case, the number of lights). This is in contrast to
-parametric models, which start with a set number of parameters and, more important, can
-have more or fewer parameters purely at the discretion of the scientist training the model
-(regardless of data).
-A close eye might question this idea. The parametric model from before seemed to have
-a knob for each input datapoint. Most parametric models still have to have some sort of
-input based on the number of classes in the data. Thus you can see that there is a gray
-area between parametric and nonparametric algorithms. Even parametric algorithms are
-somewhat influenced by the number of classes in the data, even if they aren’t explicitly
-counting patterns.
-This also illuminates that parameters is a generic term, referring only to the set of numbers
-used to model a pattern (without any limitation on how those numbers are used). Counts
-are parameters. Weights are parameters. Normalized variants of counts or weights are
-parameters. Correlation coefficients can be parameters. The term refers to the set of
-numbers used to model a pattern. As it happens, deep learning is a class of parametric
-models. We won’t discuss nonparametric models further in this book, but they’re an
-interesting and powerful class of algorithm.
-
-Licensed to Ernesto Lee <socrates73@gmail.com>
-
-Summary
-
-19
-
-Summary
-In this chapter, we’ve gone a level deeper into the various flavors of machine learning.
-You learned that a machine learning algorithm is either supervised or unsupervised
-and either parametric or nonparametric. Furthermore, we explored exactly what makes
-these four different groups of algorithms distinct. You learned that supervised machine
-learning is a class of algorithm where you learn to predict one dataset given another and
-that unsupervised learning generally groups a single dataset into various kinds of clusters.
-You learned that parametric algorithms have a fixed number of parameters and that
-nonparametric algorithms adjust their number of parameters based on the dataset.
-Deep learning uses neural networks to perform both supervised and unsupervised
-prediction. Until now, we’ve stayed at a conceptual level as you got your bearings in the field
-as a whole and your place in it. In the next chapter, you’ll build your first neural network,
-and all subsequent chapters will be project based. So, pull out your Jupyter notebook, and
-let’s jump in!
+As mentioned previously, a neural architecture controls how signal flows through a network.
+How you create these architectures will affect the ways in which the network can detect
+correlation. You’ll find that you want to create architectures that maximize the network’s
+ability to focus on the areas where meaningful correlation exists, and minimize the
+network’s ability to focus on the areas that contain noise.
+But different datasets and domains have different characteristics. For example, image data
+has different kinds of signal and noise than text data. Even though neural networks can be
+used in many situations, different architectures will be better suited to different problems
+because of their ability to locate certain types of correlations. So, for the next few chapters,
+we’ll explore how to modify neural networks to specifically find the correlation you’re
+looking for. See you there!
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-introduction to neural prediction:
-forward propagation
+learning signal and ignoring noise:
+introduction to regularization and batching
 
 In this chapter
+•	Overfitting
+•	Dropout
 •	
 
-A simple network making a prediction
+Batch gradient descent
 
-•	
+With four parameters I can fit an elephant, and with
+five I can make him wiggle his trunk.
+—John von Neumann, mathematician, physicist,
+computer scientist, and polymath
 
-What is a neural network, and what does it do?
-
-•	
-
-Making a prediction with multiple inputs
-
-•	
-
-Making a prediction with multiple outputs
-
-•	
-
-Making a prediction with multiple inputs
-and outputs
-
-•	
-
-Predicting on predictions
-
-I try not to get involved in the business of prediction.
-It’s a uick way to look like an idiot.
-—Warren Ellis comic-book writer,
-novelist, and screenwriter
-
-21
+145
 
 Licensed to Ernesto Lee <socrates73@gmail.com>
 
-3
+8
 
-22
+146
