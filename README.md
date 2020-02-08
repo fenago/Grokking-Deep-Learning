@@ -12,11 +12,11 @@ you can master a major deep learning framework. It begins by focusing on the bas
 neural networks and then switches its focus to provide an in-depth look at advanced layers
 and architectures.
 
-#### Who should read this book
+#### Pre-requisites
 No knowledge of linear algebra, calculus, convex optimization, or even machine learning
 is assumed. Everything from those subjects that’s necessary to understand deep learning
 will be explained as we go. If you’ve passed high school mathematics and hacked around in
-Python, you’re ready for this book.
+Python, you’re ready for this course.
 
 ### Labs
 Labs for this course are available at path shared below. Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. 
@@ -47,3 +47,7 @@ Labs for this course are available at path shared below. Elev8ed Notebooks (powe
 		* <host-ip>:<port>/lab/workspaces/lab12_LSTMs
 13. ##### Deep learning on unseen data: introducing federated learning
 		* <host-ip>:<port>/lab/workspaces/lab13_Federated_Learning
+
+### How to picture neural networks: in your head and on paper (Reading)
+If you would like to learn more about neural networks:
+		* <host-ip>:<port>/lab/workspaces/Picture_Neural_Network
