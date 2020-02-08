@@ -50,8 +50,6 @@ basics of deep learning’s approach to this field.
 
 Natural language processing (NLP)
 
-189
-
 Natural language processing (NLP)
 NLP is divided into a collection of tasks or challenges.
 Perhaps the best way to quickly get to know NLP is to consider a few of the many challenges
@@ -137,8 +135,6 @@ let’s take on the challenge of topic classification.
 
 
 IMDB movie reviews dataset
-
-191
 
 IMDB movie reviews dataset
 You can predict whether people post positive or
@@ -286,8 +282,6 @@ either sum the vector for “cat” three times (resulting in [3,0,0,0]) or just
 
 Predicting movie reviews
 
-193
-
 Predicting movie reviews
 With the encoding strategy and the previous network,
 you can predict sentiment.
@@ -420,8 +414,6 @@ cat
 
 Intro to an embedding layer
 
-195
-
 After running the previous code, run this code.
 import numpy as np
 np.random.seed(1)
@@ -538,8 +530,6 @@ weights_0_1
 
 Neural architecture
 
-197
-
 Neural architecture
 How did the choice of architecture affect
 what the network learned?
@@ -643,8 +633,6 @@ if and only if it has similar weights connecting it to the next and/or previous 
 
 
 Comparing word embeddings
-
-199
 
 Comparing word embeddings
 How can you visualize weight similarity?
@@ -768,8 +756,6 @@ was white as snow.
 
 Filling in the blank
 
-201
-
 Filling in the blank
 Learn richer meanings for words by having
 a richer signal to learn.
@@ -869,8 +855,6 @@ Progress:0.99998 [('terrible', -0.0), ('horrible', -2.846300248788519),
 
 
 Meaning is derived from loss
-
-203
 
 Meaning is derived from loss
 With this new neural network, you can subjectively see that the word embeddings cluster
@@ -1014,8 +998,6 @@ print(similar('terrible'))
 
 Meaning is derived from loss
 
-205
-
 The choice of loss function determines the
 neural network’s knowledge.
 The more formal term for an error function is a loss function or objective function (all
@@ -1110,8 +1092,6 @@ analogy(['elizabeth','he'],['she'])
 
 
 Word analogies
-
-207
 
 Word analogies
 Linear compression of an existing property in the data
@@ -1249,10 +1229,6 @@ Neural Networks.
 —Andrej Karpathy, “The Unreasonable Effectiveness
 of Recurrent Neural Networks,” http://mng.bz/V PW
 
-209
 
-
-
-12
 
 210

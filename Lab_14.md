@@ -67,8 +67,6 @@ industry, helping to prepare you for either.
 
 What is machine learning?
 
-11
-
 What is machine learning?
 A field of study that gives computers the ability to learn without being
 explicitly programmed.
@@ -157,8 +155,6 @@ data that requires logical analysis. This is the power of supervised machine lea
 
 
 Unsupervised machine learning
-
-13
 
 Unsupervised machine learning
 Unsupervised learning groups your data.
@@ -249,18 +245,12 @@ error, whereas nonparametric models tend to count. Let’s look closer.
 
 Supervised parametric learning
 
-15
-
 Supervised parametric learning
 Oversimplified: Trial-and-error learning using knobs
 Supervised parametric learning machines are machines with a fixed number of knobs (that’s
 the parametric part), wherein learning occurs by turning the knobs. Input data comes in, is
 processed based on the angle of the knobs, and is transformed into a prediction.
-Data
-01010111011000110
-01101101100011001
-10010011100101010
-
+Data01101101100011001
 Machine
 
 Prediction
@@ -349,8 +339,6 @@ away
 
 
 Unsupervised parametric learning
-
-17
 
 Unsupervised parametric learning
 Unsupervised parametric learning uses a very similar approach. Let’s walk through the
@@ -475,8 +463,6 @@ interesting and powerful class of algorithm.
 
 Summary
 
-19
-
 Summary
 In this chapter, we’ve gone a level deeper into the various flavors of machine learning.
 You learned that a machine learning algorithm is either supervised or unsupervised
@@ -529,8 +515,6 @@ I try not to get involved in the business of prediction.
 It’s a uick way to look like an idiot.
 —Warren Ellis comic-book writer,
 novelist, and screenwriter
-
-21
 
 
 

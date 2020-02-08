@@ -74,8 +74,6 @@ x (input)
 
 What is an activation function?
 
-163
-
 Constraint 2: Good activation functions are monotonic,
 never changing direction.
 The second constraint is that the function is 1:1. It must never change direction. In other
@@ -161,8 +159,6 @@ become popular because they’re so easy to compute at the expense of their expr
 
 Standard hidden-layer activation functions
 
-165
-
 Standard hidden-layer activation functions
 Of the infinite possible functions, which ones are most
 commonly used?
@@ -247,8 +243,6 @@ individual probabilities separately for each output node.
 
 Standard output layer activation functions
 
-167
-
 Configuration 3: Predicting which-one probabilities (softmax)
 By far the most common use case in neural networks is predicting a single label out of
 many. For example, in the MNIST digit classifier, you want to predict which number is in
@@ -301,8 +295,6 @@ values
 0.0
 
 0.0
-
-100
 
 The network’s raw input to the last layer predicts a 0 for every node but 9, where it predicts
 100. You might call this perfect. Let’s see what happens when these numbers are run through
@@ -440,8 +432,6 @@ better in both theory and practice.
 
 softmax computation
 
-169
-
 softmax computation
 softmax raises each input value exponentially and then
 divides by the layer’s sum.
@@ -488,8 +478,6 @@ values
 0.0
 
 0.0
-
-100
 
 To compute a softmax on the whole layer, first raise each
 value exponentially. For each value x, compute e to the
@@ -635,8 +623,6 @@ x (input)
 
 Activation installation instructions
 
-171
-
 Thus, when you backpropagate, in order to generate layer_1_delta, multiply the
 backpropagated delta from layer_2 (layer_2_delta.dot(weights_1_2.T)) by the
 slope of relu at the point predicted in forward propagation. For some deltas the slope is 1
@@ -737,8 +723,6 @@ to corrupt intelligence that has been reinforced many times.
 
 
 Converting output to slope (derivative)
-
-173
 
 Converting output to slope (derivative)
 Most great activations can convert their output to their slope.
@@ -849,8 +833,6 @@ return temp / np.sum(temp, axis=1, keepdims=True)
 
 Upgrading the MNIST network
 
-175
-
 alpha, iterations, hidden_size = (2, 300, 100)
 pixels_per_image, num_labels = (784, 10)
 batch_size = 100
@@ -957,10 +939,6 @@ networks is a big mistake, and the fact that it works
 so well is a disaster.
 —Geoffrey Hinton, from “Ask Me Anything” on Reddit
 
-177
 
-
-
-10
 
 178

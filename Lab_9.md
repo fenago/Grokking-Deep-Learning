@@ -65,8 +65,6 @@ sentence in a useful way (a way that can be compared with other vectors).
 
 Do comparisons really matter?
 
-211
-
 Do comparisons really matter?
 Why should you care about whether you can compare two
 sentence vectors?
@@ -201,8 +199,6 @@ reviews
 
 How is information stored in these embeddings?
 
-213
-
 How is information stored in these embeddings?
 When you average word embeddings, average shapes remain.
 Considering what’s going on here requires a little abstract thought. I recommend digesting
@@ -302,8 +298,6 @@ previous section).
 
 
 The limitations of bag-of-words vectors
-
-215
 
 The limitations of bag-of-words vectors
 Order becomes irrelevant when you average word embeddings.
@@ -432,8 +426,6 @@ order of the words would change the resulting embedding. Let’s see this in Pyt
 
 Matrices that change absolutely nothing
 
-217
-
 Matrices that change absolutely nothing
 Let’s create sentence embeddings using identity matrices in Python.
 In this section, we’ll demonstrate how to play with identity matrices in Python and
@@ -554,8 +546,6 @@ network
 
 
 Learning to create useful sentence vectors
-
-219
 
 Learning to create useful sentence vectors
 Create the sentence vector, make a prediction, and modify the
@@ -711,8 +701,6 @@ all vocabulary
 
 How do you backpropagate into this?
 
-221
-
 How do you backpropagate into this?
 It might seem trickier, but they’re the same steps you
 already learned.
@@ -809,8 +797,6 @@ starting words. Along the way, you’ll see the importance of allowing the recur
 
 
 Setting things up
-
-223
 
 Setting things up
 Before you can create matrices, you need to learn how many
@@ -931,8 +917,6 @@ update steps.
 
 Backpropagation with arbitrary length
 
-225
-
 Backpropagation with arbitrary length
 You’ll backpropagate using the same logic described earlier.
 As described with the “Red Sox defeat Yankees” example, let’s implement backpropagation
@@ -1046,8 +1030,6 @@ print("Perplexity:" + str(np.exp(loss/len(sent))))
 
 Execution and output analysis
 
-227
-
 Execution and output analysis
 You’ll update weights using the same logic described earlier.
 Now the moment of truth: what happens when you run it? Well, when I run this code, I
@@ -1160,8 +1142,6 @@ in my opinion, creates educational analysis for the ways in which it fails.
 
 Summary
 
-229
-
 Summary
 Recurrent neural networks predict over arbitrary-length
 sequences.
@@ -1238,10 +1218,6 @@ no fundamental difference; we should each be treated
 with appropriate respect.
 —Arthur C. Clarke, 2010: Odyssey Two (1982)
 
-231
 
-
-
-13
 
 2

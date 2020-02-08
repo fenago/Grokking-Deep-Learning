@@ -62,8 +62,6 @@ stochastic gradient descent optimizer.
 
 The need for truncated backpropagation
 
-267
-
 The need for truncated backpropagation
 Backpropagating through 100,000 characters is intractable.
 One of the more challenging aspects of reading code for RNNs is the mini-batching logic for
@@ -153,8 +151,6 @@ you that part, as if batch_size was set to 8 (for readability):
 
 
 Truncated backpropagation
-
-269
 
 print(raw[0:5])
 print(indices[0:5])
@@ -385,8 +381,6 @@ Iter:99 - Batch 61/195 - Loss:1.0533843281265225 I af the mands your
 
 A sample of the output
 
-271
-
 A sample of the output
 By sampling from the predictions of the model,
 you can write Shakespeare!
@@ -522,8 +516,6 @@ keep the network from learning. Let’s take a closer look at RNN backpropagatio
 
 A toy example of RNN backpropagation
 
-273
-
 A toy example of RNN backpropagation
 To see vanishing/exploding gradients firsthand,
 let’s synthesize an example.
@@ -652,8 +644,6 @@ u)
 
 
 Some intuition about LSTM gates
-
-275
 
 Some intuition about LSTM gates
 LSTM gates are semantically similar to reading/writing
@@ -792,8 +782,6 @@ return (h, c)
 
 Upgrading the character language model
 
-277
-
 Upgrading the character language model
 Let’s swap out the vanilla RNN with the new LSTM cell.
 Earlier in this chapter, you trained a character language model to predict Shakespeare.
@@ -893,8 +881,6 @@ optim.alpha *= 0.99
 
 
 Tuning the LSTM character language model
-
-279
 
 Tuning the LSTM character language model
 I spent about two days tuning this model, and
@@ -996,10 +982,6 @@ Homomorphically encrypted federated learning
 Friends don’t spy; true friendship is about privacy, too.
 —Stephen King, Hearts in Atlantis (1999)
 
-281
 
-
-
-15
 
 282

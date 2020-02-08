@@ -14,8 +14,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
-32
-
 
 I Introducing automatic optimization
 
@@ -59,8 +57,6 @@ layers and loss functions.
 
 
 Introduction to tensors
-
-233
 
 Introduction to tensors
 Tensors are an abstract form of vectors and matrices.
@@ -147,8 +143,6 @@ defaults to None). Thus, when the two tensors x and y are added together, z has 
 
 
 Introduction to automatic gradient computation (autograd)
-
-235
 
 creators, x and y. creation_op is a related feature that stores the instructions creators
 used in the creation process. Thus, performing z = x + y creates a computation graph with
@@ -243,8 +237,6 @@ you’re chasing down an optimization bug that’s keeping you from getting that
 
 
 Tensors that are used multiple times
-
-237
 
 Tensors that are used multiple times
 The basic autograd has a rather pesky bug. Let’s squish it!
@@ -373,8 +365,6 @@ children
 
 Upgrading autograd to support multiuse tensors
 
-239
-
 if(self.creation_op == "add"):
 self.creators[0].backward(self.grad, self)
 self.creators[1].backward(self.grad, self)
@@ -471,8 +461,6 @@ has self.autograd == True only if self.autograd == other.autograd == True.
 
 Adding support for negation
 
-241
-
 Adding support for negation
 Let’s modify the support for addition to support negation.
 Now that addition is working, you should be able to copy and paste the addition code, create
@@ -566,8 +554,6 @@ return Tensor(self.data.transpose())
 
 
 Adding support for additional functions
-
-243
 
 def mm(self, x):
 if(self.autograd):
@@ -687,8 +673,6 @@ forward propagation), but the code is better organized.
 
 
 Adding support for additional functions
-
-245
 
 d LEARN: backpropagating from layer_2 to layer_1
 Inputs
@@ -853,8 +837,6 @@ appropriate weight matrix and perform the weight update appropriately.
 
 Using autograd to train a neural network
 
-247
-
 import numpy
 np.random.seed(0)
 data = Tensor(np.array([[0,0],[0,1],[1,0],[1,1]]), autograd=True)
@@ -954,8 +936,6 @@ Learn
 
 Adding support for layer types
 
-249
-
 Adding support for layer types
 You may be familiar with layer types in Keras or PyTorch.
 At this point, you’ve done the most complicated pieces of the new deep learning framework.
@@ -1038,8 +1018,6 @@ Learn
 
 Loss-function layers
 
-251
-
 Loss-function layers
 Some layers have no weights.
 You can also create layers that are functions on the input. The most popular version of this
@@ -1121,8 +1099,6 @@ you call .backward(). It’s not, strictly speaking, necessary—but it’s hand
 
 
 Nonlinearity layers
-
-253
 
 Nonlinearity layers
 Let’s add nonlinear functions to Tensor and then create some
@@ -1219,8 +1195,6 @@ probability distribution over labels.
 
 
 The embedding layer
-
-255
 
 The embedding layer
 An embedding layer translates indices into activations.
@@ -1421,8 +1395,6 @@ print(x.grad)
 
 The embedding layer (revisited)
 
-257
-
 The embedding layer (revisited)
 Now you can finish forward propagation using the new
 .index_select() method.
@@ -1523,8 +1495,6 @@ return input.cross_entropy(target)
 
 The cross-entropy layer
 
-259
-
 import numpy
 np.random.seed(0)
 # data indices
@@ -1623,8 +1593,6 @@ hidden to hidden (which updates each hidden vector based on the previous), and o
 
 
 The recurrent neural network layer
-
-261
 
 a hidden-to-output layer that learns to make predictions based on the hidden vector. This
 RNNCell implementation includes all three. The self.w_ih layer is the input-to-hidden layer,
@@ -1727,8 +1695,6 @@ Loss:
 
 Summary
 
-263
-
 batch_size = 1
 hidden = model.init_hidden(batch_size=batch_size)
 for t in range(5):
@@ -1796,10 +1762,6 @@ Lord, what fools these mortals be!
 —William Shakespeare
 A Midsummer Night’s Dream
 
-265
 
-
-
-14
 
 266

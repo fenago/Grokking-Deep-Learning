@@ -62,8 +62,6 @@ as a layer it’s called a convolutional layer.
 
 The convolutional layer
 
-179
-
 The convolutional layer
 Lots of very small linear layers are reused in every position,
 instead of a single big one.
@@ -159,8 +157,6 @@ to overfit to training data and increasing its ability to generalize.
 
 
 A simple implementation in NumPy
-
-181
 
 A simple implementation in NumPy
 Just think mini-linear layers, and you already know what you
@@ -308,8 +304,6 @@ row_start+kernel_rows,
 
 
 
-183
-
 184
 
 
@@ -375,8 +369,6 @@ might still be in the previous AI winter even at the time of writing.
 
 
 Summary
-
-185
 
 Summary
 Reusing weights is one of the most important innovations in
@@ -458,10 +450,6 @@ Man is a slow, sloppy, and brilliant thinker; computers
 are fast, accurate, and stupid.
 —John Pfeiffer, in Fortune, 1961
 
-187
 
-
-
-11
 
 188

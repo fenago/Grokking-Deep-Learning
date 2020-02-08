@@ -57,8 +57,6 @@ is one example where datasets are often locked up tight, making research challen
 
 Federated learning
 
-283
-
 Federated learning
 You don’t have to have access to a dataset in order
 to learn from it.
@@ -152,8 +150,6 @@ test_target.append([0])
 
 
 Learning to detect spam
-
-285
 
 def train(model, input_data, target_data, batch_size=500, iterations=5):
 n_batches = int(len(input_data) / batch_size)
@@ -260,8 +256,6 @@ Starting Training Round...
 
 Hacking into federated learning
 
-287
-
 Hacking into federated learning
 Let’s use a toy example to see how to still learn
 the training dataset.
@@ -343,8 +337,6 @@ homomorphic encryption.
 
 
 Homomorphic encryption
-
-289
 
 Homomorphic encryption
 You can perform arithmetic on encrypted values.
@@ -442,8 +434,6 @@ str(test(model, test_data, test_target)*100))
 
 
 Summary
-
-291
 
 Now you can run the new training scheme, which has an added step. Alice, Bob, and Sue
 add up their homomorphically encrypted models before sending them back to you, so

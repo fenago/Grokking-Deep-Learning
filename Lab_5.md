@@ -57,8 +57,6 @@ we celebrate?
 
 Three-layer network on MNIST
 
-147
-
 import sys, numpy as np
 from keras.datasets import mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -155,8 +153,6 @@ network only images it hasn’t seen before). This is the score that matters.
 
 Memorization vs. generalization
 
-149
-
 Memorization vs. generalization
 Memorizing 1,000 images is easier than generalizing to all images.
 Let’s consider again how a neural network learns. It adjusts each weight in each matrix so
@@ -248,8 +244,6 @@ learned the noise in the dataset instead of making decisions based only on the t
 
 Where overfitting comes from
 
-151
-
 Where overfitting comes from
 What causes neural networks to overfit?
 Let’s alter this scenario a bit. Picture the fresh clay again (unmolded). What if you pushed
@@ -310,8 +304,6 @@ control training. You use a validation set instead.
 
 
 Industry standard regularization: Dropout
-
-153
 
 Industry standard regularization: Dropout
 The method: Randomly turn off neurons (set them to 0)
@@ -388,8 +380,6 @@ noise would tend to cancel out, revealing only what they all learned in common: 
 
 
 Dropout in code
-
-155
 
 Dropout in code
 Here’s how to use dropout in the real world.
@@ -498,8 +488,6 @@ np.argmax(test_labels[i:i+1]))
 
 Dropout evaluated on MNIST
 
-157
-
 Dropout evaluated on MNIST
 If you remember from before, the neural network (without dropout) previously reached a
 test accuracy of 81.14% before falling down to finish training at 70.73% accuracy. When you
@@ -601,8 +589,6 @@ Thus, averaging them makes for a smoother learning process.
 
 
 Batch gradient descent
-
-159
 
 import numpy as np
 np.random.seed(1)
@@ -709,8 +695,6 @@ process I could convert 2 & 2 into five it would give me
 much greater pleasure.
 —George Gordon Byron, letter to Annabella Milbanke,
 November 10, 1813
-
-161
 
 
 

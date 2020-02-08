@@ -44,8 +44,6 @@ WALK
 
 The streetlight problem
 
-101
-
 People walked, so something about this light changed the signal. The only thing you know
 for sure is that the far-right light doesn’t seem to indicate one way or another. Perhaps it’s
 irrelevant. Let’s collect another datapoint:
@@ -111,8 +109,6 @@ if you swapped which dataset was in which group. For some problems, this works.
 
 
 Matrices and the matrix relationship
-
-103
 
 Matrices and the matrix relationship
 Translate the streetlight into math.
@@ -231,31 +227,21 @@ Streetlight matrix B
 
 0
 
-10
-
 2
 
 8
-
-10
 
 1
 
 0
 
-10
-
 8
 
 9
 
-10
-
 1
 
 7
-
-10
 
 9
 
@@ -271,45 +257,21 @@ examples (rows) and lights (columns). Note that Matrix A * 10 == Matrix B
 
 Matrices and the matrix relationship
 
-105
-
 Matrices A and B both contain the same underlying pattern.
 The important takeaway is that an infinite number of matrices exist that perfectly reflect the
 streetlight patterns in the dataset. Even the one shown next is perfect.
 Streetlights
 
 Streetlight matrix C
-18
-
 0
-
-20
 
 4
 
-16
-
-20
-
 2
 
 0
 
-20
-
-16
-
-18
-
-20
-
 2
-
-14
-
-20
-
-18
 
 2
 
@@ -428,8 +390,6 @@ walk_vs_stop
 
 
 Building a neural network
-
-107
 
 Building a neural network
 You’ve been learning about neural networks for several chapters now. You have a new
@@ -594,8 +554,6 @@ Error:0.000533736773285
 
 Full, batch, and stochastic gradient descent
 
-109
-
 Full, batch, and stochastic gradient descent
 Stochastic gradient descent updates weights one example
 at a time.
@@ -665,8 +623,6 @@ weights. Where does the pressure come from? Why is it different for different we
 
 
 Up and down pressure
-
-111
 
 Up and down pressure
 It comes from the data.
@@ -921,8 +877,6 @@ of gradient descent and just remember that learning rewards correlation with lar
 
 Edge case: Overfitting
 
-113
-
 Edge case: Overfitting
 Sometimes correlation happens accidentally.
 Consider again the first example in the training data. What if the far-left weight was 0.5 and
@@ -1085,8 +1039,6 @@ the middle weight downward.
 
 Edge case: Conflicting pressure
 
-115
-
 It doesn’t always work out like this.
 In some ways, you kind of got lucky. If the middle node hadn’t been so perfectly correlated,
 the network might have struggled to silence the far-right weight. Later you’ll learn about
@@ -1220,8 +1172,6 @@ of like cheating.
 
 Creating correlation
 
-117
-
 Creating correlation
 Here’s a picture of the new neural network. You basically stack two neural networks on top
 of each other. The middle layer of nodes (layer_1) represents the intermediate dataset. The
@@ -1286,8 +1236,6 @@ accurate predictions.
 
 
 Backpropagation: Long-distance error attribution
-
-119
 
 Backpropagation: Long-distance error attribution
 The weighted average error
@@ -1406,8 +1354,6 @@ layer_0
 
 Linear vs. nonlinear
 
-121
-
 Linear vs. nonlinear
 This is probably the hardest concept in the book.
 Let’s take it slowly.
@@ -1511,8 +1457,6 @@ This is called conditional correlation or sometimes correlation.
 
 The secret to sometimes correlation
 
-123
-
 The secret to sometimes correlation
 Turn off the node when the value would be below 0.
 This might seem too simple to work, but consider this: if a node’s value dropped below 0,
@@ -1585,8 +1529,6 @@ yourself relax and trust the things you’ve already learned.
 
 
 Your first deep neural network
-
-125
 
 Your first deep neural network
 Here’s how to make the prediction.
@@ -1728,8 +1670,6 @@ purpose, as you’ll see in a moment.
 
 
 Backpropagation in code
-
-127
 
 Remember, the goal is error attribution. It’s about figuring out how much each weight
 contributed to the final error. In the first (two-layer) neural network, you calculated a delta
@@ -1898,8 +1838,6 @@ layer_2_delta=(layer_2-walk_stop[0:1])
 One iteration of backpropagation
 
 d
-
-129
 
 LEARN: Backpropagating from layer_2 to layer_1
 
@@ -2084,8 +2022,6 @@ Error:1.50556226651e-05
 
 Why do deep networks matter?
 
-131
-
 Why do deep networks matter?
 What’s the point of creating “intermediate datasets” that
 have correlation?
@@ -2148,8 +2084,6 @@ The importance of visualization tools
 Numbers have an important story to tell. They rely on
 you to give them a clear and convincing voice.
 —Stephen Few, IT innovator, teacher, and consultant
-
-133
 
 
 

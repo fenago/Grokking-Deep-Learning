@@ -111,8 +111,6 @@ delta = pred - true
 
 d
 
-81
-
 LEARN: Calculating each weight_delta and putting it on each weight
 def ele_mul(number,vector):
 		
@@ -275,8 +273,6 @@ generate). Now you have three. How do you generate three weight_deltas?
 
 Gradient descent with multiple inputs explained
 
-83
-
 How do you turn a single delta (on the node)
 into three weight_delta values?
 Remember the definition and purpose of delta versus weight_delta. delta is a measure
@@ -425,8 +421,6 @@ Updating the weight
 New weight
 
 .1125
-
-85
 
 number_of_toes = [8.5]
 win_or_lose_binary = [1] # (won!!!)
@@ -590,8 +584,6 @@ higher than the others and thus, a higher derivative.
 Let’s watch several steps of learning
 
 c
-
-87
 
 Iteration
 
@@ -873,8 +865,6 @@ because error is shared, when one weight finds
 the bottom of the bowl, all the weights find the
 bottom of the bowl.
 
-89
-
 weight
 
 is determined by the training data. Any network can have any weight value, but
@@ -985,8 +975,6 @@ for i in range(len(true)):
 Gradient descent learning with multiple outputs
 
 d
-
-91
 
 COMPARE: Calculating each weight_delta and putting it on each weight
 weight_deltas
@@ -1279,8 +1267,6 @@ weight_deltas = outer_prod(input,delta)
 
 e
 
-93
-
 LEARN: Updating the weights
 Inputs
 
@@ -1395,8 +1381,6 @@ pix[2]
 pix[783]
 
 9?
-
-95
 
 This diagram represents the new MNIST classification neural
 network. It most closely resembles the network you trained
@@ -1554,8 +1538,6 @@ quick review.
 
 
 Visualizing dot products (weighted sums)
-
-97
 
 Visualizing dot products (weighted sums)
 Recall how dot products work. They take two vectors, multiply them together (elementwise),

@@ -55,8 +55,6 @@ in the next step, learn.
 
 Learn
 
-49
-
 Learn
 Learning tells each weight how it can change to reduce the error.
 Learning is all about error attribution, or the art of figuring out how each weight played
@@ -132,8 +130,6 @@ why squaring is valuable?
 
 
 Why measure error?
-
-51
 
 Why measure error?
 Measuring error simplifies the problem.
@@ -253,8 +249,6 @@ wouldn't make sense.
 What’s the simplest form of neural learning?
 
 d
-
-53
 
 COMPARE: Making a prediction with a higher weight and evaluating error
 We want to move the weight so the error goes downward. Let’s try moving the weight up and down using
@@ -398,8 +392,6 @@ predicts 0.8!
 
 
 Characteristics of hot and cold learning
-
-55
 
 Characteristics of hot and cold learning
 It’s simple.
@@ -548,8 +540,6 @@ those with multiple inputs and outputs).
 
 
 
-57
-
 58
 
 
@@ -640,8 +630,6 @@ network’s prediction was 0.85, so the network was too low by 0.15. Thus, delta
 
 
 One iteration of gradient descent
-
-59
 
 The primary difference between gradient descent and this implementation is the new variable
 delta. It’s the raw amount that the node was too high or too low. Instead of computing
@@ -745,8 +733,6 @@ error = ((0.5 * weight) - 0.8) ** 2
 
 
 Learning is just reducing error
-
-61
 
 The secret
 For any input and goal_pred, an exact relationship is defined between error and weight,
@@ -857,8 +843,6 @@ error = 0.002
 
 d
 
-63
-
 weight = 0.69
 
 OK, we’re pretty much there.
@@ -941,8 +925,6 @@ mentioned a few pages ago). This won’t do, either.
 
 Why does this work? What is weight_delta, really?
 
-65
-
 What’s left? The only variable remaining is weight. Adjusting it doesn’t change your perception
 of the world, doesn’t change your goal, and doesn’t destroy your error measure. Changing
 weight means the function conforms to the patterns in the data. By forcing the rest of the
@@ -1020,8 +1002,6 @@ As it turns out, there’s a method for doing this for any formula. You’ll use
 
 
 A box with rods poking out of it
-
-67
 
 A box with rods poking out of it
 Picture yourself sitting in front of a cardboard box that has two circular rods sticking
@@ -1124,8 +1104,6 @@ weight
 
 What you really need to know
 
-69
-
 What you really need to know
 With derivatives, you can pick any two variables in any formula,
 and know how they interact.
@@ -1224,8 +1202,6 @@ It’s like gravity.
 
 
 Look familiar?
-
-71
 
 Look familiar?
 weight = 0.0
@@ -1351,8 +1327,6 @@ about how to combat this phenomenon.
 
 Visualizing the overcorrections
 
-73
-
 Visualizing the overcorrections
 A big weight increase
 delta (raw error)
@@ -1459,8 +1433,6 @@ it smaller?
 
 Introducing alpha
 
-75
-
 Introducing alpha
 It’s the simplest way to prevent overcorrecting weight updates.
 What’s the problem you’re trying to solve? That if the input is too big, then the weight
@@ -1539,8 +1511,6 @@ now, try various alphas until you get one that seems to work pretty well. Play w
 
 
 Memorizing
-
-77
 
 Memorizing
 It’s time to really learn this stuff.

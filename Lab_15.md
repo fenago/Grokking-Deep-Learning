@@ -39,8 +39,6 @@ complexity of neural networks. Let’s create a name for this idea: the correlat
 
 Correlation summarization
 
-135
-
 Correlation summarization
 This is the key to sanely moving forward to more advanced
 neural networks.
@@ -134,8 +132,6 @@ weights_0_1
 layer_0
 
 The simplified visualization
-
-137
 
 The simplified visualization
 Neural networks are like LEGO bricks, and each brick
@@ -246,8 +242,6 @@ rest of this book discussing new architectures.
 
 
 Let’s see this network predict
-
-139
 
 1
 
@@ -391,8 +385,6 @@ l0
 
 Linking the variables
 
-141
-
 Linking the variables
 The letters can be combined to indicate functions
 and operations.
@@ -472,8 +464,6 @@ layer_0
 
 The importance of visualization tools
 
-143
-
 The importance of visualization tools
 We’re going to be studying new architectures.
 In the following chapters, we’ll be taking these vectors and matrices and combining them
@@ -515,8 +505,6 @@ With four parameters I can fit an elephant, and with
 five I can make him wiggle his trunk.
 —John von Neumann, mathematician, physicist,
 computer scientist, and polymath
-
-145
 
 
 
