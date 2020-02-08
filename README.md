@@ -50,7 +50,8 @@ Labs for this course are available at path shared below. Elev8ed Notebooks (powe
 
 ### Further Reading
 If you would like to learn more about deep learning and neural networks:
-13. ##### Fundamental concepts: how do machines learn? (Reading)
+
+1. ##### Fundamental concepts: how do machines learn? (Reading)
 		* <host-ip>:<port>/lab/workspaces/Deep_Learning
-13. ##### How to picture neural networks: in your head and on paper (Reading)
+2. ##### How to picture neural networks: in your head and on paper (Reading)
 		* <host-ip>:<port>/lab/workspaces/Picture_Neural_Network
