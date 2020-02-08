@@ -935,7 +935,8 @@ I the sentastar thamy this not thame.
 
 I Learning to write like Shakespeare
 
-Summary
+### Summary
+
 LSTMs are incredibly powerful models.
 The distribution of Shakespearian language that the LSTM learned to generate isn’t to be
 taken lightly. Language is an incredibly complex statistical distribution to learn, and the

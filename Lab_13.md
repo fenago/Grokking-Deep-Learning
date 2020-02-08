@@ -433,7 +433,8 @@ str(test(model, test_data, test_target)*100))
 
 
 
-Summary
+### Summary
+
 
 Now you can run the new training scheme, which has an added step. Alice, Bob, and Sue
 add up their homomorphically encrypted models before sending them back to you, so
@@ -451,7 +452,8 @@ Starting Training Round...
 ...
 	 % Correct on Test Set: 99.15
 
-Summary
+### Summary
+
 Federated learning is one of the most exciting breakthroughs
 in deep learning.
 I firmly believe that federated learning will change the landscape of deep learning in the

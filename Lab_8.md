@@ -1168,7 +1168,8 @@ compression of these co-occurrence statistics will behave similarly.
 
 I Neural networks that understand language
 
-Summary
+### Summary
+
 You’ve learned a lot about neural word embeddings and the
 impact of loss on learning.
 In this chapter, we’ve unpacked the fundamental principles of using neural networks to

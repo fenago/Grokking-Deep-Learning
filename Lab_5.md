@@ -658,7 +658,8 @@ Because the example takes an average of a noisy signal (the average weight chang
 size 8 to as high as 256. Generally, researchers pick numbers randomly until they find a
 batch_size/alpha pair that seems to work well.
 
-Summary
+### Summary
+
 This chapter addressed two of the most widely used methods for increasing the accuracy
 and training speed of almost any neural architecture. In the following chapters, we’ll pivot
 from sets of tools that are universally applicable to nearly all neural networks, to specialpurpose architectures that are advantageous for modeling specific types of phenomena

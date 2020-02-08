@@ -1583,7 +1583,8 @@ Predictions
 
 I Learning multiple weights at a time
 
-Summary
+### Summary
+
 Gradient descent is a general learning algorithm.
 Perhaps the most important subtext of this chapter is that gradient descent is a very flexible
 learning algorithm. If you combine weights in a way that allows you to calculate an error

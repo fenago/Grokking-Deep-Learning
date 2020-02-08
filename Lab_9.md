@@ -1140,9 +1140,11 @@ in my opinion, creates educational analysis for the ways in which it fails.
 
 
 
-Summary
+### Summary
 
-Summary
+
+### Summary
+
 Recurrent neural networks predict over arbitrary-length
 sequences.
 In this chapter, you learned how to create vector representations for arbitrary-length

@@ -1693,7 +1693,8 @@ Loss:
 
 
 
-Summary
+### Summary
+
 
 batch_size = 1
 hidden = model.init_hidden(batch_size=batch_size)
@@ -1715,7 +1716,8 @@ As you can see, the neural network learns to predict the first 100 examples of t
 dataset with an accuracy of around 37% (near perfect, for this toy task). It predicts a
 plausible location for Mary to be moving toward, much like at the end of chapter 12.
 
-Summary
+### Summary
+
 Frameworks are efficient, convenient abstractions of forward
 and backward logic.
 I hope this chapter’s exercise has given you an appreciation for how convenient frameworks

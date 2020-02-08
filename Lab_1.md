@@ -940,7 +940,8 @@ Throws
 an error
 Throws an error; .T flips the
 rows and columns of a matrix.
-Summary
+### Summary
+
 To predict, neural networks perform repeated weighted sums
 of the input.
 You’ve seen an increasingly complex variety of neural networks in this chapter. I hope it’s clear

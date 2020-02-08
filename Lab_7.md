@@ -368,9 +368,11 @@ might still be in the previous AI winter even at the time of writing.
 
 
 
-Summary
+### Summary
 
-Summary
+
+### Summary
+
 Reusing weights is one of the most important innovations in
 deep learning.
 Convolutional neural networks are a more general development than you might realize. The
