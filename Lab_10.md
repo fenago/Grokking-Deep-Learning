@@ -474,7 +474,7 @@ creators=[self],
 creation_op="neg")
 return Tensor(self.data * -1)
 
-Nearly everything is identical. You don’t accept any parameters so the parameter “other” has
+Nearly everything is identical. You don’t accept any parameters so the parameter "other" has
 been removed in several places. Let’s take a look at the backprop logic you should add to
 .backward(). Modifications from the __add__ function backpropagation logic are in bold:
 if(self.creation_op == "neg"):
@@ -1218,7 +1218,7 @@ weight = np.random.rand(vocab_size, dim) - 0.5) / dim
 
 So far, so good. The matrix has a row (vector) for each word in the vocabulary. Now, how
 will you forward propagate? Well, forward propagation always starts with the question,
-“How will the inputs be encoded?” In the case of word embeddings, you obviously can’t pass
+"How will the inputs be encoded?" In the case of word embeddings, you obviously can’t pass
 in the words themselves, because the words don’t tell you which rows in self.weight to
 forward propagate with. Instead, as you hopefully remember from chapter 11, you forward
 propagate indices. Fortunately, NumPy supports this operation:

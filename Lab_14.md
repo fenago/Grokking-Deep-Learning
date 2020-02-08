@@ -160,16 +160,16 @@ Unsupervised machine learning
 Unsupervised learning groups your data.
 Unsupervised learning shares a property in common with supervised learning: it transforms
 one dataset into another. But the dataset that it transforms into is not previously known or
-understood. Unlike supervised learning, there is no “right answer” that you’re trying to get
-the model to duplicate. You just tell an unsupervised algorithm to “find patterns in this data
-and tell me about them.”
+understood. Unlike supervised learning, there is no "right answer" that you’re trying to get
+the model to duplicate. You just tell an unsupervised algorithm to "find patterns in this data
+and tell me about them."
 For example, clustering a dataset into groups is a type of unsupervised learning. Clustering
 transforms a sequence of datapoints into a sequence of cluster labels. If it learns 10 clusters,
 it’s common for these labels to be the numbers 1–10. Each datapoint will be assigned to a
 number based on which cluster it’s in. Thus, the dataset turns from a bunch of datapoints
 into a bunch of labels. Why are the labels numbers? The algorithm doesn’t tell you what the
-clusters are. How could it know? It just says, “Hey scientist! I found some structure. It looks
-like there are groups in your data. Here they are!”
+clusters are. How could it know? It just says, "Hey scientist! I found some structure. It looks
+like there are groups in your data. Here they are!"
 List of
 datapoints
 
@@ -264,12 +264,12 @@ make a prediction (such as 98% chance). Next, the model would observe whether or
 the Red Sox actually won. After it knew whether they won, the learning algorithm would
 update the knobs to make a more accurate prediction the next time it sees the same
 or similar input data.
-Perhaps it would “turn up” the “win/loss record” knob if the team’s win/loss record was a
-good predictor. Inversely, it might “turn down” the “average number of toes” knob if that
+Perhaps it would "turn up" the "win/loss record" knob if the team’s win/loss record was a
+good predictor. Inversely, it might "turn down" the "average number of toes" knob if that
 datapoint wasn’t a good predictor. This is how parametric models learn!
 Note that the entirety of what the model has learned can be captured in the positions
 of the knobs at any given time. You can also think of this type of learning model as a
-search algorithm. You’re “searching” for the appropriate knob configuration by trying
+search algorithm. You’re "searching" for the appropriate knob configuration by trying
 configurations, adjusting them, and retrying.
 Note further that the notion of trial and error isn’t the formal definition, but it’s a common
 (with exceptions) property to parametric models. When there is an arbitrary (but
@@ -321,7 +321,7 @@ input data.
 In theory, the next time this step saw the same sports stats,
 the prediction would be lower than 98%. Note that each
 knob represents the prediction’s sensitivity to different types
-of input data. That’s what you’re changing when you “learn.”
+of input data. That’s what you’re changing when you "learn."
 
 Adjusting sensitivity
 by turning knobs
@@ -422,7 +422,7 @@ Nonparametric learning is a class of algorithm wherein the number of parameters 
 on data (instead of predefined). This lends itself to methods that generally count in one way
 or another, thus increasing the number of parameters based on the number of items being
 counted within the data. In the supervised setting, for example, a nonparametric model
-might count the number of times a particular color of streetlight causes cars to “go.” After
+might count the number of times a particular color of streetlight causes cars to "go." After
 counting only a few examples, this model would then be able to predict that middle lights
 always (100%) cause cars to go, and right lights only sometimes (50%) cause cars to go.
 Stop

@@ -15,23 +15,19 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
 
 
-
-
-I Introduction to neural learning
-
 Predict, compare, and learn
-In chapter 3, you learned about the paradigm “predict, compare, learn,” and we dove
+In chapter 3, you learned about the paradigm "predict, compare, learn," and we dove
 deep into the first step: predict. In the process, you learned a myriad of things, including
 the major parts of neural networks (nodes and weights), how datasets fit into networks
 (matching the number of datapoints coming in at one time), and how to use a neural
 network to make a prediction.
-Perhaps this process begged the question, “How do we set weight values so the network
-predicts accurately?” Answering this question is the main focus of this chapter, as we
+Perhaps this process begged the question, "How do we set weight values so the network
+predicts accurately?" Answering this question is the main focus of this chapter, as we
 cover the next two steps of the paradigm: compare and learn.
 
 Compare
 Comparing gives a measurement of how much a prediction
-“missed” by.
+"missed" by.
 Once you’ve made a prediction, the next step is to evaluate how well you did. This may
 seem like a simple concept, but you’ll find that coming up with a good way to measure
 error is one of the most important and complicated subjects of deep learning.
@@ -45,10 +41,10 @@ kinds of properties when measuring error.
 As a heads-up, in this chapter we evaluate only one simple way of measuring error: mean
 squared error. It’s but one of many ways to evaluate the accuracy of a neural network.
 This step will give you a sense for how much you missed, but that isn’t enough to be able to
-learn. The output of the compare logic is a “hot or cold” type signal. Given some prediction,
-you’ll calculate an error measure that says either “a lot” or “a little.” It won’t tell you why you
+learn. The output of the compare logic is a "hot or cold" type signal. Given some prediction,
+you’ll calculate an error measure that says either "a lot" or "a little." It won’t tell you why you
 missed, what direction you missed, or what you should do to fix the error. It more or less
-says “big miss,” “little miss,” or “perfect prediction.” What to do about the error is captured
+says "big miss," "little miss," or "perfect prediction." What to do about the error is captured
 in the next step, learn.
 
 
@@ -70,8 +66,6 @@ you’ll move the weight according to that number, and you’ll be finished.
 ## 50
 
 
-
-I Introduction to neural learning
 
 Compare: Does your network make
 good predictions?
@@ -107,8 +101,8 @@ wouldn't make sense.
 
 What is the goal_pred variable?
 Much like input, goal_pred is a number you recorded in the real world somewhere.
-But it’s usually something hard to observe, like “the percentage of people who did wear
-sweatsuits,” given the temperature; or “whether the batter did hit a home run,” given his
+But it’s usually something hard to observe, like "the percentage of people who did wear
+sweatsuits," given the temperature; or "whether the batter did hit a home run," given his
 batting average.
 
 Why is the error squared?
@@ -116,7 +110,7 @@ Why is the error squared?
 Think about an archer hitting a target. When the shot hits 2 inches too high, how much
 did the archer miss by? When the shot hits 2 inches too low, how much did the archer
 miss by? Both times, the archer missed by only 2 inches. The primary reason to square
-“how much you missed” is that it forces the output to be positive. (pred - goal_pred)
+"how much you missed" is that it forces the output to be positive. (pred - goal_pred)
 could be negative in some situations, unlike actual error.
 
 Doesn’t squaring make big errors (>1) bigger and small errors (<1) smaller?
@@ -173,8 +167,6 @@ when you average them.
 ## 52
 
 
-
-I Introduction to neural learning
 
 What’s the simplest form of neural learning?
 Learning using the hot and cold method.
@@ -337,8 +329,6 @@ slightly more difficult prediction so you can see this searching in action!
 
 
 
-I Introduction to neural learning
-
 Hot and cold learning
 This is perhaps the simplest form of learning.
 Execute the following code in your Jupyter notebook. (New neural network modifications
@@ -438,8 +428,6 @@ repeatedly make predictions?
 ## 56
 
 
-
-I Introduction to neural learning
 
 Calculating both direction and amount from error
 Let’s measure the error and find the direction and amount!
@@ -543,8 +531,6 @@ those with multiple inputs and outputs).
 ## 58
 
 
-
-I Introduction to neural learning
 
 <span style="color:red;"> One iteration of gradient descent</span>
 
@@ -697,8 +683,6 @@ change (small increase) as hot and cold learning.
 
 
 
-I Introduction to neural learning
-
 ## Learning is just reducing error
 You can modify weight to reduce error.
 Putting together the code from the previous pages, we now have the following:
@@ -761,8 +745,6 @@ bowl. You can use this slope to help the neural network reduce the error.
 ## 62
 
 
-
-I Introduction to neural learning
 
 Let’s watch several steps of learning
 Will we eventually find the bottom of the bowl?
@@ -886,8 +868,6 @@ Delta:0.0074088 Weight Delta:0.00814968
 
 
 
-I Introduction to neural learning
-
 Why does this work? What is weight_delta, really?
 Let’s back up and talk about functions. What is a function?
 How do you understand one?
@@ -902,7 +882,7 @@ so powerful: it lets you take some numbers (say, image pixels) and convert them 
 numbers (say, the probability that the image contains a cat).
 Every function has what you might call moving parts: pieces you can tweak or change to make
 the output the function generates different. Consider my_function in the previous example. Ask
-yourself, “What’s controlling the relationship between the input and the output of this function?”
+yourself, "What’s controlling the relationship between the input and the output of this function?"
 The answer is, the 2. Ask the same question about the following function:
 error = ((input * weight) - goal_pred) ** 2
 
@@ -911,7 +891,7 @@ are—this function is a bit more complicated! goal_pred, input, **2, weight, an
 parentheses and algebraic operations (addition, subtraction, and so on) play a part in calculating
 the error. Tweaking any one of them would change the error. This is important to consider.
 As a thought exercise, consider changing goal_pred to reduce the error. This is silly, but totally
-doable. In life, you might call this (setting goals to be whatever your capability is) “giving up.”
+doable. In life, you might call this (setting goals to be whatever your capability is) "giving up."
 You’re denying that you missed! That wouldn’t do.
 What if you changed input until error went to 0? Well, that’s akin to seeing the world as you
 want to see it instead of as it actually is. You’re changing the input data until you’re predicting
@@ -960,15 +940,13 @@ about exactly that.
 
 
 
-I Introduction to neural learning
-
 Tunnel vision on one concept
 Concept: Learning is adjusting the weight to reduce the error to 0.
 So far in this chapter, we’ve been hammering on the idea that learning is really just about
 adjusting weight to reduce error to 0. This is the secret sauce. Truth be told, knowing how to
 do this is all about understanding the relationship between weight and error. If you understand
 this relationship, you can know how to adjust weight to reduce error.
-What do I mean by “understand the relationship”? Well, to understand the relationship between
+What do I mean by "understand the relationship"? Well, to understand the relationship between
 two variables is to understand how changing one variable changes the other. In this case, what
 you’re really after is the sensitivity between these two variables. Sensitivity is another name for
 direction and amount. You want to know how sensitive error is to weight. You want to know
@@ -1015,11 +993,11 @@ a relationship between the red and blue rods. However much you move the blue rod
 rod will move by twice as much. You might say the following is true:
 red_length = blue_length * 2
 
-As it turns out, there’s a formal definition for “When I tug on this part, how much does this
-other part move?” It’s called a derivative, and all it really means is “How much does rod X
-move when I tug on rod Y?”
-In the case of the red and blue rods, the derivative for “How much does red move when
-I tug on blue?” is 2. Just 2. Why is it 2? That’s the multiplicative relationship determined by
+As it turns out, there’s a formal definition for "When I tug on this part, how much does this
+other part move?" It’s called a derivative, and all it really means is "How much does rod X
+move when I tug on rod Y?"
+In the case of the red and blue rods, the derivative for "How much does red move when
+I tug on blue?" is 2. Just 2. Why is it 2? That’s the multiplicative relationship determined by
 the formula:
 Derivative
 
@@ -1043,15 +1021,13 @@ exactly what we were looking for.
 
 
 
-I Introduction to neural learning
-
 Derivatives: Take two
 Still a little unsure about them? Let’s take another perspective.
 I’ve heard people explain derivatives two ways. One way is all about understanding how one
 variable in a function changes when you move another variable. The other way says that a
 derivative is the slope at a point on a line or curve. As it turns out, if you take a function and
-plot it (draw it), the slope of the line you plot is the same thing as “how much one variable
-changes when you change the other.” Let me show you by plotting our favorite function:
+plot it (draw it), the slope of the line you plot is the same thing as "how much one variable
+changes when you change the other." Let me show you by plotting our favorite function:
 error = ((input * weight) - goal_pred) ** 2
 
 Remember, goal_pred and input are fixed, so you can rewrite this function:
@@ -1133,7 +1109,7 @@ In this book, I’m going to do what I typically do in real life (cuz I’m lazy
 look up the derivative in a reference table. All you need to know is what the derivative
 represents. It’s the relationship between two variables in a function so you can know how
 much one changes when you change the other. It’s just the sensitivity between two variables.
-I know that was a lot of information to say, “It’s the sensitivity between two variables,” but
+I know that was a lot of information to say, "It’s the sensitivity between two variables," but
 it is. Note that this can include positive sensitivity (when variables move together), negative
 sensitivity (when they move in opposite directions), and zero sensitivity (when one stays fixed
 regardless of what you do to the other). For example, y = 0 * x. Move x, and y is always 0.
@@ -1144,8 +1120,6 @@ Enough about derivatives. Let’s get back to gradient descent.
 ## 70
 
 
-
-I Introduction to neural learning
 
 How to use a derivative to learn
 weight_delta is your derivative.
@@ -1272,8 +1246,6 @@ weight = 0.88
 
 
 
-I Introduction to neural learning
-
 Breaking gradient descent
 Just give me the code!
 weight = 0.5
@@ -1396,8 +1368,6 @@ weight = 1.3
 
 
 
-I Introduction to neural learning
-
 Divergence
 Sometimes neural networks explode in value. Oops?
 
@@ -1460,10 +1430,8 @@ that attempt to counter for this, but gradient descent is still very popular.
 
 
 
-I Introduction to neural learning
-
 Alpha in code
-Where does our “alpha” parameter come into play?
+Where does our "alpha" parameter come into play?
 You just learned that alpha reduces the weight update so it doesn’t overshoot. How does this
 affect the code? Well, you were updating the weights according to the following formula:
 weight = weight - derivative
@@ -1517,14 +1485,14 @@ It’s time to really learn this stuff.
 This may sound a bit intense, but I can’t stress enough the value I’ve found from this
 exercise: see if you can build the code from the previous section in a Jupyter notebook (or a
 .py file, if you must) from memory. I know that might seem like overkill, but I (personally)
-didn’t have my “click” moment with neural networks until I was able to perform this task.
+didn’t have my "click" moment with neural networks until I was able to perform this task.
 Why does this work? Well, for starters, the only way to know you’ve gleaned all the
 information necessary from this chapter is to try to produce it from your head. Neural
 networks have lots of small moving parts, and it’s easy to miss one.
 Why is this important for the rest of the book? In the following chapters, I’ll be referring to
 the concepts discussed in this chapter at a faster pace so that I can spend plenty of time on
-the newer material. It’s vitally important that when I say something like “Add your alpha
-parameterization to the weight update,” you immediately recognize which concepts from
+the newer material. It’s vitally important that when I say something like "Add your alpha
+parameterization to the weight update," you immediately recognize which concepts from
 this chapter I’m referring to.
 All that is to say, memorizing small bits of neural network code has been hugely beneficial
 for me personally, as well as for many individuals who have taken my advice on this subject

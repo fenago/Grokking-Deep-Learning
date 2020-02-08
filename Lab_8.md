@@ -95,8 +95,8 @@ I Neural networks that understand language
 Supervised NLP
 Words go in, and predictions come out.
 Perhaps you’ll remember the following figure from chapter 2. Supervised learning is all
-about taking “what you know” and transforming it into “what you want to know.” Up until
-now, “what you know” has always consisted of numbers in one way or another. But NLP
+about taking "what you know" and transforming it into "what you want to know." Up until
+now, "what you know" has always consisted of numbers in one way or another. But NLP
 uses text as input. How do you process it?
 
 What you
@@ -142,7 +142,7 @@ negative reviews.
 The IMDB movie reviews dataset is a collection of review -> rating pairs that often look like
 the following (this is an imitation, not pulled from IMDB):
 This movie was terrible! The plot was dry, the acting
-unconvincing, and I spilled popcorn on my shirt.”
+unconvincing, and I spilled popcorn on my shirt."
 Rating: 1 (stars)
 
 The entire dataset consists of around 50,000 of these pairs, where the input reviews are
@@ -160,8 +160,8 @@ The input data, however, is a bit trickier. To begin, let’s consider the raw d
 of characters. This presents a few problems: not only is the input data text instead of
 numbers, but it’s variable-length text. So far, neural networks always take an input of a
 fixed size. You’ll need to overcome this.
-So, the raw input won’t work. The next question to ask is, “What about this data will have
-correlation with the output?” Representing that property might work well. For starters, I
+So, the raw input won’t work. The next question to ask is, "What about this data will have
+correlation with the output?" Representing that property might work well. For starters, I
 wouldn’t expect any characters (in the list of characters) to have any correlation with the
 sentiment. You need to think about it differently.
 What about the words? Several words in this dataset would have a bit of correlation. I’d
@@ -273,10 +273,10 @@ Sent Encoding:[1 1 0 1]
 
 1
 
-Note that when you create an embedding for several terms (such as “the cat sat”), you have
-multiple options if words occur multiple times. If the phrase was “cat cat cat,” you could
-either sum the vector for “cat” three times (resulting in [3,0,0,0]) or just take the unique
-“cat” a single time (resulting in [1,0,0,0]). The latter typically works better for language.
+Note that when you create an embedding for several terms (such as "the cat sat"), you have
+multiple options if words occur multiple times. If the phrase was "cat cat cat," you could
+either sum the vector for "cat" three times (resulting in [3,0,0,0]) or just take the unique
+"cat" a single time (resulting in [1,0,0,0]). The latter typically works better for language.
 
 
 
@@ -545,7 +545,7 @@ output layer. But we used a network that has a hidden layer. This begs the quest
 does this hidden layer do?
 Fundamentally, hidden layers are about grouping datapoints from a previous layer into n
 groups (where n is the number of neurons in the hidden layer). Each hidden neuron takes in
-a datapoint and answers the question, “Is this datapoint in my group?” As the hidden layer
+a datapoint and answers the question, "Is this datapoint in my group?" As the hidden layer
 learns, it searches for useful groupings of its input. What are useful groupings?
 An input datapoint grouping is useful if it does two things. First, the grouping must be useful
 to the prediction of an output label. If it’s not useful to the output prediction, the correlation
@@ -557,11 +557,11 @@ Second, a grouping is useful if it’s an actual phenomenon in the data that you
 Bad groupings just memorize the data. Good groupings pick up on phenomena that are
 useful linguistically.
 For example, when predicting whether a movie review is positive or negative, understanding
-the difference between “terrible” and “not terrible” is a powerful grouping. It would be great
-to have a neuron that turned off when it saw “awful” and turned on when it saw “not awful.”
+the difference between "terrible" and "not terrible" is a powerful grouping. It would be great
+to have a neuron that turned off when it saw "awful" and turned on when it saw "not awful."
 This would be a powerful grouping for the next layer to use to make the final prediction.
-But because the input to the neural network is the vocabulary of a review, “it was great,
-not terrible” creates exactly the same layer_1 value as “it was terrible, not great.” For this
+But because the input to the neural network is the vocabulary of a review, "it was great,
+not terrible" creates exactly the same layer_1 value as "it was terrible, not great." For this
 reason, the network is very unlikely to create a hidden neuron that understands negation.
 Testing whether a layer is the same or different based on a certain language pattern is a
 great first step for knowing whether an architecture is likely to find that pattern using the
@@ -614,10 +614,10 @@ good
 –.30
 film
 
-The three bold weights for “good”
-form the embedding for “good.”
+The three bold weights for "good"
+form the embedding for "good."
 They reflect how much the term
-“good” is a member of each
+"good" is a member of each
 group (hidden neuron). Words
 with similar predictive power
 have similar word embeddings
@@ -701,7 +701,7 @@ I Neural networks that understand language
 What is the meaning of a neuron?
 Meaning is entirely based on the target labels being predicted.
 Note that the meanings of different words didn’t totally reflect how you might group them.
-The term most similar to “beautiful” is “atmosphere.” This is a valuable lesson. For the
+The term most similar to "beautiful" is "atmosphere." This is a valuable lesson. For the
 purposes of predicting whether a movie review is positive or negative, these words have
 nearly identical meaning. But in the real world, their meaning is quite different (one is an
 adjective and another a noun, for example).
@@ -747,7 +747,7 @@ nearly infinite training data (the internet), which means nearly infinite signal
 network to use to learn more-nuanced information about words. Furthermore, being able to
 accurately fill in the blank requires at least some notion of context about the real world.
 For instance, in the following example, is it more likely that the blank is correctly filled by
-the word “anvil” or “wool”? Let’s see if the neural network can figure it out.
+the word "anvil" or "wool"? Let’s see if the neural network can figure it out.
 ????
 Mary had a little lamb whose __________
 was white as snow.
@@ -1045,7 +1045,7 @@ and perform basic algebraic operations on them.
 For example, if you train the previous network on a large enough corpus, you’ll be able to
 take the vector for king, subtract from it the vector for man, add in the vector for woman, and
 then search for the most similar vector (other than those in the query). As it turns out, the
-most similar vector is often the word “queen.” There are even similar phenomena in the fillin-the-blank network trained over movie reviews.
+most similar vector is often the word "queen." There are even similar phenomena in the fillin-the-blank network trained over movie reviews.
 def analogy(positive=['terrible','good'],negative=['bad']):
 norms = np.sum(weights_0_1 * weights_0_1,axis=1)
 norms.resize(norms.shape[0],1)
@@ -1144,20 +1144,20 @@ queen - woman = [0.1 , 0.2]
 
 queen
 
-The relative usefulness to the final prediction between “king”/“man” and “queen”/“woman” is
-similar. Why? The difference between “king” and “man” leaves a vector of royalty. There are
+The relative usefulness to the final prediction between "king"/"man" and "queen"/"woman" is
+similar. Why? The difference between "king" and "man" leaves a vector of royalty. There are
 a bunch of male- and female-related words in one grouping, and then there’s another grouping
 in the royal direction.
-This can be traced back to the chosen loss. When the word “king” shows up in a phrase, it
+This can be traced back to the chosen loss. When the word "king" shows up in a phrase, it
 changes the probability of other words showing up in a certain way. It increases the probability
-of words related to “man” and the probability of words related to royalty. The word “queen”
-appearing in a phrase increases the probability of words related to “woman” and the probability
+of words related to "man" and the probability of words related to royalty. The word "queen"
+appearing in a phrase increases the probability of words related to "woman" and the probability
 of words related to royalty (as a group). Thus, because the words have this sort of Venn diagram
 impact on the output probability, they end up subscribing to similar combinations of groupings.
-Oversimplified, “king” subscribes to the male and the royal dimensions of the hidden layer,
-whereas “queen” subscribes to the female and royal dimensions of the hidden layer. Taking
-the vector for “king” and subtracting out some approximation of the male dimensions
-and adding in the female ones yields something close to “queen.” The most important
+Oversimplified, "king" subscribes to the male and the royal dimensions of the hidden layer,
+whereas "queen" subscribes to the female and royal dimensions of the hidden layer. Taking
+the vector for "king" and subtracting out some approximation of the male dimensions
+and adding in the female ones yields something close to "queen." The most important
 takeaway is that this is more about the properties of language than deep learning. Any linear
 compression of these co-occurrence statistics will behave similarly.
 
@@ -1227,8 +1227,8 @@ Weight update with arbitrary length
 
 There’s something magical about Recurrent
 Neural Networks.
-—Andrej Karpathy, “The Unreasonable Effectiveness
-of Recurrent Neural Networks,” http://mng.bz/V PW
+—Andrej Karpathy, "The Unreasonable Effectiveness
+of Recurrent Neural Networks," http://mng.bz/V PW
 
 
 

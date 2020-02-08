@@ -157,8 +157,8 @@ Memorization vs. generalization
 Memorizing 1,000 images is easier than generalizing to all images.
 Let’s consider again how a neural network learns. It adjusts each weight in each matrix so
 the network is better able to take specific inputs and make a specific prediction. Perhaps a
-better question might be, “If we train it on 1,000 images, which it learns to predict perfectly,
-why does it work on other images at all?”
+better question might be, "If we train it on 1,000 images, which it learns to predict perfectly,
+why does it work on other images at all?"
 As you might expect, when the fully trained neural network is applied to a new image,
 it’s guaranteed to work well only if the new image is nearly identical to an image from the
 training data. Why? Because the neural network learned to transform input data to output
@@ -230,7 +230,7 @@ notice that there’s a specific outline for three thin prongs in the clay. The 
 doesn’t fit. Why not? It’s still a fork.
 It’s because the clay wasn’t molded on any four-pronged forks. It was molded only on the
 three-pronged variety. In this way, the clay has overfit to recognize only the types of forks it
-was “trained” to shape.
+was "trained" to shape.
 This is exactly the same phenomenon you just witnessed in the neural network. It’s an even
 closer parallel than you might think. One way to view the weights of a neural network is
 as a high-dimensional shape. As you train, this shape molds around the shape of the data,
@@ -258,7 +258,7 @@ What is this detailed information in the images that’s incompatible with the t
 fork analogy, it’s the number of prongs on the fork. In images, it’s generally referred to as
 noise. In reality, it’s a bit more nuanced. Consider these two dog pictures.
 
-Everything that makes these pictures unique beyond what captures the essence of “dog”
+Everything that makes these pictures unique beyond what captures the essence of "dog"
 is included in the term noise. In the picture on the left, the pillow and the background are
 both noise. In the picture on the right, the empty, middle blackness of the dog is a form of
 noise as well. It’s really the edges that tell you it’s a dog; the middle blackness doesn’t tell you

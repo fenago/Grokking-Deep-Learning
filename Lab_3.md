@@ -1344,8 +1344,8 @@ network to have the correct number of inputs and outputs for the new MNIST task.
 tweak it to have 784 inputs and 10 outputs.
 In the MNISTPreprocessor notebook is a script to preprocess the MNIST dataset and
 load the first 1,000 images and labels into two NumPy matrices called images and
-labels. You may be wondering, “Images are two-dimensional. How do I load the
-(28 × 28) pixels into a flat neural network?” For now, the answer is simple: flatten the
+labels. You may be wondering, "Images are two-dimensional. How do I load the
+(28 × 28) pixels into a flat neural network?" For now, the answer is simple: flatten the
 images into a vector of 1 × 784. You’ll take the first row of pixels and concatenate them
 with the second row, and the third row, and so on, until you have one list of pixels per
 image (784 pixels long).

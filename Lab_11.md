@@ -85,7 +85,7 @@ p_correct = (target.data == np.argmax(output.data,axis=1)).mean()
 print_loss = total_loss / (len(data)/batch_size)
 print("Loss:",print_loss,"% Correct:",p_correct)
 
-You might ask, “Why iterate to 5?” As it turns out, the previous dataset didn’t have any
+You might ask, "Why iterate to 5?" As it turns out, the previous dataset didn’t have any
 example longer than six words. It read in five words and then attempted to predict the sixth.
 Even more important is the backpropagation step. Consider when you did a simple
 feedforward network classifying MNIST digits: the gradients always backpropagated all the
@@ -160,7 +160,7 @@ array([ 9, 14,
 2, 10, 57])
 
 Those are the first five characters in the Shakespeare dataset. They spell out the string
-“That,”. Following are the first five rows of the output of the transformation contained within
+"That,". Following are the first five rows of the output of the transformation contained within
 batched_indices:
 print(batched_indices[0:5])
 array([[ 9,
@@ -211,7 +211,7 @@ array([[ 9,
 43],
 33]])
 
-I’ve highlighted the first column in bold. See how the indices for the phrase “That,” are in the
+I’ve highlighted the first column in bold. See how the indices for the phrase "That," are in the
 first column on the left? This is a standard construction. The reason there are eight columns
 is that the batch_size is 8. This tensor is then used to construct a list of smaller datasets,
 each of length bptt.
@@ -444,8 +444,8 @@ Vanilla RNNs suffer from vanishing and exploding gradients.
 You may recall this image from when you first put together a RNN. The idea was to be able
 to combine the word embeddings in a way that order mattered. You did this by learning a
 matrix that transformed each embedding to the next timestep. Forward propagation then
-became a two-step process: start with the first word embedding (the embedding for “Red” in
-the following example), multiply by the weight matrix, and add the next embedding (“Sox”).
+became a two-step process: start with the first word embedding (the embedding for "Red" in
+the following example), multiply by the weight matrix, and add the next embedding ("Sox").
 You then take the resulting vector, multiply it by the same weight matrix, and then add in
 the next word, repeating until you’ve read in the entire series of words.
 "Red Sox defeat Yankees"
@@ -619,7 +619,7 @@ The previous code is the forward propagation logic for the RNN cell. Following i
 forward propagation logic for the LSTM cell. The LSTM has two hidden state vectors: h (for
 hidden) and cell.
 The one you care about is cell. Notice how it’s updated. Each new cell is the previous cell
-plus u, weighted by i and f. f is the “forget” gate. If it takes a value of 0, the new cell will
+plus u, weighted by i and f. f is the "forget" gate. If it takes a value of 0, the new cell will
 erase what it saw previously. If i is 1, it will fully add in the value of u to create the new cell.
 o is an output gate that controls how much of the cell’s state the output prediction is allowed
 to see. For example, if o is all zeros, then the self.w_ho.forward(h) line will make a

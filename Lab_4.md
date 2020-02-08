@@ -34,9 +34,9 @@ following pattern:
 
 STOP
 
-OK, nobody walked at the first light. At this point you’re thinking, “Wow, this pattern could
+OK, nobody walked at the first light. At this point you’re thinking, "Wow, this pattern could
 be anything. The left light or the right light could be correlated with stopping, or the central
-light could be correlated with walking.” There’s no way to know. Let’s take another datapoint:
+light could be correlated with walking." There’s no way to know. Let’s take another datapoint:
 
 WALK
 
@@ -1208,7 +1208,7 @@ I Building your first deep neural network
 Stacking neural networks: A review briefly mentioned stacked neural networks.
 Let’s review.
 When you look at the following architecture, the prediction occurs exactly as you might
-expect when I say, “Stack neural networks.” The output of the first lower network (layer_0
+expect when I say, "Stack neural networks." The output of the first lower network (layer_0
 to layer_1) is the input to the second upper neural network (layer_1 to layer_2). The
 prediction for each of these networks is identical to what you saw before.
 walk/stop
@@ -1301,9 +1301,9 @@ Backpropagation: Why does this work?
 The weighted average delta
 In the neural network from chapter 5, the delta variable told you the direction and
 amount the value of this node should change next time. All backpropagation lets you
-do is say, “Hey, if you want this node to be x amount higher, then each of these previous
+do is say, "Hey, if you want this node to be x amount higher, then each of these previous
 four nodes needs to be x*weights_1_2 amount higher/lower, because these weights were
-amplifying the prediction by weights_1_2 times.”
+amplifying the prediction by weights_1_2 times."
 When used in reverse, the weights_1_2 matrix amplifies the error by the appropriate
 amount. It amplifies the error so you know how much each layer_1 node should move
 up or down.
@@ -1464,8 +1464,8 @@ normally the node would still have the same correlation to the input as always. 
 happen to be negative in value. But if you turn off the node (setting it to 0) when it would be
 negative, then it has zero correlation to any inputs whenever it’s negative.
 What does this mean? The node can now selectively pick and choose when it wants to be
-correlated to something. This allows it to say something like, “Make me perfectly correlated
-to the left input, but only when the right input is turned off.” How can it do this? Well, if
+correlated to something. This allows it to say something like, "Make me perfectly correlated
+to the left input, but only when the right input is turned off." How can it do this? Well, if
 the weight from the left input is 1.0 and the weight from the right input is a huge negative
 number, then turning on both the left and right inputs will cause the node to be 0 all the
 time. But if only the left input is on, the node will take on the value of the left input.
@@ -1475,7 +1475,7 @@ Solution: By turning off any middle node whenever it would be negative, you allo
 network to sometimes subscribe to correlation from various inputs. This is impossible for
 two-layer neural networks, thus adding power to three-layer nets.
 
-The fancy term for this “if the node would be negative, set it to 0” logic is nonlinearity.
+The fancy term for this "if the node would be negative, set it to 0" logic is nonlinearity.
 Without this tweak, the neural network is linear. Without this technique, the output layer
 only gets to pick from the same correlation it had in the two-layer network. It’s subscribing
 to pieces of the input layer, which means it can’t solve the new streetlights dataset.
@@ -1484,7 +1484,7 @@ one to use. It’s also the simplest. (It’s called relu.)
 For what it’s worth, most other books and courses say that consecutive matrix multiplication
 is a linear transformation. I find this unintuitive. It also makes it harder to understand
 what nonlinearities contribute and why you choose one over the other (which we’ll get to
-later). It says, “Without the nonlinearity, two matrix multiplications might as well be 1.” My
+later). It says, "Without the nonlinearity, two matrix multiplications might as well be 1." My
 explanation, although not the most concise answer, is an intuitive explanation of why you
 need nonlinearities.
 
@@ -2023,7 +2023,7 @@ Error:1.50556226651e-05
 ## Why do deep networks matter?
 
 Why do deep networks matter?
-What’s the point of creating “intermediate datasets” that
+What’s the point of creating "intermediate datasets" that
 have correlation?
 Consider the cat picture shown here. Consider further that I had a dataset of images with
 cats and without cats (and I labeled them as such). If I wanted to train a neural network to

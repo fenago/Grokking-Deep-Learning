@@ -64,10 +64,10 @@ earlier layers what kind of signal they need, to ultimately find correlation wit
 cross-communication is called backpropagation.
 
 When global correlation teaches each layer what it should be, local correlation can optimize
-weights locally. When a neuron in the final layer says, “I need to be a little higher,” it then
-proceeds to tell all the neurons in the layer immediately preceding it, “Hey, previous layer,
-send me higher signal.” They then tell the neurons preceding them, “Hey. Send us higher
-signal.” It’s like a giant game of telephone—at the end of the game, every layer knows which
+weights locally. When a neuron in the final layer says, "I need to be a little higher," it then
+proceeds to tell all the neurons in the layer immediately preceding it, "Hey, previous layer,
+send me higher signal." They then tell the neurons preceding them, "Hey. Send us higher
+signal." It’s like a giant game of telephone—at the end of the game, every layer knows which
 of its neurons need to be higher and lower, and the local correlation summarization takes
 over, updating the weights accordingly.
 
@@ -87,8 +87,8 @@ connected by a weight matrix (a bunch of lines) to layer_1, and so on. This was 
 to learn the basics of how collections of weights and layers come together to learn a function.
 But moving forward, this picture has too much detail. Given the correlation summarization,
 you already know you no longer need to worry about how individual weights are updated.
-Later layers already know how to communicate to earlier layers and tell them, “Hey, I
-need higher signal” or “Hey, I need lower signal.” Truth be told, you don’t really care about
+Later layers already know how to communicate to earlier layers and tell them, "Hey, I
+need higher signal" or "Hey, I need lower signal." Truth be told, you don’t really care about
 the weight values anymore, only that they’re behaving as they should, properly capturing
 correlation in a way that generalizes.
 To reflect this change, let’s update the visualization on paper. We’ll also do a few other
@@ -147,7 +147,7 @@ To reflect this, we’ll build all the neural networks
 with the pieces shown at right. The strip is a vector,
 the box is a matrix, and the circles are individual
 weights. Note that the box can be viewed as a
-“vector of vectors,” horizontally or vertically.
+"vector of vectors," horizontally or vertically.
 (1 × 1)
 
 layer_2
@@ -338,7 +338,7 @@ and vector, we can perform the same visualization
 in the form of letters.
 How do you visualize a matrix using math? Pick
 a capital letter. I try to pick one that’s easy to
-remember, such as W for “weights.” The little 0
+remember, such as W for "weights." The little 0
 means it’s probably one of several Ws. In this case,
 the network has two. Perhaps surprisingly, I could
 have picked any capital letter. The little 0 is an extra
@@ -396,27 +396,27 @@ Translation
 
 l0W0
 
-“Take the layer 0 vector and perform vectormatrix multiplication with the weight matrix 0.”
+"Take the layer 0 vector and perform vectormatrix multiplication with the weight matrix 0."
 
 l1W1
 
-“Take the layer 1 vector and perform vectormatrix multiplication with the weight matrix 1.”
+"Take the layer 1 vector and perform vectormatrix multiplication with the weight matrix 1."
 
 You can even throw in arbitrary functions like relu using notation that looks almost exactly
 like the Python code. This is crazy-intuitive stuff.
 
 l1 = relu(l0W0)
 
-“To create the layer 1 vector, take the layer 0 vector
+"To create the layer 1 vector, take the layer 0 vector
 and perform vector-matrix multiplication with the
 weight matrix 0; then perform the relu function on
-the output (setting all negative numbers to 0).”
+the output (setting all negative numbers to 0)."
 
 l2 = l1W1
 
-“To create the layer 2 vector, take the layer 1 vector
+"To create the layer 2 vector, take the layer 1 vector
 and perform vector-matrix multiplication with the
-weight matrix 1.”
+weight matrix 1."
 
 If you notice, the layer 2 algebra contains layer 1 as an input variable. This means you
 can represent the entire neural network in one expression by chaining them together.

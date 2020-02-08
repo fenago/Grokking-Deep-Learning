@@ -79,7 +79,7 @@ never changing direction.
 The second constraint is that the function is 1:1. It must never change direction. In other
 words, it must either be always increasing or always decreasing.
 As an example, look at the following two functions. These shapes answer the question,
-“Given x as input, what value of y does the function describe?” The function on the left
+"Given x as input, what value of y does the function describe?" The function on the left
 (y = x * x) isn’t an ideal activation function because it isn’t either always increasing or
 always decreasing.
 How can you tell? Well, notice that there are many cases in which two values of x have a
@@ -104,10 +104,10 @@ When you’re learning in neural networks, you’re searching for the right weig
 configurations to give a specific output. This problem can get a lot harder if there are
 multiple right answers. If there are multiple ways to get the same output, then the network
 has multiple possible perfect configurations.
-An optimist might say, “Hey, this is great! You’re more likely to find the right answer if it
-can be found in multiple places!” A pessimist would say, “This is terrible! Now you don’t
+An optimist might say, "Hey, this is great! You’re more likely to find the right answer if it
+can be found in multiple places!" A pessimist would say, "This is terrible! Now you don’t
 have a correct direction to go to reduce the error, because you can go in either direction and
-theoretically make progress.”
+theoretically make progress."
 Unfortunately, the phenomenon the pessimist identified is more important. For an advanced
 study of this subject, look more into convex versus non-convex optimization; many
 universities (and online classes) have entire courses dedicated to these kinds of questions.
@@ -226,7 +226,7 @@ without an activation function on the output.
 Configuration 2: Predicting unrelated yes/no
 probabilities (sigmoid)
 You’ll often want to make multiple binary probabilities in one neural network. We did this
-in the “Gradient descent with multiple inputs and outputs” section of chapter 5, predicting
+in the "Gradient descent with multiple inputs and outputs" section of chapter 5, predicting
 whether the team would win, whether there would be injuries, and the morale of the team
 (happy or sad) based on the input data.
 As an aside, when a neural network has hidden layers, predicting multiple things at once can
@@ -249,8 +249,8 @@ many. For example, in the MNIST digit classifier, you want to predict which numb
 the image. You know ahead of time that the image can’t be more than one number. You can
 train this network with a sigmoid activation function and declare that the highest output
 probability is the most likely. This will work reasonably well. But it’s far better to have an
-activation function that models the idea that “The more likely it’s one label, the less likely it’s
-any of the other labels.”
+activation function that models the idea that "The more likely it’s one label, the less likely it’s
+any of the other labels."
 Why do we like this phenomenon? Consider how weight updates are performed. Let’s say the
 MNIST digit classifier should predict that the image is a 9. Also say that the raw weighted sums
 going into the final layer (before applying an activation function) are the following values:
@@ -377,9 +377,9 @@ MSE
 Look at all the error! These weights are in for a massive weight update even though the
 network predicted perfectly. Why? For sigmoid to reach 0 error, it doesn’t just have to
 predict the highest positive number for the true output; it also has to predict a 0 everywhere
-else. Where softmax asks, “Which digit seems like the best fit for this input?” sigmoid says,
-“You better believe that it’s only digit 9 and doesn’t have anything in common with the other
-MNIST digits.”
+else. Where softmax asks, "Which digit seems like the best fit for this input?" sigmoid says,
+"You better believe that it’s only digit 9 and doesn’t have anything in common with the other
+MNIST digits."
 
 
 
@@ -594,14 +594,14 @@ straightforward. But properly compensating for the activation function in
 backpropagation is a bit more nuanced.
 In chapter 6, we performed an interesting operation to create the layer_1_delta variable.
 Wherever relu had forced a layer_1 value to be 0, we also multiplied the delta by 0.
-The reasoning at the time was, “Because a layer_1 value of 0 had no effect on the output
+The reasoning at the time was, "Because a layer_1 value of 0 had no effect on the output
 prediction, it shouldn’t have any impact on the weight update either. It wasn’t responsible
-for the error.” This is the extreme form of a more nuanced property. Consider the shape of
+for the error." This is the extreme form of a more nuanced property. Consider the shape of
 the relu function.
 
 Because the purpose of delta at this point is
-to tell earlier layers “make my input higher or
-lower next time,” this delta is very useful. It
+to tell earlier layers "make my input higher or
+lower next time," this delta is very useful. It
 modifies the delta backpropagated from the
 following layer to take into account whether
 this node contributed to the error.
@@ -937,7 +937,7 @@ The convolutional layer
 The pooling operation used in convolutional neural
 networks is a big mistake, and the fact that it works
 so well is a disaster.
-—Geoffrey Hinton, from “Ask Me Anything” on Reddit
+—Geoffrey Hinton, from "Ask Me Anything" on Reddit
 
 
 

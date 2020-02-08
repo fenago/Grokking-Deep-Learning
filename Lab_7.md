@@ -33,10 +33,10 @@ Similar strokes!
 
 Overfitting is often caused by having more parameters than
 necessary to learn a specific dataset. In this case, the network has so many parameters that
-it can memorize every fine-grained detail in the training dataset (neural network: “Ah. I see
-we have image number 363 again. This was the number 2.”) instead of learning high-level
-abstractions (neural network: “Hmm, it’s got a swooping top, a swirl at the bottom left, and
-a tail on the right; it must be a 2.”). When neural networks have lots of parameters but not
+it can memorize every fine-grained detail in the training dataset (neural network: "Ah. I see
+we have image number 363 again. This was the number 2.") instead of learning high-level
+abstractions (neural network: "Hmm, it’s got a swooping top, a swirl at the bottom left, and
+a tail on the right; it must be a 2."). When neural networks have lots of parameters but not
 very many training examples, overfitting is difficult to avoid.
 We covered this topic extensively in chapter 8, when we looked at regularization as a means
 of countering overfitting. But regularization isn’t the only technique (or even the most ideal

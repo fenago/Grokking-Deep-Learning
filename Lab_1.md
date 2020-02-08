@@ -44,20 +44,20 @@ neural network, you’re going to predict one datapoint at a time, like so:
 ![](./images_3/2.png)
 
 Later, you’ll find that the number of datapoints you process at a time has a significant
-impact on what a network looks like. You might be wondering, “How do I choose how
-many datapoints to propagate at a time?” The answer is based on whether you think the
+impact on what a network looks like. You might be wondering, "How do I choose how
+many datapoints to propagate at a time?" The answer is based on whether you think the
 neural network can be accurate with the data you give it.
 
 For example, if I’m trying to predict whether there’s a cat in a photo, I definitely need to
 show my network all the pixels of an image at once. Why? Well, if I sent you only one
 pixel of an image, could you classify whether the image contained a cat? Me neither!
 (That’s a general rule of thumb, by the way: always present enough information to the
-network, where “enough information” is defined loosely as how much a human might
+network, where "enough information" is defined loosely as how much a human might
 need to make the same prediction.)
 
 Let’s skip over the network for now. As it turns out, you can create a network only after
-you understand the shape of the input and output datasets (for now, shape means “number
-of columns” or “number of datapoints you’re processing at once”). Let’s stick with a single
+you understand the shape of the input and output datasets (for now, shape means "number
+of columns" or "number of datapoints you’re processing at once"). Let’s stick with a single
 prediction of the likelihood that the baseball team will win:
 
 ![](./images_3/3.png)
@@ -65,9 +65,9 @@ prediction of the likelihood that the baseball team will win:
 Now that you know you want to take one input datapoint and output one prediction, you
 can create a neural network. Because you have only one input datapoint and one output
 datapoint, you’re going to build a network with a single knob mapping from the input point
-to the output. (Abstractly, these “knobs” are actually called weights, and I’ll refer to them
+to the output. (Abstractly, these "knobs" are actually called weights, and I’ll refer to them
 as such from here on out.) So, without further ado, here’s your first neural network, with a
-single weight mapping from the input “# toes” to the output “win?”:
+single weight mapping from the input "# toes" to the output "win?":
 
 ![](./images_3/4.png)
 
@@ -93,7 +93,7 @@ more weights that you can multiply by the input data to make a prediction.
 ![](./images_3/7.png)
 
 What does this neural network do?
-It multiplies the input by a weight. It “scales” the input by a
+It multiplies the input by a weight. It "scales" the input by a
 certain amount.
 
 In the previous section, you made your first prediction with a neural network. A neural network,
@@ -117,14 +117,14 @@ Notice several things. First, the neural network does not have access to any inf
 except one instance. If, after this prediction, you were to feed in number_of_toes[1], the
 network wouldn’t remember the prediction it made in the last timestep. A neural network
 knows only what you feed it as input. It forgets everything else. Later, you’ll learn how to
-give a neural network a “short-term memory” by feeding in multiple inputs at once.
+give a neural network a "short-term memory" by feeding in multiple inputs at once.
 
 ![](./images_3/10.png)
 
 Another way to think about a neural network’s weight value is as a measure of sensitivity
 between the input of the network and its prediction. If the weight is very high, then even the
 tiniest input can create a really large prediction! If the weight is very small, then even large
-inputs will make small predictions. This sensitivity is akin to volume. “Turning up the weight”
+inputs will make small predictions. This sensitivity is akin to volume. "Turning up the weight"
 amplifies the prediction relative to the input: weight is a volume knob!
 
 ![](./images_3/11.png)
@@ -146,8 +146,8 @@ Making a prediction with multiple inputs
 Neural networks can combine intelligence from
 multiple datapoints.
 The previous neural network was able to take one datapoint as input and make one prediction
-based on that datapoint. Perhaps you’ve been wondering, “Is the average number of toes really
-a good predictor, all by itself?” If so, you’re onto something. What if you could give the network
+based on that datapoint. Perhaps you’ve been wondering, "Is the average number of toes really
+a good predictor, all by itself?" If so, you’re onto something. What if you could give the network
 more information (at one time) than just the average number of toes per player? In that case,
 the network should, in theory, be able to make more-accurate predictions. Well, as it turns out, a
 network can accept multiple input datapoints at a time. Take a look at the next prediction:
@@ -297,8 +297,8 @@ AND, because if any of the rows show weight, the score is affected. Thus, for w_
 (a[0] AND b[0]) OR (a[1] AND b[1]), and so on, then w_sum(a,b) returns a positive score.
 Furthermore, if one value is negative, then that column gets a NOT.
 Amusingly, this gives us a kind of crude language for reading weights. Let’s read a few
-examples, shall we? These assume you’re performing w_sum(input,weights) and the “then”
-to these if statements is an abstract “then give high score”:
+examples, shall we? These assume you’re performing w_sum(input,weights) and the "then"
+to these if statements is an abstract "then give high score":
 weights = [ 1, 0, 1] => if input[0] OR input[2]
 weights = [ 0, 0, 1] => if input[2]
 weights = [ 1, 0, -1] => if input[0] OR NOT input[2]
@@ -361,7 +361,7 @@ nfans = [1.2, 1.3, 0.5, 1.0]
 input = [toes[0],wlrec[0],nfans[0]]
 pred = neural_network(input,weights)
 print(pred)
-There’s a Python library called NumPy, which stands for “numerical Python.” It has
+There’s a Python library called NumPy, which stands for "numerical Python." It has
 very efficient code for creating vectors and performing common functions (such as dot
 products). Without further ado, here’s the same code in NumPy.
 NumPy code
@@ -377,7 +377,7 @@ input = np.array([toes[0],wlrec[0],nfans[0]])
 pred = neural_network(input,weights)
 print(pred)
 Both networks should print out 0.98. Notice that in the NumPy code, you don’t have to
-create a w_sum function. Instead, NumPy has a dot function (short for “dot product”) you
+create a w_sum function. Instead, NumPy has a dot function (short for "dot product") you
 can call. Many functions you’ll use in the future have NumPy parallels.
 Multiple inputs: Complete runnable code
 Input corresponds
@@ -820,9 +820,9 @@ same number of columns as a
 Because a and e don’t
 have the same number
 of columns, this throws
-“Value Error: operands
+"Value Error: operands
 could not be broadcast
-together with...”
+together with..."
 import numpy as np
 a = np.array([0,1,2,3])
 b = np.array([4,5,6,7])
@@ -857,15 +857,15 @@ Random 2 × 5 matrix
 of numbers between
 0 and 1
 
-Go ahead and run all of the previous code. The first bit of “at first confusing but eventually
-heavenly” magic should be visible. When you multiply two variables with the * function,
+Go ahead and run all of the previous code. The first bit of "at first confusing but eventually
+heavenly" magic should be visible. When you multiply two variables with the * function,
 NumPy automatically detects what kinds of variables you’re working with and tries to figure
 out the operation you’re talking about. This can be mega-convenient but sometimes makes
 NumPy code a bit hard to read. Make sure you keep track of each variable type as you go along.
 The general rule of thumb for anything elementwise (+, –, *, /) is that either the two
 variables must have the same number of columns, or one of the variables must have only
 one column. For example, print(a * 0.1) multiplies a vector by a single number (a
-scalar). NumPy says, “Oh, I bet I’m supposed to do vector-scalar multiplication here,” and
+scalar). NumPy says, "Oh, I bet I’m supposed to do vector-scalar multiplication here," and
 then multiples the scalar (0.1) by every value in the vector. This looks exactly the same as
 print(c * 0.2), except NumPy knows that c is a matrix. Thus, it performs scalar-matrix
 multiplication, multiplying every element in c by 0.2. Because the scalar has only one
@@ -879,7 +879,7 @@ print(a * c) is perhaps the most elusive. a is a vector with four columns, and c
 same number of columns. They do, so NumPy multiplies the vector a by each row of c
 (as if it were doing elementwise vector multiplication on each row).
 Again, the most confusing part is that all of these operations look the same if you don’t
-know which variables are scalars, vectors, or matrices. When you “read NumPy,” you’re really
+know which variables are scalars, vectors, or matrices. When you "read NumPy," you’re really
 doing two things: reading the operations and keeping track of the shape (number of rows and
 columns) of each operation. It will take some practice, but eventually it becomes second nature.
 Let’s look at a few examples of matrix multiplication in NumPy, noting the input and output shapes
@@ -891,7 +891,7 @@ print(c.shape)
 Output
 (1,3)
 There’s one golden rule when using the dot function: if you put the (rows,cols) description
-of the two variables you’re “dotting” next to each other, neighboring numbers should always be
+of the two variables you’re "dotting" next to each other, neighboring numbers should always be
 the same. In this case, you’re dot-producting (1,4) with (4,3). It works fine and outputs (1,3).
 In terms of variable shape, you can think of it as follows, regardless of whether you’re dotting
 Vector of length 4

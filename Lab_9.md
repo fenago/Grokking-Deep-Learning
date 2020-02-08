@@ -53,9 +53,9 @@ sat
 still
 
 In theory, these two sentences should be very similar, and comparing their vectors should
-indicate a high degree of similarity. But because “the cat sat” is a shorter vector, you have to
-choose which part of “the cat sat still” vector to compare to. If you align left, the vectors will
-appear to be identical (ignoring the fact that “the cat sat still” is, in fact, a different sentence).
+indicate a high degree of similarity. But because "the cat sat" is a shorter vector, you have to
+choose which part of "the cat sat still" vector to compare to. If you align left, the vectors will
+appear to be identical (ignoring the fact that "the cat sat still" is, in fact, a different sentence).
 But if you align right, then the vectors will appear to be extraordinarily different, despite the
 fact that three-quarters of the words are the same, in the same order. Although this naive
 approach shows some promise, it’s far from ideal in terms of representing the meaning of a
@@ -76,10 +76,10 @@ network will also have difficulty recognizing when two sentences are similar. Al
 work with are the vectors!
 As we continue to iterate and evaluate various methods for computing sentence vectors,
 I want you to remember why we’re doing this. We’re trying to take the perspective of a
-neural network. We’re asking, “Will the correlation summarization find correlation between
+neural network. We’re asking, "Will the correlation summarization find correlation between
 sentence vectors similar to this one and a desirable label, or will two nearly identical
 sentences instead generate wildly different vectors such that there is very little correlation
-between sentence vectors and the corresponding labels you’re trying to predict?” We want to
+between sentence vectors and the corresponding labels you’re trying to predict?" We want to
 create sentence vectors that are useful for predicting things about the sentence, which, at a
 minimum, means similar sentences need to create similar vectors.
 The previous way of creating the sentence
@@ -108,10 +108,10 @@ Sentence vector
 
 cat
 
-Furthermore, the sentences “the cat sat”
-and “the cat sat still” will have similar
+Furthermore, the sentences "the cat sat"
+and "the cat sat still" will have similar
 sentence vectors because the words going into them are similar. Even better, it’s likely that
-“a dog walked” will be similar to “the cat sat,” even though no words overlap, because the
+"a dog walked" will be similar to "the cat sat," even though no words overlap, because the
 words used are also similar.
 As it turns out, averaging word embeddings is a surprisingly effective way to create word
 embeddings. It’s not perfect (as you’ll see), but it does a strong job of capturing what you
@@ -188,7 +188,7 @@ vector and the vector of
 every other review in the corpus. This dot product similarity metric is the same one we
 briefly discussed in chapter 4 when you were learning to predict with multiple inputs.
 Perhaps surprisingly, when you query for the most similar reviews to the average vector
-between the two words “boring” and “awful,” you receive back three very negative reviews.
+between the two words "boring" and "awful," you receive back three very negative reviews.
 There appears to be interesting statistical information within these vectors, such that
 negative and positive embeddings cluster together.
 
@@ -232,10 +232,10 @@ terrible
 the various words. Notice that each
 vector’s corresponding shape is
 wonderful
-unique. But “terrible” and “boring”
+unique. But "terrible" and "boring"
 have a certain similarity in their
 boring
-shape. “beautiful” and “wonderful”
+shape. "beautiful" and "wonderful"
 beautiful
 also have a similarity to their shape,
 but it’s different from that of the other
@@ -244,7 +244,7 @@ squiggles, words with similar meaning would cluster together. More important, pa
 these squiggles have true meaning in and of themselves.
 For example, for the negative words, there’s a downward and then upward spike about 40%
 from the left. If I were to continue drawing lines corresponding to words, this spike would
-continue to be distinctive. There’s nothing magical about that spike that means “negativity,”
+continue to be distinctive. There’s nothing magical about that spike that means "negativity,"
 and if I retrained the network, it would likely show up somewhere else. The spike indicates
 negativity only because all the negative words have it!
 Thus, during the course of training, these shapes are molded such that different curves in
@@ -302,10 +302,10 @@ previous section).
 The limitations of bag-of-words vectors
 Order becomes irrelevant when you average word embeddings.
 The biggest issue with average embeddings is that they have no concept of order. For
-example, consider the two sentences “Yankees defeat Red Sox” and “Red Sox defeat
-Yankees.” Generating sentence vectors for these two sentences using the average approach
+example, consider the two sentences "Yankees defeat Red Sox" and "Red Sox defeat
+Yankees." Generating sentence vectors for these two sentences using the average approach
 will yield identical vectors, but the sentences are conveying the exact opposite information!
-Furthermore, this approach ignores grammar and syntax, so “Sox Red Yankees defeat” will
+Furthermore, this approach ignores grammar and syntax, so "Sox Red Yankees defeat" will
 also yield an identical sentence embedding.
 This approach of summing or averaging word embeddings to form the embedding for a
 phrase or sentence is classically known as a bag-of-words approach because, much like
@@ -408,13 +408,13 @@ matrix
 
 x
 
-The vector for “Red” is multiplied by an
+The vector for "Red" is multiplied by an
 identity matrix, and then the output is
 Red
 +
-summed with the vector for “Sox,” which is
+summed with the vector for "Sox," which is
 then vector-matrix multiplied by the identity
-matrix and added to the vector for “defeat,”
+matrix and added to the vector for "defeat,"
 and so on throughout the sentence. Note that because the vector-matrix multiplication by
 the identity matrix returns the same vector that goes into it, the process on the right yields
 exactly the same sentence embedding as the process at top left.
@@ -508,8 +508,8 @@ Before we begin, let’s remember the goal: generating sentence embeddings that 
 according to the meaning of the sentence, such that given a sentence, we can use the vector
 to find sentences with a similar meaning. More specifically, these sentence embeddings
 should care about the order of words.
-Previously, we tried summing word embeddings. But this meant “Red Sox defeat Yankees”
-had an identical vector to the sentence “Yankees defeat Red Sox,” despite the fact that these
+Previously, we tried summing word embeddings. But this meant "Red Sox defeat Yankees"
+had an identical vector to the sentence "Yankees defeat Red Sox," despite the fact that these
 two sentences have opposite meanings. Instead, we want to form sentence embeddings
 where these two sentences generate different embeddings (yet still cluster in a meaningful
 way). The theory is that if we use the identity-matrix way of creating sentence embeddings,
@@ -517,8 +517,8 @@ but used any other matrix other than the identity matrix, the sentence embedding
 different depending on the order.
 Now the obvious question: what matrix to use instead of the identity matrix. There are
 an infinite number of choices. But in deep learning, the standard answer to this kind
-of question is, “You’ll learn the matrix just like you learn any other matrix in a neural
-network!” OK, so you’ll just learn this matrix. How?
+of question is, "You’ll learn the matrix just like you learn any other matrix in a neural
+network!" OK, so you’ll just learn this matrix. How?
 Whenever you want to train a neural network to learn something, you always need a task
 for it to learn. In this case, that task should require it to generate interesting sentence
 embeddings by learning both useful word vectors and useful modifications to the identity
@@ -562,9 +562,9 @@ It’s composed of two steps: create
 the sentence embedding, and then
 use that embedding to predict which
 word comes next. The input to this
-network is the text “Red Sox defeat,”
+network is the text "Red Sox defeat,"
 and the word to be predicted is
-“Yankees.”
+"Yankees."
 I’ve written Identity matrix in the
 boxes between the word vectors.
 This matrix will only start as an
@@ -622,8 +622,8 @@ learn how to create embeddings where the order in which the words are presented 
 sentence embedding. But this change isn’t arbitrary. The network will learn how to incorporate
 the order of words in a way that’s useful for the task of predicting the next word.
 You’ll also constrain the transition matrices (the matrices that are originally identity
-matrices) to all be the same matrix. In other words, the matrix from “Red” -> “Sox” will
-be reused to transition from “Sox” -> “defeat.” Whatever logic the network learns in one
+matrices) to all be the same matrix. In other words, the matrix from "Red" -> "Sox" will
+be reused to transition from "Sox" -> "defeat." Whatever logic the network learns in one
 transition will be reused in the next, and only logic that’s useful at every predictive step will
 be allowed to be learned in the network.
 
@@ -671,7 +671,7 @@ This code creates three sets of weights. It creates a Python dictionary of word 
 the identity matrix (transition matrix), and a classification layer. This classification layer
 sent2output is a weight matrix to predict the next word given a sentence vector of length 3.
 With these tools, forward propagation is trivial. Here’s how forward propagation works with
-the sentence “red sox defeat” -> “yankees”:
+the sentence "red sox defeat" -> "yankees":
 layer_0 = word_vects['red']
 layer_1 = layer_0.dot(identity) + word_vects['sox']
 layer_2 = layer_1.dot(identity) + word_vects['defeat']
@@ -723,7 +723,7 @@ again (chapter 9 stuff)
 
 Based on previous chapters, you should feel comfortable with computing a loss and
 backpropagating until you get to the gradients at layer_2, called layer_2_delta. At this
-point, you might be wondering, “Which direction do I backprop in?” Gradients could go
+point, you might be wondering, "Which direction do I backprop in?" Gradients could go
 back to layer_1 by going backward through the identity matrix multiplication, or they
 could go into word_vects['defeat'].
 When you add two vectors together during forward propagation, you backpropagate the
@@ -733,7 +733,7 @@ to word_vects['defeat']:
 y = np.array([1,0,0,0,0,0,0,0,0])
 
 Targets the one-hot
-vector for “yankees”
+vector for "yankees"
 
 pred_delta = pred - y
 layer_2_delta = pred_delta.dot(sent2output.T)
@@ -751,10 +751,10 @@ sent2output -= np.outer(layer_2,pred_delta) * alpha
 
 
 
-Can ignore the “1”
+Can ignore the "1"
 as in chapter 11
 Again, can
-ignore the “1”
+ignore the "1"
 
 ## 222
 
@@ -919,14 +919,14 @@ update steps.
 
 Backpropagation with arbitrary length
 You’ll backpropagate using the same logic described earlier.
-As described with the “Red Sox defeat Yankees” example, let’s implement backpropagation
+As described with the "Red Sox defeat Yankees" example, let’s implement backpropagation
 over arbitrary-length sequences, assuming you have access to the forward propagation
 objects returned from the function in the previous section. The most important object is the
 layers list, which has two vectors (layer['state'] and layer['previous->hidden']).
 In order to backpropagate, you’ll take the output gradient and add a new object to each
 list called layer['state_delta'], which will represent the gradient at that layer. This
-corresponds to variables like sox_delta, layer_0_delta, and defeat_delta from the “Red
-Sox defeat Yankees” example. You’re building the same logic in a way that it can consume
+corresponds to variables like sox_delta, layer_0_delta, and defeat_delta from the "Red
+Sox defeat Yankees" example. You’re building the same logic in a way that it can consume
 the variable-length sequences from the forward propagation logic.
 Forward
 for iter in range(30000):
@@ -965,7 +965,7 @@ layer['hidden_delta'] = layers[layer_idx+1]['hidden_delta']\
 Before moving on to the next section, be sure you can read this code and explain it to a
 friend (or at least to yourself). There are no new concepts in this code, but its construction
 can make it seem a bit foreign at first. Spend some time linking what’s written in this code
-back to each line of the “Red Sox defeat Yankees” example, and you should be ready for the
+back to each line of the "Red Sox defeat Yankees" example, and you should be ready for the
 next section and updating the weights using the gradients you backpropagated.
 
 
@@ -1110,7 +1110,7 @@ Prev Input:the
 True:garden.
 Pred:the
 
-After 10,000 training steps, the neural network picks out the most common word (“the”) and
+After 10,000 training steps, the neural network picks out the most common word ("the") and
 predicts it at every timestep. This is an extremely common error in recurrent neural networks.
 It takes lots of training to learn finer-grained detail in a highly skewed dataset.
 ['sandra', 'moved', 'to', 'the', 'garden.']
@@ -1127,14 +1127,14 @@ Prev Input:the
 True:garden.
 Pred:bedroom.
 
-These mistakes are really interesting. After seeing only the word “sandra,” the network
-predicts “is,” which, although not exactly the same as “moved,” isn’t a bad guess. It picked the
-wrong verb. Next, notice that the words “to” and “the” were correct, which isn’t as surprising
+These mistakes are really interesting. After seeing only the word "sandra," the network
+predicts "is," which, although not exactly the same as "moved," isn’t a bad guess. It picked the
+wrong verb. Next, notice that the words "to" and "the" were correct, which isn’t as surprising
 because these are some of the more common words in the dataset, and presumably the
-network has been trained to predict the phrase “to the” after the verb “moved” many times.
-The final mistake is also compelling, mistaking “bedroom” for the word “garden.”
+network has been trained to predict the phrase "to the" after the verb "moved" many times.
+The final mistake is also compelling, mistaking "bedroom" for the word "garden."
 It’s important to note that there’s almost no way this neural network could learn this task
-perfectly. After all, if I gave you the words “sandra moved to the,” could you tell me the
+perfectly. After all, if I gave you the words "sandra moved to the," could you tell me the
 correct next word? More context is needed to solve this task, but the fact that it’s unsolvable,
 in my opinion, creates educational analysis for the ways in which it fails.
 
@@ -1168,7 +1168,7 @@ these networks can be a bit daunting, and the complexity is about to jump by qui
 Before moving on, become comfortable with what you’ve learned in this chapter.
 And with that, let’s dive into LSTMs!
 
-* See, for example, “Frustratingly Short Attention Spans in Neural Language Modeling” by Michał Daniluk et al. (paper presented at
+* See, for example, "Frustratingly Short Attention Spans in Neural Language Modeling" by Michał Daniluk et al. (paper presented at
 ICLR 2017), https://arxiv.org/abs/1702.04521.
 
 

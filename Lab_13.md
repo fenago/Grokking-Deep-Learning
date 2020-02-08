@@ -278,7 +278,7 @@ bobs_model = train(copy.deepcopy(model),
 bob_input, bob_target, iterations=1, batch_size=1)
 
 Bob is going to create an update to the model using an email in his inbox. But Bob saved
-his password in an email to himself that says, “My computer password is pizza.” Silly Bob.
+his password in an email to himself that says, "My computer password is pizza." Silly Bob.
 By looking at which weights changed, you can figure out the vocabulary (and infer the
 meaning) of Bob’s email:
 for i, v in enumerate(bobs_model.weight.data - model.weight.data):
@@ -309,13 +309,13 @@ The solution is to never let Bob put a gradient out in the open like that. How c
 contribute his gradient if people shouldn’t see it? The social sciences use an interesting
 technique called randomized response.
 It goes like this. Let’s say you’re conducting a survey, and you want to ask 100 people
-whether they’ve committed a heinous crime. Of course, all would answer “No” even if you
+whether they’ve committed a heinous crime. Of course, all would answer "No" even if you
 promised them you wouldn’t tell. Instead, you have them flip a coin twice (somewhere you
 can’t see), and tell them that if the first coin flip is heads, they should answer honestly; and
-if it’s tails, they should answer “Yes” or “No” according to the second coin flip.
+if it’s tails, they should answer "Yes" or "No" according to the second coin flip.
 Given this scenario, you never actually ask people to tell you whether they committed
 crimes. The true answers are hidden in the random noise of the first and second coin flips.
-If 60% of people say “Yes,” you can determine (using simple math) that about 70% of the
+If 60% of people say "Yes," you can determine (using simple math) that about 70% of the
 people you surveyed committed heinous crimes (give or take a few percentage points). The
 idea is that the random noise makes it plausible that any information you learn about the
 person came from the noise instead of from them.
@@ -374,8 +374,8 @@ The Answer: 8
 
 This code encrypts two numbers (5 and 3) and adds them together while they’re still
 encrypted. Pretty neat, eh? There’s another technique that’s a sort-of cousin to homomorphic
-encryption: secure multi-party computation. You can learn about it at the “Cryptography and
-Machine Learning” blog (https://mortendahl.github.io).
+encryption: secure multi-party computation. You can learn about it at the "Cryptography and
+Machine Learning" blog (https://mortendahl.github.io).
 Now, let’s return to the problem of secure aggregation. Given your new knowledge that
 you can add together numbers you can’t see, the answer becomes plain. The person who
 initializes the model sends a public_key to Bob, Alice, and Sue so they can each encrypt
