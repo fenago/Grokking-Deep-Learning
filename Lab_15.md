@@ -9,7 +9,7 @@
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/Picture_Neural_Network`
 
 
-I How to picture neural networks
+
 
 It’s time to simplify
 It’s impractical to think about everything all the time.
@@ -81,11 +81,6 @@ of its neurons need to be higher and lower, and the local correlation summarizat
 over, updating the weights accordingly.
 
 
-
-## 136
-
-
-I How to picture neural networks
 
 The previously overcomplicated visualization
 While simplifying the mental picture, let’s simplify the
@@ -200,7 +195,7 @@ even further.
 ## 138
 
 
-I How to picture neural networks
+
 
 Simplifying even further
 The dimensionality of the matrices is determined by the layers.
@@ -337,7 +332,7 @@ weights_0_1
 
 
 
-I How to picture neural networks
+
 
 Visualizing using letters instead of pictures
 All these pictures and detailed explanations are actually
@@ -440,7 +435,7 @@ have the right dimensions.
 ## 142
 
 
-I How to picture neural networks
+
 
 Everything side by side
 Let’s see the visualization, algebra formula,

@@ -16,8 +16,6 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab13_Federated_L
 
 
 
-I Deep learning on unseen data
-
 The problem of privacy in deep learning
 Deep learning (and tools for it) often means you have access to
 your training data.
@@ -107,8 +105,6 @@ return indices
 
 ## 284
 
-
-I Deep learning on unseen data
 
 Learning to detect spam
 Let’s say you want to train a model across people’s emails
@@ -200,8 +196,6 @@ Loss:0.008068268387986223
 
 ## 286
 
-
-I Deep learning on unseen data
 
 Let’s make it federated
 The previous example was plain vanilla deep learning. Let’s
@@ -300,8 +294,6 @@ the weight update?
 ## 288
 
 
-I Deep learning on unseen data
-
 Secure aggregation
 Let’s average weight updates from zillions of people before
 anyone can see them.
@@ -387,8 +379,6 @@ the model owner, who decrypts it with the private_key.
 
 ## 290
 
-
-I Deep learning on unseen data
 
 Homomorphically encrypted federated learning
 Let’s use homomorphic encryption to protect the gradients

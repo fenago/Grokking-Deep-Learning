@@ -16,7 +16,7 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab11_Exploding_G
 
 
 
-I Learning to write like Shakespeare
+
 
 Character language modeling
 Let’s tackle a more challenging task with the RNN.
@@ -107,7 +107,7 @@ becomes another tunable parameter (like batch size or alpha).
 ## 268
 
 
-I Learning to write like Shakespeare
+
 
 Truncated backpropagation
 Technically, it weakens the theoretical maximum
@@ -325,7 +325,7 @@ time. I thought I’d spend a couple of pages explaining it.
 ## 270
 
 
-I Learning to write like Shakespeare
+
 
 Let’s see how to iterate using truncated backpropagation.
 The following code shows truncated backpropagation in practice. Notice that it looks very
@@ -437,7 +437,7 @@ ever wo formall, have abon, with a good lorges ever word.
 ## 272
 
 
-I Learning to write like Shakespeare
+
 
 Vanishing and exploding gradients
 Vanilla RNNs suffer from vanishing and exploding gradients.
@@ -595,7 +595,7 @@ Relu Gradients
 ## 274
 
 
-I Learning to write like Shakespeare
+
 
 Long short-term memory (LSTM) cells
 LSTMs are the industry standard model to counter
@@ -680,7 +680,7 @@ short, c can learn to transport information over long distances, so it doesn’t
 ## 276
 
 
-I Learning to write like Shakespeare
+
 
 The long short-term memory layer
 You can use the autograd system to implement an LSTM.
@@ -833,7 +833,7 @@ min_loss = 1000
 ## 278
 
 
-I Learning to write like Shakespeare
+
 
 Training the LSTM character language model
 The training logic also hasn’t changed much.
@@ -929,11 +929,6 @@ I sentlentony my thent:
 I the sentastar thamy this not thame.
 
 
-
-## 280
-
-
-I Learning to write like Shakespeare
 
 ### Summary
 

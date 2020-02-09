@@ -15,7 +15,6 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab10_Automatic_Differentiation`
 
 
-I Introducing automatic optimization
 
 What is a deep learning framework?
 Good tools reduce errors, speed development, and increase
@@ -99,7 +98,6 @@ class with the appropriate functionality.
 ## 234
 
 
-I Introducing automatic optimization
 
 Introduction to automatic gradient computation
 (autograd)
@@ -196,7 +194,6 @@ Output
 ## 236
 
 
-I Introducing automatic optimization
 
 A quick checkpoint
 Everything in Tensor is another form of lessons already learned.
@@ -292,7 +289,6 @@ We need to change the way gradients are written.
 ## 238
 
 
-I Introducing automatic optimization
 
 Upgrading autograd to support multiuse tensors
 Add one new function, and update three old ones.
@@ -415,7 +411,6 @@ various ways. Try calling .backprop() twice.
 ## 240
 
 
-I Introducing automatic optimization
 
 How does addition backpropagation work?
 Let’s study the abstraction to learn how to add support
@@ -503,7 +498,6 @@ need them. Let’s add some more!
 ## 242
 
 
-I Introducing automatic optimization
 
 Adding support for additional functions
 Subtraction, multiplication, sum, expand, transpose,
@@ -615,7 +609,6 @@ need to perform .expand(dim=1, copies=4) to the gradient when you backpropagate 
 ## 244
 
 
-I Introducing automatic optimization
 
 You can now add the corresponding backpropagation logic to the .backward() method:
 							
@@ -780,7 +773,6 @@ weights_0_1 -= alpha * weight_delta_0_1
 ## 246
 
 
-I Introducing automatic optimization
 
 Using autograd to train a neural network
 You no longer have to write backpropagation logic!
@@ -889,7 +881,6 @@ that for loop at the end). Let’s try making this its own class as well.
 ## 248
 
 
-I Introducing automatic optimization
 
 Adding automatic optimization
 Let’s make a stochastic gradient descent optimizer.
@@ -974,7 +965,6 @@ as the SGD class created in the previous section).
 ## 250
 
 
-I Introducing automatic optimization
 
 Layers that contain layers
 Layers can also contain other layers.
@@ -1065,7 +1055,6 @@ ensure that the functionality executes in the correct order.
 ## 252
 
 
-I Introducing automatic optimization
 
 How to learn a framework
 Oversimplified, frameworks are autograd + a list of prebuilt
@@ -1147,7 +1136,6 @@ return input.sigmoid()
 ## 254
 
 
-I Introducing automatic optimization
 
 Let’s try out the new nonlinearities. New additions are in bold:
 import numpy
@@ -1317,7 +1305,6 @@ of indices turns into a 3D matrix of embeddings (rows). This is perfect!
 ## 256
 
 
-I Introducing automatic optimization
 
 Adding indexing to autograd
 Before you can build the embedding layer, autograd needs to
@@ -1454,7 +1441,6 @@ This example was to show the embedding working.
 ## 258
 
 
-I Introducing automatic optimization
 
 The cross-entropy layer
 Let’s add cross entropy to the autograd and create a layer.
@@ -1547,7 +1533,6 @@ This has to do with a shortcut in the gradient math.
 ## 260
 
 
-I Introducing automatic optimization
 
 The recurrent neural network layer
 By combining several layers, you can learn over time series.
@@ -1642,7 +1627,6 @@ data = np.array(indices)
 ## 262
 
 
-I Introducing automatic optimization
 
 You can learn to fit the task you previously accomplished
 in the preceding chapter.
