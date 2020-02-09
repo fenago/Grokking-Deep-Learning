@@ -1,6 +1,6 @@
 <img align="right" src="../logo-small.png">
 
-# Lab : 
+# Lab : Learning signal and ignoring noise: introduction to regularization and batching
 
 #### Pre-reqs:
 - Google Chrome (Recommended)
@@ -12,7 +12,7 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab5_Regularization`
 
 
 
@@ -482,6 +482,7 @@ I:260 Test-Err:0.431 Test-Acc:0.8038 Train-Err:0.394 Train-Acc:0.843
 I:270 Test-Err:0.428 Test-Acc:0.8014 Train-Err:0.384 Train-Acc:0.845
 I:280 Test-Err:0.430 Test-Acc:0.8067 Train-Err:0.401 Train-Acc:0.846
 I:290 Test-Err:0.428 Test-Acc:0.7975 Train-Err:0.383 Train-Acc:0.851
+```
 
 Notice that the training accuracy has a smoother trend than it did before. Taking an average
 weight update consistently creates this kind of phenomenon during training. As it turns out,
@@ -489,6 +490,7 @@ individual training examples are very noisy in terms of the weight updates they 
 Thus, averaging them makes for a smoother learning process.
 
 ![](./images_8/4.png)
+
 ```
 alpha, iterations = (0.001, 300)
 pixels_per_image, num_labels, hidden_size = (784, 10, 100)
@@ -523,8 +525,6 @@ layer_0 = test_images[i:i+1]
 layer_1 = relu(np.dot(layer_0,weights_0_1))
 layer_2 = np.dot(layer_1, weights_1_2)
 ```
-
-
 
 The first thing you’ll notice when running this code is that it runs much faster. This is
 because each np.dot function is now performing 100 vector dot products at a time. CPU

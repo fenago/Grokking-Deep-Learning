@@ -1,6 +1,6 @@
 <img align="right" src="../logo-small.png">
 
-# Lab : 
+# Lab : Introduction to neural prediction: forward propagation
 
 #### Pre-reqs:
 - Google Chrome (Recommended)
@@ -12,7 +12,7 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab1_Forward_Propagation`
 
 In this chapter
 • A simple network making a prediction

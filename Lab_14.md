@@ -1,42 +1,12 @@
+<img align="right" src="../logo-small.png">
 
-## fundamental concepts:
-how do machines learn?
+# Lab : Deep learning on unseen data: introducing federated learning
 
-In this chapter
-•	
+#### Pre-reqs:
+- Google Chrome (Recommended)
 
-What are deep learning, machine learning, and
-artificial intelligence?
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/Deep_Learning`
 
-•	
-
-What are parametric models and nonparametric
-models?
-
-•	
-
-What are supervised learning and unsupervised
-learning?
-
-•	
-
-How can machines learn?
-
-Machine learning will cause every successful IPO win
-in five years.
-—Eric Schmidt, Google executive chairman, keynote
-speech, Cloud Computing Platform conference, 2016
-
-9
-
-
-
-2
-
-## 10
-
-
-I Fundamental concepts
 
 What is deep learning?
 Deep learning is a subset of methods for machine learning.

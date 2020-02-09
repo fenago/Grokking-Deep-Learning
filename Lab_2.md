@@ -1,6 +1,6 @@
 <img align="right" src="../logo-small.png">
 
-# Lab : 
+# Lab : Introduction to neural learning: gradient descent
 
 #### Pre-reqs:
 - Google Chrome (Recommended)
@@ -12,7 +12,7 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/`
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab2_Gradient_Descent`
 
 <span style="color:red;"> Predict, compare, and learn</span> 
 In chapter 3, you learned about the paradigm "predict, compare, learn," and we dove
