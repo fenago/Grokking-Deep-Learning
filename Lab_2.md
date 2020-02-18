@@ -370,9 +370,9 @@ The slope points to the bottom of the bowl (lowest error) no matter where you ar
 bowl. You can use this slope to help the neural network reduce the error.
 
 
-
 <span style="color:red;">Let’s watch several steps of learning </span>
-Will we eventually find the bottom of the bowl?
+
+**Will we eventually find the bottom of the bowl?**
 
 weight, goal_pred, input = (0.0, 0.8, 1.1)
 ```
@@ -389,12 +389,9 @@ print("Delta:" + str(delta) + " Weight Delta:" + str(weight_delta))
 
 ![](./images_4/12.png)
 
-![](./images______/.png)
-
 ![](./images_4/13.png)
 
-
-
+![](./images_4/14.png)
 
 
 ## Why does this work? What is weight_delta, really?
@@ -721,7 +718,8 @@ print("Error:" + str(error) + " Prediction:" + str(pred))
 
 When I run this code, I see the following output:
 
-```Error:0.3025 Prediction:0.25
+```
+Error:0.3025 Prediction:0.25
 Error:0.17015625 Prediction:0.3875
 Error:0.095712890625 Prediction:0.490625
 							
