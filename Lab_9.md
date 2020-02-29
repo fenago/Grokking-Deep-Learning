@@ -25,7 +25,7 @@ mastered the concepts and techniques from chapter 11 before you dive into this o
 chapter 11, you learned about natural language processing (NLP). This included how to
 modify a loss function to learn a specific pattern of information within the weights of a
 neural network. You also developed an intuition for what a word embedding is and how it
-can represent shades of similarity with other word embeddings. In this chapter, we’ll expand
+can represent shades of similarity with other word embeddings. In this lab, we’ll expand
 on this intuition of an embedding conveying the meaning of a single word by creating
 embeddings that convey the meaning of variable-length phrases and sentences.
 
@@ -190,7 +190,7 @@ different words so it can tell them apart, and grouping them (giving them simila
 curves) to help make accurate predictions. But this is another way of summarizing the
 lessons from the end of chapter 11. We want to press further.
 
-In this chapter, we’ll consider what it means to sum these embeddings into a sentence
+In this lab, we’ll consider what it means to sum these embeddings into a sentence
 embedding. What kinds of classifications would this summed vector be useful for? We’ve
 identified that taking an average across the word embeddings of a sentence results in a
 vector with an average of the characteristics of the words therein. If there are many positive
@@ -758,7 +758,7 @@ in my opinion, creates educational analysis for the ways in which it fails.
 Recurrent neural networks predict over arbitrary-length
 sequences.
 
-In this chapter, you learned how to create vector representations for arbitrary-length
+In this lab, you learned how to create vector representations for arbitrary-length
 sequences. The last exercise trained a linear recurrent neural network to predict the
 next term given a previous phrase of terms. To do this, it needed to learn how to create
 embeddings that accurately represented variable-length strings of terms into a fixed-size
@@ -778,5 +778,5 @@ question and more using nonlinearities and gates to form a neural network called
 short-term memory network (LSTM). But first, make sure you can sit down and (from
 memory) code a working linear RNN that converges. The dynamics and control flow of
 these networks can be a bit daunting, and the complexity is about to jump by quite a bit.
-Before moving on, become comfortable with what you’ve learned in this chapter.
+Before moving on, become comfortable with what you’ve learned in this lab.
 And with that, let’s dive into LSTMs!

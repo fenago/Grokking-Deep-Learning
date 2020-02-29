@@ -33,13 +33,13 @@ error is one of the most important and complicated subjects of deep learning.
 
 There are many properties of measuring error that you’ve likely been doing your whole
 life without realizing it. Perhaps you (or someone you know) amplify bigger errors while
-ignoring very small ones. In this chapter, you’ll learn how to mathematically teach a network
+ignoring very small ones. In this lab, you’ll learn how to mathematically teach a network
 to do this. You’ll also learn that error is always positive! We’ll consider the analogy of an
 archer hitting a target: whether the shot is too low by an inch or too high by an inch, the
 error is still just 1 inch. In the neural network compare step, you need to consider these
 kinds of properties when measuring error.
 
-As a heads-up, in this chapter we evaluate only one simple way of measuring error: mean
+As a heads-up, in this lab we evaluate only one simple way of measuring error: mean
 squared error. It’s but one of many ways to evaluate the accuracy of a neural network.
 This step will give you a sense for how much you missed, but that isn’t enough to be able to
 learn. The output of the compare logic is a "hot or cold" type signal. Given some prediction,
@@ -55,7 +55,7 @@ in the next step, learn.
 Learn
 Learning tells each weight how it can change to reduce the error.
 Learning is all about error attribution, or the art of figuring out how each weight played
-its part in creating error. It’s the blame game of deep learning. In this chapter, we’ll
+its part in creating error. It’s the blame game of deep learning. In this lab, we’ll
 spend many pages looking at the most popular version of the deep learning blame game:
 gradient descent.
 
@@ -460,7 +460,7 @@ about exactly that.
 ## Tunnel vision on one concept
 Concept: Learning is adjusting the weight to reduce the error to 0.
 
-So far in this chapter, we’ve been hammering on the idea that learning is really just about
+So far in this lab, we’ve been hammering on the idea that learning is really just about
 adjusting weight to reduce error to 0. This is the secret sauce. Truth be told, knowing how to
 do this is all about understanding the relationship between weight and error. If you understand
 this relationship, you can know how to adjust weight to reduce error.
@@ -874,7 +874,7 @@ information necessary from this chapter is to try to produce it from your head. 
 networks have lots of small moving parts, and it’s easy to miss one.
 
 Why is this important for the rest of the book? In the following chapters, I’ll be referring to
-the concepts discussed in this chapter at a faster pace so that I can spend plenty of time on
+the concepts discussed in this lab at a faster pace so that I can spend plenty of time on
 the newer material. It’s vitally important that when I say something like "Add your alpha
 parameterization to the weight update," you immediately recognize which concepts from
 this chapter I’m referring to.

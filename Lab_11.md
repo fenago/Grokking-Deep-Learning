@@ -23,7 +23,7 @@ At the end of chapters 12 and 13, you trained vanilla recurrent neural networks 
 that learned a simple series prediction problem. But you were training over a toy dataset
 of phrases that were synthetically generated using rules.
 
-In this chapter, you’ll attempt language modeling over a much more challenging dataset:
+In this lab, you’ll attempt language modeling over a much more challenging dataset:
 the works of Shakespeare. And instead of learning to predict the next word given the
 previous words (as in the preceding chapter), the model will train on characters. It needs
 to learn to predict the next character given the previous characters observed. Here’s what
@@ -468,7 +468,7 @@ You can use the autograd system to implement an LSTM.
 ## Upgrading the character language model
 Let’s swap out the vanilla RNN with the new LSTM cell.
 
-Earlier in this chapter, you trained a character language model to predict Shakespeare.
+Earlier in this lab, you trained a character language model to predict Shakespeare.
 Now let’s train an LSTM-based model to do the same. Fortunately, the framework from the
 preceding chapter makes this easy to do (the complete code from the book’s website, www.
 manning.com/books/grokking-deep-learning; or on GitHub at https://github.com/iamtrask/

@@ -47,7 +47,7 @@ overfit. An everlasting battle is going on in research, where people continually
 that need more powerful layers but then have to do lots of problem-solving to make sure the
 network doesn’t overfit.
 
-In this chapter, we’re going to study the basics of regularization, which is key to combatting
+In this lab, we’re going to study the basics of regularization, which is key to combatting
 overfitting in neural networks. To do this, we’ll start with the most powerful neural network
 (three-layer network with relu hidden layer) on the most challenging task (MNIST digit
 classification).

@@ -26,7 +26,7 @@ challenges hidden in the data.
 
 ![](./images_11/1.png)
 
-We’ll begin this chapter by exploring a much older field that overlaps deep learning:
+We’ll begin this lab by exploring a much older field that overlaps deep learning:
 natural language processing (NLP). This field is dedicated exclusively to the automated
 understanding of human language (previously not using deep learning). We’ll discuss the
 basics of deep learning’s approach to this field.
@@ -69,7 +69,7 @@ models (not deep learning). But the recent development and popularization of two
 neural algorithms have swept the field of NLP: neural word embeddings and recurrent
 neural networks (RNNs).
 
-In this chapter, we’ll build a word-embedding algorithm and demonstrate why it increases
+In this lab, we’ll build a word-embedding algorithm and demonstrate why it increases
 the accuracy of NLP algorithms. In the next chapter, we’ll create a recurrent neural network
 and demonstrate why it’s so effective at predicting across sequences.
 
@@ -1015,13 +1015,13 @@ compression of these co-occurrence statistics will behave similarly.
 You’ve learned a lot about neural word embeddings and the
 impact of loss on learning.
 
-In this chapter, we’ve unpacked the fundamental principles of using neural networks to
+In this lab, we’ve unpacked the fundamental principles of using neural networks to
 study language. We started with an overview of the primary problems in natural language
 processing and then explored how neural networks model language at the word level using
 word embeddings. You also learned how the choice of loss function can change the kinds of
 properties that are captured by word embeddings. We finished with a discussion of perhaps
 the most magical of neural phenomena in this space: word analogies.
 
-As with the other chapters, I encourage you to build the examples in this chapter from
+As with the other chapters, I encourage you to build the examples in this lab from
 scratch. Although it may seem as though this chapter stands on its own, the lessons in lossfunction creation and tuning are invaluable and will be extremely important as you tackle
 increasingly more complicated strategies in future chapters. Good luck!

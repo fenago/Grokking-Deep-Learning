@@ -309,7 +309,7 @@ interesting and powerful class of algorithm.
 
 ### Summary
 
-In this chapter, we’ve gone a level deeper into the various flavors of machine learning.
+In this lab, we’ve gone a level deeper into the various flavors of machine learning.
 You learned that a machine learning algorithm is either supervised or unsupervised
 and either parametric or nonparametric. Furthermore, we explored exactly what makes
 these four different groups of algorithms distinct. You learned that supervised machine

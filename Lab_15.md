@@ -25,7 +25,7 @@ the examples get larger, this exercise becomes less about remembering specific l
 of code and more about remembering concepts and then rebuilding the code based on
 those concepts.
 
-In this chapter, this construction of efficient concepts in your mind is exactly what I want
+In this lab, this construction of efficient concepts in your mind is exactly what I want
 to talk about. Even though it’s not an architecture or experiment, it’s perhaps the most
 important value I can give you. In this case, I want to show how I summarize all the little
 lessons in an efficient way in my mind so that I can do things like build new architectures,

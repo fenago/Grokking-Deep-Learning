@@ -14,7 +14,7 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab1_Forward_Propagation`
 
-In this chapter
+In this lab
 • A simple network making a prediction
 • What is a neural network, and what does it do?
 • Making a prediction with multiple inputs
@@ -37,7 +37,7 @@ looks a lot like this:
 
 ![](./images_3/1.png)
 
-In this chapter, you’ll learn more about what these three different parts of a neural network
+In this lab, you’ll learn more about what these three different parts of a neural network
 prediction look like under the hood. Let’s start with the first one: the data. In your first
 neural network, you’re going to predict one datapoint at a time, like so:
 
@@ -771,7 +771,7 @@ print(pred)
 
 A quick primer on NumPy
 NumPy does a few things for you. Let’s reveal the magic.
-So far in this chapter, we’ve discussed two new types of mathematical tools: vectors and matrices.
+So far in this lab, we’ve discussed two new types of mathematical tools: vectors and matrices.
 You’ve also learned about different operations that occur on vectors and matrices, including dot
 products, elementwise multiplication and addition, and vector-matrix multiplication. For these
 operations, you’ve written Python functions that can operate on simple Python list objects.
@@ -944,10 +944,10 @@ rows and columns of a matrix.
 
 To predict, neural networks perform repeated weighted sums
 of the input.
-You’ve seen an increasingly complex variety of neural networks in this chapter. I hope it’s clear
+You’ve seen an increasingly complex variety of neural networks in this lab. I hope it’s clear
 that a relatively small number of simple rules are used repeatedly to create larger, more advanced
 neural networks. The network’s intelligence depends on the weight values you give it.
-Everything we’ve done in this chapter is a form of what’s called forward propagation, wherein
+Everything we’ve done in this lab is a form of what’s called forward propagation, wherein
 a neural network takes input data and makes a prediction. It’s called this because you’re
 propagating activations forward through the network. In these examples, activations are all the
 numbers that are not weights and are unique for every prediction.
