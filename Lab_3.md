@@ -15,7 +15,8 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab3_Generalizing_Gradient_Descent`
 
 
-<span style="color:red;">Gradient descent learning with multiple inputs </span>
+<h4><span style="color:red;">Gradient descent learning with multiple inputs </span></h4>
+
 Gradient descent also works with multiple inputs.
 
 In the preceding chapter, you learned how to use gradient descent to update a weight. In
@@ -168,7 +169,8 @@ significant difference in slope forced me to set alpha lower than I wanted (0.01
 0.1). Try setting alpha to 0.1: do you see how a causes it to diverge?
 
 
-<span style="color:red;">Freezing one weight: What does it do? </span>
+<h4><span style="color:red;">Freezing one weight: What does it do? </span></h4>
+
 
 This experiment is a bit advanced in terms of theory, but I think it’s a great exercise to
 understand how the weights affect each other. You’re going to train again, except weight a
@@ -264,7 +266,8 @@ lowest point on this big error plane, where the lowest point refers to the lowes
 Interesting, eh? We’ll come back to this idea later, so file it away for now.
 
 
-<span style="color:red;">Gradient descent learning with multiple outputs </span>
+<h4><span style="color:red;">Gradient descent learning with multiple outputs </span></h4>
+
 Neural networks can also make multiple predictions using only
 a single input.
 
@@ -352,7 +355,8 @@ prediction nodes so that error falls toward 0 in training. But what does this do
 mean to modify a bunch of weights to learn a pattern in aggregate?
 
 
-<span style="color:red;">Visualizing weight values </span>
+<h4><span style="color:red;">Visualizing weight values </span></h4>
+
 
 An interesting and intuitive
 practice in neural network research

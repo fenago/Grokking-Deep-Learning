@@ -14,7 +14,8 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab2_Gradient_Descent`
 
-<span style="color:red;"> Predict, compare, and learn</span> 
+<h4><span style="color:red;"> Predict, compare, and learn</span></h4>
+ 
 In chapter 3, you learned about the paradigm "predict, compare, learn," and we dove
 deep into the first step: predict. In the process, you learned a myriad of things, including
 the major parts of neural networks (nodes and weights), how datasets fit into networks
@@ -64,8 +65,9 @@ represents how that weight should be higher or lower in order to reduce the erro
 you’ll move the weight according to that number, and you’ll be finished.
 
 
-<span style="color:red;"> Compare: Does your network make
-good predictions?</span>
+<h4><span style="color:red;"> Compare: Does your network make
+good predictions?</span></h4>
+
 Let’s measure the error and find out!
 
 Execute the following code in your Jupyter notebook. It should print 0.3025:
@@ -96,8 +98,8 @@ why squaring is valuable?
 
 
 
-<span style="color:red;"> Why measure error?
- </span>
+<h4><span style="color:red;"> Why measure error? </span></h4>
+
 
 Measuring error simplifies the problem.
 The goal of training a neural network is to make correct predictions. That’s what you want.
@@ -170,7 +172,8 @@ perfectly). As with all other forms of search, you might not find exactly what y
 for, and even if you do, it may take some time. Next, we’ll use hot and cold learning for a
 slightly more difficult prediction so you can see this searching in action!
 
-<span style="color:red;"> Hot and cold learning</span>
+<h4><span style="color:red;"> Hot and cold learning</span></h4>
+
 This is perhaps the simplest form of learning.
 
 Execute the following code in your Jupyter notebook. (New neural network modifications
@@ -223,7 +226,8 @@ repeatedly make predictions?
 
 
 
-<span style="color:red;">Calculating both direction and amount from error </span>
+<h4><span style="color:red;">Calculating both direction and amount from error </span></h4>
+
 Let’s measure the error and find the direction and amount!
 
 Execute this code in your Jupyter notebook:
@@ -285,7 +289,8 @@ code it in a way that makes it more obviously applicable to other kinds of netwo
 those with multiple inputs and outputs).
 
 
-<span style="color:red;"> One iteration of gradient descent</span>
+<h4><span style="color:red;"> One iteration of gradient descent</span></h4>
+
 
 This performs a weight update on a single training example
 (input->true) pair.
@@ -370,7 +375,8 @@ The slope points to the bottom of the bowl (lowest error) no matter where you ar
 bowl. You can use this slope to help the neural network reduce the error.
 
 
-<span style="color:red;">Let’s watch several steps of learning </span>
+<h4><span style="color:red;">Let’s watch several steps of learning </span></h4>
+
 
 **Will we eventually find the bottom of the bowl?**
 
@@ -654,7 +660,8 @@ regardless of what you do to the other). For example, y = 0 * x. Move x, and y i
 
 Enough about derivatives. Let’s get back to gradient descent.
 
-<span style="color:red;">How to use a derivative to learn </span>
+<h4><span style="color:red;">How to use a derivative to learn </span></h4>
+
 weight_delta is your derivative.
 
 
@@ -705,7 +712,8 @@ It’s like gravity.
 
 ![](./images_4/18.png)
 
-<span style="color:red;"> Breaking gradient descent</span>
+<h4><span style="color:red;"> Breaking gradient descent</span></h4>
+
 Just give me the code!
 
 ```
@@ -822,7 +830,8 @@ alpha is too high, and you decrease it. If learning is happening too slowly, the
 is too low, and you increase it. There are other methods than simple gradient descent
 that attempt to counter for this, but gradient descent is still very popular.
 
-<span style="color:red;">Alpha in code </span>
+<h4><span style="color:red;">Alpha in code </span></h4>
+
 Where does our "alpha" parameter come into play?
 
 You just learned that alpha reduces the weight update so it doesn’t overshoot. How does this
@@ -866,7 +875,8 @@ works best. It’s more art than science. There are more advanced ways to get to
 now, try various alphas until you get one that seems to work pretty well. Play with it.
 
 
-<span style="color:red;"> Memorizing</span>
+<h4><span style="color:red;"> Memorizing</span></h4>
+
 It’s time to really learn this stuff.
 
 This may sound a bit intense, but I can’t stress enough the value I’ve found from this

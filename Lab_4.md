@@ -60,7 +60,8 @@ whether it’s safe to walk. You learned this pattern by observing all the indiv
 and searching for correlation. This is what you’re going to train a neural network to do.
 
 
-<span style="color:red;">Preparing the data </span>
+<h4><span style="color:red;">Preparing the data </span></h4>
+
 Neural networks don’t read streetlights.
 
 In the previous labs, you learned about supervised algorithms. You learned that they
@@ -228,7 +229,8 @@ Neural network
 ![](./images_6/11.png)
 
 
-<span style="color:red;">Building a neural network </span>
+<h4><span style="color:red;">Building a neural network </span></h4>
+
 
 You’ve been learning about neural networks for several chapters now. You have a new
 dataset, and you’re going to create a neural network to solve it. Following is some example
@@ -486,7 +488,8 @@ predictions, drawing the balanced node to favor up or down. But in this case, al
 are equally balanced between positive and negative pressure. What do you do?
 
 
-<span style="color:red;"> Learning indirect correlation</span>
+<h4><span style="color:red;"> Learning indirect correlation</span></h4>
+
 If your data doesn’t have correlation, create intermediate data
 that does!
 
@@ -574,7 +577,8 @@ This value is the layer_2 delta
 ![](./images_6/23.png)
 
 
-<span style="color:red;">Backpropagation: Why does this work?</span>
+<h4><span style="color:red;">Backpropagation: Why does this work?</span></h4>
+
 The weighted average delta
 
 In the neural network from chapter 5, the delta variable told you the direction and
@@ -713,7 +717,8 @@ explanation, although not the most concise answer, is an intuitive explanation o
 need nonlinearities.
 
 
-<span style="color:red;">A quick break </span>
+<h4><span style="color:red;">A quick break </span></h4>
+
 That last part probably felt a little abstract, and that’s totally OK.
 
 Here’s the deal. Previous chapters worked with simple algebra, so everything was ultimately

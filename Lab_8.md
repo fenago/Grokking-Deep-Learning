@@ -74,7 +74,8 @@ because language is the bedrock of conscious logic and communication in humans. 
 such, methods by which machines can use and understand language form the foundation of
 human-like logic in machines: the foundation of thought.
 
-<span style="color:red;">Supervised NLP </span>
+<h4><span style="color:red;">Supervised NLP </span></h4>
+
 
 Words go in, and predictions come out.
 Perhaps you’ll remember the following figure from chapter 2. Supervised learning is all
@@ -210,7 +211,8 @@ either sum the vector for "cat" three times (resulting in [3,0,0,0]) or just tak
 "cat" a single time (resulting in [1,0,0,0]). The latter typically works better for language.
 
 
-<span style="color:red;"> Predicting movie reviews</span>
+<h4><span style="color:red;"> Predicting movie reviews</span></h4>
+
 With the encoding strategy and the previous network,
 you can predict sentiment.
 
@@ -868,7 +870,8 @@ is in the loss function, which includes both the forward prediction and the raw 
 evaluation (such as mean squared error or cross entropy).
 
 
-<span style="color:red;"> King – Man + Woman ~= Queen</span>
+<h4><span style="color:red;"> King – Man + Woman ~= Queen</span></h4>
+
 Word analogies are an interesting consequence
 of the previously built network.
 

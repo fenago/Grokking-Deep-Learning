@@ -122,7 +122,8 @@ become popular because they’re so easy to compute at the expense of their expr
 (relu is a great example of this).
 
 
-<span style="color:red;"> Standard hidden-layer activation functions</span>
+<h4><span style="color:red;"> Standard hidden-layer activation functions</span></h4>
+
 Of the infinite possible functions, which ones are most commonly used?
 
 Even with these constraints, it should be clear that an infinite (possibly transfinite?) number
@@ -162,7 +163,8 @@ sigmoid in hidden layers.
 ![](./images_9/6.png)
 
 
-<span style="color:red;">Standard output layer activation functions </span>
+<h4><span style="color:red;">Standard output layer activation functions </span></h4>
+
 Choosing the best one depends on what you’re trying to predict.
 
 It turns out that what’s best for hidden-layer activation functions can be quite different from
@@ -406,7 +408,8 @@ the network to leave weights alone if adjusting them will have little to no effe
 multiplying it by the slope. It’s no different for sigmoid.
 
 
-<span style="color:red;"> Multiplying delta by the slope</span>
+<h4><span style="color:red;"> Multiplying delta by the slope</span></h4>
+
 To compute layer_delta, multiply the backpropagated delta by
 the layer’s slope.
 
@@ -469,7 +472,8 @@ Note that the delta computation for softmax is special because it’s used only 
 layer. There’s a bit more going on (theoretically) than we have time to discuss here. For now,
 let’s install some better activation functions in the MNIST classification network.
 
-<span style="color:red;">Upgrading the MNIST network </span>
+<h4><span style="color:red;">Upgrading the MNIST network </span></h4>
+
 Let’s upgrade the MNIST network to reflect what you’ve learned.
 
 Theoretically, the tanh function should make for a better hidden-layer activation, and

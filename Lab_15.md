@@ -172,7 +172,8 @@ even further.
 
 
 
-<span style="color:red;">Simplifying even further </span> 
+<h4><span style="color:red;">Simplifying even further </span></h4>
+ 
 The dimensionality of the matrices is determined by the layers.
 
 In the previous section, you may have noticed a pattern. Each matrix’s dimensionality

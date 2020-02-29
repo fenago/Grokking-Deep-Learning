@@ -16,7 +16,8 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab5_Regularizati
 
 
 
-<span style="color:red;"> Three-layer network on MNIST</span>
+<h4><span style="color:red;"> Three-layer network on MNIST</span></h4>
+
 Let’s return to the MNIST dataset and attempt to classify it with
 the new network.
 
@@ -166,7 +167,8 @@ I:340 Train-Err:0.109 Train-Acc:1.0 Test-Err:0.645 Test-Acc:0.71
 I:349 Train-Err:0.108 Train-Acc:1.0 Test-Err:0.653 Test-Acc:0.7073
 ```
 
-<span style="color:red;"> Overfitting in neural networks</span>
+<h4><span style="color:red;"> Overfitting in neural networks</span></h4>
+
 Neural networks can get worse if you train them too much!
 
 For some reason, the test accuracy went up for the first 20 iterations and then slowly
@@ -266,7 +268,8 @@ knowing when to stop, you could overfit to the test set. As a general rule, you 
 control training. You use a validation set instead.
 
 
-<span style="color:red;">Industry standard regularization: Dropout </span>
+<h4><span style="color:red;">Industry standard regularization: Dropout </span></h4>
+
 The method: Randomly turn off neurons (set them to 0)
 during training.
 
@@ -343,7 +346,8 @@ mistakes, they will often make differing mistakes. If you allowed them to vote e
 noise would tend to cancel out, revealing only what they all learned in common: the signal.
 
 
-<span style="color:red;">Dropout in code </span>
+<h4><span style="color:red;">Dropout in code </span></h4>
+
 Here’s how to use dropout in the real world.
 
 In the MNIST classification model, let’s add dropout to the hidden layer, such that 50% of

@@ -262,7 +262,8 @@ of variety in how these models train and their resulting properties, but at a hi
 adjust parameters to transform the input data into its subscribing group(s).
 
 
-<span style="color:red;">Nonparametric learning </span>
+<h4><span style="color:red;">Nonparametric learning </span></h4>
+
 
 Oversimplified: Counting-based methods
 

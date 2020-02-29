@@ -28,7 +28,8 @@ It’s a uick way to look like an idiot.
 —Warren Ellis comic-book writer,
 novelist, and screenwriter
 
-Step 1: Predict
+**Step 1: Predict**
+
 This lab is about prediction.
 
 In the previous lab, you learned about the paradigm predict, compare, learn. In this
@@ -177,7 +178,10 @@ The new property here is that, because you have multiple inputs, you have to sum
 respective predictions. Thus, you multiply each input by its respective weight and then sum
 all the local predictions together. This is called a weighted sum of the input, or a weighted sum
 for short. Some also refer to the weighted sum as a dot product, as you’ll see.
-A relevant reminder
+
+<h4><span style="color:red;">A relevant reminder</span></h4>
+ 
+
 The interface for the neural network is simple: it accepts an input variable as information and
 a weights variable as knowledge, and it outputs a prediction.
 

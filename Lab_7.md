@@ -14,7 +14,8 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab7_Convolutional_Neural_Networks`
 
-<span style="color:red;">Reusing weights in multiple places </span>
+<h4><span style="color:red;">Reusing weights in multiple places </span></h4>
+
 If you need to detect the same feature in multiple places,
 use the same weights!
 

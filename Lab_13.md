@@ -16,7 +16,8 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab13_Federated_L
 
 
 
-<span style="color:red;">The problem of privacy in deep learning </span>
+<h4><span style="color:red;">The problem of privacy in deep learning </span></h4>
+
 Deep learning (and tools for it) often means you have access to
 your training data.
 
