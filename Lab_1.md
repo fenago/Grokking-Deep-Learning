@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Introduction to neural prediction: forward propagation
 
@@ -13,6 +13,10 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab1_Forward_Propagation`
+
+##### Run Notebook
+Click notebook `Chapter3 -  Forward Propagation - Intro to Neural Prediction- Practice.ipynb` in jupterLab UI and run jupyter notebook. There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter3 -  Forward Propagation - Intro to Neural Prediction.ipynb` as well as lab guide.
+ 
 
 In this lab
 - A simple network making a prediction
@@ -529,7 +533,7 @@ a neural network takes input data and makes a prediction. It’s called this bec
 propagating activations forward through the network. In these examples, activations are all the
 numbers that are not weights and are unique for every prediction.
 
-In the next chapter, you’ll learn how to set weights so your neural networks make accurate
+In the next lab, you’ll learn how to set weights so your neural networks make accurate
 predictions. Just as prediction is based on several simple techniques that are repeated/stacked on
 top of each other, weight learning is also a series of simple techniques that are combined many
 times across an architecture. See you there!

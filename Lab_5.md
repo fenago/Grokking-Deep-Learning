@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Learning signal and ignoring noise: introduction to regularization and batching
 
@@ -14,7 +14,9 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab5_Regularization`
 
-
+##### Run Notebook
+Click notebook `Chapter8 - Intro to Regularization - Learning Signal and Ignoring Noise- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter8 - Intro to Regularization - Learning Signal and Ignoring Noise.ipynb` as well as lab guide.
 
 <h4><span style="color:red;"> Three-layer network on MNIST</span></h4>
 

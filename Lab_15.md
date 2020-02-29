@@ -1,5 +1,5 @@
 
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Deep learning on unseen data: introducing federated learning
 

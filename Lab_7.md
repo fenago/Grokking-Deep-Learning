@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Neural learning about edges and corners: intro to convolutional neural networks
 
@@ -12,7 +12,11 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
-You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab7_Convolutional_Neural_Networks`
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab7_Convolutional_Neural_Networks` 
+ 
+##### Run Notebook
+Click notebook `Chapter10 - Intro to Convolutional Neural Networks - Learning Edges and Corners- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter10 - Intro to Convolutional Neural Networks - Learning Edges and Corners.ipynb` as well as lab guide.
 
 <h4><span style="color:red;">Reusing weights in multiple places </span></h4>
 

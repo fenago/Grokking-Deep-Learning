@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Building your first deep neural network: introduction to backpropagation
 
@@ -14,8 +14,9 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab4_Backpropagation`
 
-
-
+##### Run Notebook
+Click notebook `Chapter6 - Intro to Backpropagation - Building Your First DEEP Neural Network- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter6 - Intro to Backpropagation - Building Your First DEEP Neural Network.ipynb` as well as lab guide. 
 
 ## The streetlight problem
 This toy problem considers how a network learns entire datasets.
@@ -559,10 +560,10 @@ The weighted average delta
 In the neural network from chapter 5, the delta variable told you the direction and
 amount the value of this node should change next time. All backpropagation lets you
 do is say, "Hey, if you want this node to be x amount higher, then each of these previous
-four nodes needs to be x*weights_1_2 amount higher/lower, because these weights were
+four nodes needs to be **x*weights_1_2** amount higher/lower, because these weights were
 amplifying the prediction by weights_1_2 times."
 
-When used in reverse, the weights_1_2 matrix amplifies the error by the appropriate
+When used in reverse, the *weights_1_2* matrix amplifies the error by the appropriate
 amount. It amplifies the error so you know how much each layer_1 node should move
 up or down.
 

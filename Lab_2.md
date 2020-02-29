@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Introduction to neural learning: gradient descent
 
@@ -12,6 +12,9 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
+##### Run Notebook
+Click notebook `Chapter4 - Gradient Descent - Intro to Neural Learning- Practice.ipynb` in jupterLab UI and run jupyter notebook. There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter4 - Gradient Descent - Intro to Neural Learning.ipynb` as well as lab guide.
+ 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab2_Gradient_Descent`
 
 <h4><span style="color:red;"> Predict, compare, and learn</span></h4>

@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Introducing automatic optimization: let’s build a deep learning framework
 
@@ -13,8 +13,10 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab10_Automatic_Differentiation`
-
-
+ 
+##### Run Notebook
+Click notebook `Chapter13 - Intro to Automatic Differentiation - Let`s Build A Deep Learning Framework- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter13 - Intro to Automatic Differentiation - Let`s Build A Deep Learning Framework.ipynb` as well as lab guide.
 
 ## What is a deep learning framework?
 Good tools reduce errors, speed development, and increase
@@ -736,7 +738,7 @@ you call .backward(). It’s not, strictly speaking, necessary—but it’s hand
 Let’s add nonlinear functions to Tensor and then create some
 layer types.
 
-For the next chapter, you’ll need .sigmoid() and .tanh(). Let’s add them to the Tensor
+For the next lab, you’ll need .sigmoid() and .tanh(). Let’s add them to the Tensor
 class. You learned about the derivative for both quite some time ago, so this should be easy:
 
 ```

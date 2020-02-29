@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Neural networks that understand language: king – man + woman == ?
 
@@ -14,7 +14,10 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab8_Word_Embeddings`
 
-
+##### Run Notebook
+Click notebook `Chapter11 - Intro to Word Embeddings - Neural Networks that Understand Language- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter11 - Intro to Word Embeddings - Neural Networks that Understand Language.ipynb` as well as lab guide.
+ 
 ## What does it mean to understand language?
 What kinds of predictions do people make about language?
 
@@ -64,7 +67,7 @@ neural algorithms have swept the field of NLP: neural word embeddings and recurr
 neural networks (RNNs).
 
 In this lab, we’ll build a word-embedding algorithm and demonstrate why it increases
-the accuracy of NLP algorithms. In the next chapter, we’ll create a recurrent neural network
+the accuracy of NLP algorithms. In the next lab, we’ll create a recurrent neural network
 and demonstrate why it’s so effective at predicting across sequences.
 
 It’s also worth mentioning the key role that NLP (perhaps using deep learning) plays in the

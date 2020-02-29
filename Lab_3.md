@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Learning multiple weights at a time: generalizing gradient descent
 
@@ -17,7 +17,10 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab3_Generalizing
 
 <h4><span style="color:red;">Gradient descent learning with multiple inputs </span></h4>
 
-Gradient descent also works with multiple inputs.
+##### Run Notebook
+Click notebook `Chapter5 - Generalizing Gradient Descent - Learning Multiple Weights at a Time- Practice.ipynb` in jupterLab UI and run jupyter notebook. There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter5 - Generalizing Gradient Descent - Learning Multiple Weights at a Time.ipynb` as well as lab guide.
+ 
+**Gradient descent also works with multiple inputs.**
 
 In the preceding chapter, you learned how to use gradient descent to update a weight. In
 this lab, we’ll more or less reveal how the same techniques can be used to update a
@@ -439,5 +442,5 @@ Perhaps the most important subtext of this lab is that gradient descent is a ver
 learning algorithm. If you combine weights in a way that allows you to calculate an error
 function and a delta, gradient descent can show you how to move the weights to reduce the
 error. We’ll spend the rest of this book exploring different types of weight combinations and
-error functions for which gradient descent is useful. The next chapter is no exception.
+error functions for which gradient descent is useful. The next lab is no exception.
 

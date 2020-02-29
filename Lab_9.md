@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Neural networks that write like Shakespeare: recurrent layers for variable-length data
 
@@ -14,11 +14,13 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab9_Recurrence`
 
+##### Run Notebook
+Click notebook `Chapter12 - Intro to Recurrence - Predicting the Next Word- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter12 - Intro to Recurrence - Predicting the Next Word.ipynb` as well as lab guide.
 
-## The challenge of arbitrary length
-Let’s model arbitrarily long sequences of data
-with neural networks!
+<h4><span style="color:red;">The challenge of arbitrary length</span></h4>
 
+**Let’s model arbitrarily long sequences of data with neural networks!**
 
 This lab and chapter 11 are intertwined, and I encourage you to ensure that you’ve
 mastered the concepts and techniques from chapter 11 before you dive into this one. In
@@ -773,7 +775,7 @@ learn to forget (aka, not make unique patterns in their vectors for) words furth
 the history.
 
 But note that there are no nonlinearities in the generation of these representations. What
-kinds of limitations do you think that could create? In the next chapter, we’ll explore this
+kinds of limitations do you think that could create? In the next lab, we’ll explore this
 question and more using nonlinearities and gates to form a neural network called a long
 short-term memory network (LSTM). But first, make sure you can sit down and (from
 memory) code a working linear RNN that converges. The dynamics and control flow of

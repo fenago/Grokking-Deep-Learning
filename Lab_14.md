@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Deep learning on unseen data: introducing federated learning
 
@@ -315,7 +315,7 @@ nonparametric algorithms adjust their number of parameters based on the dataset.
 
 Deep learning uses neural networks to perform both supervised and unsupervised
 prediction. Until now, we’ve stayed at a conceptual level as you got your bearings in the field
-as a whole and your place in it. In the next chapter, you’ll build your first neural network,
+as a whole and your place in it. In the next lab, you’ll build your first neural network,
 and all subsequent chapters will be project based. So, pull out your Jupyter notebook, and
 let’s jump in!
 

@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Modeling probabilities and nonlinearities: activation functions
 
@@ -13,7 +13,10 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab6_Activation_Functions`
-
+ 
+##### Run Notebook
+Click notebook `Chapter9 - Intro to Activation Functions - Modeling Probabilities- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter9 - Intro to Activation Functions - Modeling Probabilities.ipynb` as well as lab guide.
 
 ## What is an activation function?
 It’s a function applied to the neurons

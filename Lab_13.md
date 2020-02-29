@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Deep learning on unseen data: introducing federated learning
 
@@ -14,6 +14,11 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab13_Federated_Learning`
 
+ 
+##### Run Notebook
+Click notebook  `Chapter15 - Intro to Federated Learning - Deep Learning on Unseen Data- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter15 - Intro to Federated Learning - Deep Learning on Unseen Data.ipynb` as well as lab guide.
+ 
 <h4><span style="color:red;">The problem of privacy in deep learning </span></h4>
 
 Deep learning (and tools for it) often means you have access to your training data.

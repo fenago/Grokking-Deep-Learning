@@ -1,4 +1,4 @@
-<img align="right" src="../logo-small.png">
+<img align="right" src="./logo-small.png">
 
 # Lab : Learning to write like Shakespeare: long short-term memory (Part 1)
 
@@ -14,9 +14,11 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab11_Exploding_Gradients`
 
-
-
-## bCharacter language modeling
+##### Run Notebook
+Click notebook `Chapter14 - Exploding Gradients Examples- Practice.ipynb` in jupterLab UI and run jupyter notebook. 
+There are some placeholder(s) to write code in the notebook. You can get help from solution notebook `Chapter14 - Exploding Gradients Examples.ipynb` as well as lab guide. 
+ 
+## Character language modeling
 Let’s tackle a more challenging task with the RNN.
 
 At the end of chapters 12 and 13, you trained vanilla recurrent neural networks (RNNs)
