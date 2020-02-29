@@ -449,6 +449,7 @@ the most similar weight values connecting them to each
 hidden neuron (to each group).
 
 ![](./images_11/11.png)
+
 The three bold weights for "good"
 form the embedding for "good."
 They reflect how much the term
@@ -593,7 +594,7 @@ accurately fill in the blank requires at least some notion of context about the 
 For instance, in the following example, is it more likely that the blank is correctly filled by
 the word "anvil" or "wool"? Let’s see if the neural network can figure it out.
 
-![](./images______/.png)
+![](./images_11/m1.png)
 
 
 ## Filling in the blank

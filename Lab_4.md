@@ -116,7 +116,7 @@ and turned on and off at varying degrees of intensity? Perhaps the streetlight m
 look more like this:
 Streetlights
 
-![](./images______/.png)
+![](./images_6/m1.png)
 
 Matrix A is perfectly valid. It’s mimicking the patterns that exist in the real world
 (streetlight), so you can ask the computer to interpret them. Would the following matrix
@@ -850,7 +850,7 @@ might have a problem.
 Just as in the last streetlight dataset, no individual pixel correlates with whether there’s a cat
 in the picture. Only different configurations of pixels correlate with whether there’s a cat.
 
-![](./images______/.png)
+![](./images_6/m2.png)
 
 This is the essence of deep learning. Deep learning is all about creating intermediate layers
 (datasets) wherein each node in an intermediate layer represents the presence or absence of

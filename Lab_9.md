@@ -313,6 +313,7 @@ diagonally from top-left to bottom-right (which,
 by the way, is called the diagonal in linear algebra).
 Any square matrix with 1s along the diagonal and 0s
 everywhere else is an identity matrix.
+
 We then proceed to perform vector-matrix
 multiplication with each of the vectors and the
 identity matrix (using NumPy’s dot function). As
@@ -323,7 +324,7 @@ identity matrix returns the same vector we started
 with, incorporating this process into the sentence
 embedding should seem trivial, and it is:
 
-![](./images______/.png)
+![](./images_12/m1.png)
                                  
 ```
 this = np.array([2,4,6])
