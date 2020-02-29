@@ -14,12 +14,9 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab13_Federated_Learning`
 
-
-
 <h4><span style="color:red;">The problem of privacy in deep learning </span></h4>
 
-Deep learning (and tools for it) often means you have access to
-your training data.
+Deep learning (and tools for it) often means you have access to your training data.
 
 As you’re keenly aware by now, deep learning, being a subfield of machine learning, is all
 about learning from data. But often, the data being learned from is incredibly personal.
@@ -235,6 +232,8 @@ person is changing the model somehow, right?
 Can you really not discover anything about
 their dataset?
 
+<h6>
+
 Starting Training Round...
 	 Step 1: send the model to Bob
 	Loss:0.21908166249699718
@@ -244,7 +243,7 @@ Starting Training Round...
 	 Average Everyone's New Models
 	 % Correct on Test Set: 98.8
 
-
+</h6>
 
 ## Hacking into federated learning
 Let’s use a toy example to see how to still learn
@@ -287,12 +286,16 @@ if(v != 0):
 print(vocab[i])
 ```
 
+<h6>
 
 is
 pizza
 computer
 password
 my
+
+</h6>
+
 
 And just like that, you learned Bob’s super-secret password (and
 probably his favorite food, too). What’s to be done? How can you use
@@ -446,7 +449,8 @@ Starting Training Round...
 ...
 ...
 	 % Correct on Test Set: 99.15
-	 ```
+
+```
 
 ### Summary
 Federated learning is one of the most exciting breakthroughs

@@ -166,101 +166,16 @@ print(input_batches[0][0:5])
 
 print(target_batches[0][0:5])
 
-array([[ 9,
-[14,
-[ 2,
-[10,
-[57,
-
-43,
-44,
-41,
-39,
-39,
-
-21,
-39,
-39,
-57,
-43,
-
-10,
-21,
-54,
-48,
-1,
-
-10,
-43,
-37,
-21,
-10,
-
-23,
-14,
-21,
-54,
-21,
-
-57,
-1,
-26,
-38,
-21,
-
-46],
-10],
-57],
-43],
-33]])
-
-array([[14,
-[ 2,
-[10,
-[57,
-[43,
-
-44,
-41,
-39,
-39,
-43,
-
-39,
-39,
-57,
-43,
-41,
-
-21,
-54,
-48,
-1,
-60,
-
-43,
-37,
-21,
-10,
-52,
-
-14,
-21,
-54,
-21,
-12,
-
-1,
-26,
-38,
-21,
-54,
-
-10],
-57],
-43],
-33],
-1]])
+array([[ 9, 43, 21, 10, 10, 23, 57, 46],
+[14, 44, 39, 21, 43, 14, 1, 10],
+[ 2, 41, 39, 54, 37, 21, 26, 57],
+[10, 39, 57, 48, 21, 54, 38, 43],
+[57, 39, 43, 1, 10, 21, 21, 33]])
+array([[14, 44, 39, 21, 43, 14, 1, 10],
+[ 2, 41, 39, 54, 37, 21, 26, 57],
+[10, 39, 57, 48, 21, 54, 38, 43],
+[57, 39, 43, 1, 10, 21, 21, 33],
+[43, 43, 41, 60, 52, 12, 54, 1]])
 ```
 
 Don’t worry if this doesn’t make sense to you yet. It doesn’t have much to do with deep learning
@@ -290,6 +205,8 @@ The sample that’s generated looks quite Shakespearian and even includes charac
 
 ![](./images_14/4.png)
 
+<h6>
+
 I war ded abdons would.
 CHENRO:
 
@@ -317,6 +234,7 @@ There was courter hower how, my goth Plish lo res
 Toures
 ever wo formall, have abon, with a good lorges ever word.
 
+</h6>
 
 ## Vanishing and exploding gradients
 Vanilla RNNs suffer from vanishing and exploding gradients.
@@ -376,6 +294,7 @@ multiplication and nonlinearity being used to form the next hidden state. The so
 LSTMs provide is surprisingly simple.
 
 **The gated copy trick**
+
 LSTMs create the next hidden state by copying the previous hidden state and then
 adding or removing information as necessary. The mechanisms the LSTM uses for adding
 and removing information are called gates.
@@ -547,6 +466,8 @@ overnight (8 hours). In general, the longer you train, the better your results w
 
 ![](./images_14/10.png)
 
+<h6>
+
 Intestay thee.
 
 SIR:
@@ -564,7 +485,7 @@ the seaventlace peake,
 I sentlentony my thent:
 I the sentastar thamy this not thame.
 
-
+</h6>
 
 ### Summary
 LSTMs are incredibly powerful models.

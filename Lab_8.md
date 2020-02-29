@@ -699,63 +699,7 @@ in a rather different way. Where before words were clustered according to their 
 to predict a positive or negative label, now they’re clustered based on their likelihood to
 occur within the same phrase (sometimes regardless of sentiment).
 
-```
-Predicting POS/NEG
-
-Fill in the blank
-
-print(similar('terrible'))
-
-print(similar('terrible'))
-
-[('terrible', -0.0),
-('dull', -0.760788602671491),
-('lacks', -0.76706470275372),
-('boring', -0.7682894961694),
-('disappointing', -0.768657),
-('annoying', -0.78786389931),
-('poor', -0.825784172378292),
-('horrible', -0.83154121717),
-('laughable', -0.8340279599),
-('badly', -0.84165373783678)]
-
-[('terrible', -0.0),
-('horrible', -2.79600898781),
-('brilliant', -3.3336178881),
-('pathetic', -3.49393193646),
-('phenomenal', -3.773268963),
-('masterful', -3.8376122586),
-('superb', -3.9043150978490),
-('bad', -3.9141673639585237),
-('marvelous', -4.0470804427),
-('dire', -4.178749691835959)]
-
-print(similar('beautiful'))
-
-print(similar('beautiful'))
-
-[('beautiful', -0.0),
-('atmosphere', -0.70542101298),
-('heart', -0.7339429768542354),
-('tight', -0.7470388145765346),
-('fascinating', -0.7549291974),
-('expecting', -0.759886970744),
-('beautifully', -0.7603669338),
-('awesome', -0.76647368382398),
-('masterpiece', -0.7708280057),
-('outstanding', -0.7740642167)]
-
-[('beautiful', -0.0),
-('lovely', -3.0145597243116),
-('creepy', -3.1975363066322),
-('fantastic', -3.2551041418),
-('glamorous', -3.3050812101),
-('spooky', -3.4881261617587),
-('cute', -3.592955888181448),
-('nightmarish', -3.60063813),
-('heartwarming', -3.6348147),
-('phenomenal', -3.645669007)]
-```
+![](./images_11/t1.png)
 
 The key takeaway is that, even though the network trained over the same dataset with a very
 similar architecture (three layers, cross entropy, sigmoid nonlinear), you can influence what
@@ -804,38 +748,8 @@ context will reveal the true cause of the different word-embedding clusterings. 
 the network and datasets were similar, the error function was fundamentally different,
 leading to different word clusterings within each network.
 
-```
-Predicting POS/NEG
-
-Fill in the blank
-
-print(similar('terrible'))
-
-print(similar('terrible'))
-
-[('terrible', -0.0),
-('dull', -0.760788602671491),
-('lacks', -0.76706470275372),
-('boring', -0.7682894961694),
-('disappointing', -0.768657),
-('annoying', -0.78786389931),
-('poor', -0.825784172378292),
-('horrible', -0.83154121717),
-('laughable', -0.8340279599),
-('badly', -0.84165373783678)]
-
-[('terrible', -0.0),
-('horrible', -2.79600898781),
-('brilliant', -3.3336178881),
-('pathetic', -3.49393193646),
-('phenomenal', -3.773268963),
-('masterful', -3.8376122586),
-('superb', -3.9043150978490),
-('bad', -3.9141673639585237),
-('marvelous', -4.0470804427),
-('dire', -4.178749691835959)]
-``` 
-
+![](./images_11/t2.png)
+ 
 ## The choice of loss function determines the neural network’s knowledge.
 
 The more formal term for an error function is a loss function or objective function (all
@@ -907,37 +821,9 @@ squared_difference = raw_difference * raw_difference
 scores[word] = -math.sqrt(sum(squared_difference))
 
 return scores.most_common(10)[1:]
-
-
-terrible – bad + good ~=
-
-elizabeth – she + he ~=
-
-analogy(['terrible','good'],['bad'])
-
-analogy(['elizabeth','he'],['she'])
-
-[('superb', -223.3926217861),
-('terrific', -223.690648739),
-('decent', -223.7045545791),
-('fine', -223.9233021831882),
-('worth', -224.03031703075),
-('perfect', -224.125194533),
-('brilliant', -224.2138041),
-('nice', -224.244182032763),
-('great', -224.29115420564)]
-
-[('christopher', -192.7003),
-('it', -193.3250398279812),
-('him', -193.459063887477),
-('this', -193.59240614759),
-('william', -193.63049856),
-('mr', -193.6426152274126),
-('bruce', -193.6689279548),
-('fred', -193.69940566948),
-('there', -193.7189421836)]
 ``` 
 
+![](./images_11/t3.png) 
 
 ## Word analogies
 Linear compression of an existing property in the data
@@ -959,31 +845,10 @@ dimensions, it’s perhaps easier to envision exactly
 what it means for these word analogies to work.
 
 ```
-king
-man
-woman
-queen
-
-=
-=
-=
-=
-
-[0.6
-[0.5
-[0.0
-[0.1
-
-,
-,
-,
-,
-
-0.1]
-0.0]
-0.8]
-1.0]
-
+king = [0.6 , 0.1]
+man = [0.5 , 0.0]
+woman = [0.0 , 0.8]
+queen = [0.1 , 1.0]
 king - man = [0.1 , 0.1]
 queen - woman = [0.1 , 0.2]
 ```

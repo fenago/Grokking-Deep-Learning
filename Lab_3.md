@@ -61,7 +61,8 @@ of how much you want a node’s value to be different. In this case, you compute
 subtraction between the node’s value and what you wanted the node’s value to be (pred - true).
 Positive delta indicates the node’s value was too high, and negative that it was too low.
 
-**delta**
+<h4><span style="color:red;">delta</span></h4>
+
 A measure of how much higher or lower you want a node’s value to be, to predict perfectly
 given the current training example.
 
@@ -69,7 +70,8 @@ weight_delta, on the other hand, is an estimate of the direction and amount to m
 weights to reduce node_delta, inferred by the derivative. How do you transform delta into
 a weight_delta? You multiply delta by a weight’s input.
 
-**weight_delta**
+<h4><span style="color:red;">weight_delta</span></h4>
+
 A derivative-based estimate of the direction and amount you should move a weight to reduce
 node_delta, accounting for scaling, negative reversal, and stopping.
 

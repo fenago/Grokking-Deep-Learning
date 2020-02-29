@@ -164,6 +164,7 @@ walk notes and the matrix.
 ## Creating a matrix or two in Python
 Import the matrices into Python.
 
+
 You’ve converted the streetlight pattern into a matrix (one with just 1s and 0s). Now let’s
 create that matrix (and, more important, its underlying pattern) in Python so the neural
 network can read it. Python’s NumPy library (introduced in chapter 3) was built just for
@@ -172,15 +173,10 @@ handling matrices. Let’s see it in action:
 ```
 import numpy as np
 streetlights = np.array( [ [ 1, 0, 1 ],
-								
 [ 0, 1, 1 ],
-								
 [ 0, 0, 1 ],
-								
 [ 1, 1, 1 ],
-								
 [ 0, 1, 1 ],
-								
 [ 1, 0, 1 ] ] )
 ```
 
@@ -190,33 +186,12 @@ for an array of arrays that provides special, matrix-oriented functions. Let’s
 matrix for the output data, too:
 
 ```
-walk _ vs _ stop = np.array(
-								
-								
-								
-								
-								
-
-[
-[
-[
-[
-[
-[
-
-[
-1
-0
-1
-1
-0
-
-0 ],
-],
-],
-],
-],
-] ] )
+walk _ vs _ stop = np.array( [ [ 0 ],
+[ 1 ],
+[ 0 ],
+[ 1 ],
+[ 1 ],
+[ 0 ] ] )
 ```
 
 What do you want the neural network to do? Take the streetlights matrix and learn to

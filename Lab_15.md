@@ -9,8 +9,6 @@
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/Picture_Neural_Network`
 
 
-
-
 ## It’s time to simplify
 It’s impractical to think about everything all the time.
 Mental tools can help.
@@ -299,48 +297,12 @@ and operations.
 Vector-matrix multiplication is simple. To visualize that two letters are being multiplied by
 each other, put them next to each other. For example:
 
-```
-Algebra
-
-Translation
-
-l0W0
-
-"Take the layer 0 vector and perform vectormatrix multiplication with the weight matrix 0."
-
-l1W1
-
-"Take the layer 1 vector and perform vectormatrix multiplication with the weight matrix 1."
-```
-
-You can even throw in arbitrary functions like relu using notation that looks almost exactly
-like the Python code. This is crazy-intuitive stuff.
-
-```
-l1 = relu(l0W0)
-
-"To create the layer 1 vector, take the layer 0 vector
-and perform vector-matrix multiplication with the
-weight matrix 0; then perform the relu function on
-the output (setting all negative numbers to 0)."
-
-l2 = l1W1
-
-"To create the layer 2 vector, take the layer 1 vector
-and perform vector-matrix multiplication with the
-weight matrix 1."
-```
+![](./images_7/t1.png)
 
 If you notice, the layer 2 algebra contains layer 1 as an input variable. This means you
 can represent the entire neural network in one expression by chaining them together.
 
-```
-Thus, all the logic in the forward propagation step can
-be contained in this one formula. Note: baked into this
-l2 = relu(l0W0)W1
-formula is the assumption that the vectors and matrices
-have the right dimensions.
-```
+![](./images_7/t2.png)
 
 
 ## Everything side by side

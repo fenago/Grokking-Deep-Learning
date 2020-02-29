@@ -428,11 +428,11 @@ error = ((input * weight) - goal_pred) ** 2
 ```
 
 What’s controlling the relationship between input and the output (error)? Plenty of things
-are—this function is a bit more complicated! goal_pred, input, **2, weight, and all the
+are—this function is a bit more complicated! *goal_pred, input, **2, weight*, and all the
 parentheses and algebraic operations (addition, subtraction, and so on) play a part in calculating
 the error. Tweaking any one of them would change the error. This is important to consider.
 
-As a thought exercise, consider changing goal_pred to reduce the error. This is silly, but totally
+As a thought exercise, consider changing *goal_pred* to reduce the error. This is silly, but totally
 doable. In life, you might call this (setting goals to be whatever your capability is) "giving up."
 You’re denying that you missed! That wouldn’t do.
 
@@ -457,6 +457,7 @@ some of which you can’t (input data, output data, and the error logic):
 ![](./images_4/15.png)
 
 **Key takeaway**
+
 You can modify anything in the pred calculation except input.
 
 We’ll spend the rest of this book (and many deep learning researchers will spend the rest of
