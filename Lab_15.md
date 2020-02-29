@@ -340,7 +340,4 @@ network’s ability to focus on the areas that contain noise.
 But different datasets and domains have different characteristics. For example, image data
 has different kinds of signal and noise than text data. Even though neural networks can be
 used in many situations, different architectures will be better suited to different problems
-because of their ability to locate certain types of correlations. So, for the next few chapters,
-we’ll explore how to modify neural networks to specifically find the correlation you’re
-looking for. See you there!
-
+because of their ability to locate certain types of correlations.

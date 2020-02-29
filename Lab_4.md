@@ -754,12 +754,12 @@ performed into the final node, layer_2.
 You can learn the amount that each weight contributes
 to the final error.
 
-At the end of the previous chapter, I made an assertion that it would be important to
+At the end of the previous lab, I made an assertion that it would be important to
 memorize the two-layer neural network code so you could quickly and easily recall it when I
 reference more-advanced concepts. This is when that memorization matters.
 
 The following listing is the new learning code, and it’s essential that you recognize and
-understand the parts addressed in the previous chapters. If you get lost, go to chapter 5,
+understand the parts addressed in the previous labs. If you get lost, go to chapter 5,
 memorize the code, and then come back. It will make a big difference someday.
 
 ![](./images_6/30.png)

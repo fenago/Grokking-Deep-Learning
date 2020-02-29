@@ -104,7 +104,7 @@ to the words in a sentence, and intuitively we expect these new average sentence
 behave in several desirable ways.
 
 In this section, let’s play with sentence vectors generated using the embeddings from the
-previous chapter. Break out the code from chapter 11, train the embeddings on the IMDB
+previous lab. Break out the code from chapter 11, train the embeddings on the IMDB
 corpus as you did before, and let’s experiment with average sentence embeddings.
 
 At right is the same
@@ -469,7 +469,7 @@ clear how backpropagation can be performed. But it’s simple. Perhaps this is w
 
 ![](./images_12/15.png)
 
-Based on previous chapters, you should feel comfortable with computing a loss and
+Based on previous labs, you should feel comfortable with computing a loss and
 backpropagating until you get to the gradients at layer_2, called layer_2_delta. At this
 point, you might be wondering, "Which direction do I backprop in?" Gradients could go
 back to layer_1 by going backward through the identity matrix multiplication, or they

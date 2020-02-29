@@ -975,7 +975,7 @@ By combining several layers, you can learn over time series.
 
 As the last exercise of this lab, let’s create one more layer that’s the composition of
 multiple smaller layer types. The point of this layer will be to learn the task you finished at
-the end of the previous chapter. This layer is the recurrent layer. You’ll construct it using
+the end of the previous lab. This layer is the recurrent layer. You’ll construct it using
 three linear layers, and the .forward() method will take both the output from the previous
 hidden state and the input from the current training data:
 
@@ -1082,7 +1082,7 @@ data = np.array(indices)
 ## You can learn to fit the task you previously accomplished in the preceding chapter.
 
 Now you can initialize the recurrent layer with an embedding input and train a network
-to solve the same task as in the previous chapter. Note that this network is slightly more
+to solve the same task as in the previous lab. Note that this network is slightly more
 complex (it has one extra layer) despite the code being much simpler, thanks to the little
 framework.
 
@@ -1171,7 +1171,7 @@ built-in optimizations), and much less buggy. More important, this lab will prep
 you for using and extending industry standard frameworks like PyTorch and TensorFlow.
 Whether debugging existing layer types or prototyping your own, the skills you’ve learned
 here will be some of the most important you acquire in this book, because they bridge the
-abstract knowledge of deep learning from previous chapters with the design of real-world
+abstract knowledge of deep learning from previous labs with the design of real-world
 tools you’ll use to implement models in the future.
 
 The framework that’s most similar to the one built here is PyTorch, and I highly
