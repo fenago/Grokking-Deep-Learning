@@ -36,7 +36,7 @@ But in 2017, Google published a very exciting paper and blog post that made a si
 dent in this conversation. Google proposed that we don’t need to centralize a dataset in
 order to train a model over it. The company proposed this question: what if instead of
 bringing all the data to one place, we could bring the model to the data? This is a new,
-exciting subfield of machine learning called federated learning, and it’s what this chapter
+exciting subfield of machine learning called federated learning, and it’s what this lab
 is about.
 
 What if instead of bringing the corpus of training data to one place to train a model, you

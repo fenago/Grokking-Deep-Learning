@@ -248,7 +248,7 @@ outline of a three-pronged fork. The first few imprints generally capture only t
 outline of a fork. The same can be said for neural networks. As a result, early stopping is the
 cheapest form of regularization, and if you’re in a pinch, it can be quite effective.
 
-This brings us to the subject this chapter is all about: regularization. Regularization is a
+This brings us to the subject this lab is all about: regularization. Regularization is a
 subfield of methods for getting a model to generalize to new datapoints (instead of just
 memorizing the training data). It’s a subset of methods that help the neural network learn
 the signal and ignore the noise. In this case, it’s a toolset at your disposal to create neural
@@ -440,7 +440,7 @@ running quite a bit faster because you trained for something that was much more 
 Here’s a method for increasing the speed of training and the rate
 of convergence.
 
-In the context of this chapter, I’d like to briefly apply a concept introduced several chapters
+In the context of this lab, I’d like to briefly apply a concept introduced several chapters
 ago: mini-batched stochastic gradient descent. I won’t go into too much detail, because it’s
 something that’s largely taken for granted in neural network training. Furthermore, it’s a
 simple concept that doesn’t get more advanced even with the most state-of-the-art neural
@@ -542,7 +542,7 @@ size 8 to as high as 256. Generally, researchers pick numbers randomly until the
 batch_size/alpha pair that seems to work well.
 
 ## Summary
-This chapter addressed two of the most widely used methods for increasing the accuracy
+This lab addressed two of the most widely used methods for increasing the accuracy
 and training speed of almost any neural architecture. In the following chapters, we’ll pivot
 from sets of tools that are universally applicable to nearly all neural networks, to specialpurpose architectures that are advantageous for modeling specific types of phenomena
 in data.

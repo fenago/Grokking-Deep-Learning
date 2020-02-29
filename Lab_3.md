@@ -19,7 +19,7 @@ You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab3_Generalizing
 Gradient descent also works with multiple inputs.
 
 In the preceding chapter, you learned how to use gradient descent to update a weight. In
-this chapter, we’ll more or less reveal how the same techniques can be used to update a
+this lab, we’ll more or less reveal how the same techniques can be used to update a
 network that contains multiple weights. Let’s start by jumping in the deep end, shall we? The
 following diagram shows how a network with multiple inputs can learn.
 
@@ -73,8 +73,6 @@ A derivative-based estimate of the direction and amount you should move a weight
 node_delta, accounting for scaling, negative reversal, and stopping.
 
 Consider this from the perspective of a single weight, highlighted at right:
-
-d
 
 **delta**: Hey, inputs—yeah, you three. Next time, predict a little higher.
 
@@ -431,7 +429,7 @@ Weights
 ### Summary
 Gradient descent is a general learning algorithm.
 
-Perhaps the most important subtext of this chapter is that gradient descent is a very flexible
+Perhaps the most important subtext of this lab is that gradient descent is a very flexible
 learning algorithm. If you combine weights in a way that allows you to calculate an error
 function and a delta, gradient descent can show you how to move the weights to reduce the
 error. We’ll spend the rest of this book exploring different types of weight combinations and

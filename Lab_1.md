@@ -15,13 +15,13 @@ All Notebooks are present in `work/Grokking-Deep-Learning` folder. To copy and p
 You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab1_Forward_Propagation`
 
 In this lab
-• A simple network making a prediction
-• What is a neural network, and what does it do?
-• Making a prediction with multiple inputs
-• Making a prediction with multiple outputs
-• Making a prediction with multiple inputs
+- A simple network making a prediction
+- What is a neural network, and what does it do?
+- Making a prediction with multiple inputs
+- Making a prediction with multiple outputs
+- Making a prediction with multiple inputs
 and outputs
-• Predicting on predictions
+- Predicting on predictions
 
 I try not to get involved in the business of prediction.
 It’s a uick way to look like an idiot.
@@ -29,9 +29,9 @@ It’s a uick way to look like an idiot.
 novelist, and screenwriter
 
 Step 1: Predict
-This chapter is about prediction.
+This lab is about prediction.
 
-In the previous chapter, you learned about the paradigm predict, compare, learn. In this
+In the previous lab, you learned about the paradigm predict, compare, learn. In this
 chapter, we’ll dive deep into the first step: predict. You may remember that the predict step
 looks a lot like this:
 
@@ -219,10 +219,10 @@ and elementwise multiplication multiplies two vectors.
 Challenge: Vector math
 Being able to manipulate vectors is a cornerstone technique for deep learning. See if you can
 write functions that perform the following operations:
-• def elementwise_multiplication(vec_a, vec_b)
-• def elementwise_addition(vec_a, vec_b)
-• def vector_sum(vec_a)
-• def vector_average(vec_a)
+- def elementwise_multiplication(vec_a, vec_b)
+- def elementwise_addition(vec_a, vec_b)
+- def vector_sum(vec_a)
+- def vector_average(vec_a)
 Then, see if you can use two of these methods to perform a dot product!
 
 d Performing a weighted sum of inputs

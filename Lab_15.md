@@ -359,7 +359,7 @@ We’re going to be studying new architectures.
 In the following chapters, we’ll be taking these vectors and matrices and combining them
 in some creative ways. My ability to describe each architecture for you is entirely dependent
 on our having a mutually agreed-on language for describing them. Thus, please don’t move
-beyond this chapter until you can clearly see how forward propagation manipulates these
+beyond this lab until you can clearly see how forward propagation manipulates these
 vectors and matrices, and how these various forms of describing them are articulated.
 
 

@@ -214,7 +214,7 @@ Everything in Tensor is another form of lessons already learned.
 
 Before moving on, I want to first acknowledge that even if it feels like a bit of a stretch or a
 heavy lift to think about gradients flowing over a graphical structure, this is nothing new
-compared to what you’ve already been working with. In the previous chapter on RNNs, you
+compared to what you’ve already been working with. In the previous lab on RNNs, you
 forward propagated in one direction and then back propagated across a (virtual graph) of
 activations.
 
@@ -224,7 +224,7 @@ backpropagation operations. Now you’re building a nice interface so you don’
 write as much code. This interface lets you backpropagate recursively instead of having to
 handwrite complicated backprop code.
 
-This chapter is only somewhat theoretical. It’s mostly about commonly used engineering
+This lab is only somewhat theoretical. It’s mostly about commonly used engineering
 practices for learning deep neural networks. In particular, this notion of a graph that gets
 built during forward propagation is called a dynamic computation graph because it’s built
 on the fly during forward prop. This is the type of autograd present in newer deep learning
@@ -241,14 +241,14 @@ to end up with both. The primary difference is whether forward propagation is ha
 during graph construction or after the graph is already defined. In this book, we’ll stick
 with dynamic.
 
-The main point of this chapter is to help prepare you for deep learning in the real world,
+The main point of this lab is to help prepare you for deep learning in the real world,
 where 10% (or less) of your time will be spent thinking up a new idea and 90% of your time
 will be spent figuring out how to get a deep learning framework to play nicely. Debugging
 these frameworks can be extremely difficult at times, because most bugs don’t raise an error
 and print out a stack trace. Most bugs lie hidden within the code, keeping the network from
 training as it should (even if it appears to be training somewhat).
 
-All that is to say, really dive into this chapter. You’ll be glad you did when it’s 2:00 a.m. and
+All that is to say, really dive into this lab. You’ll be glad you did when it’s 2:00 a.m. and
 you’re chasing down an optimization bug that’s keeping you from getting that juicy state-ofthe-art score.
 
 
@@ -706,16 +706,14 @@ frameworks greatly increases the speed with which you can go from idea to experi
 will reduce the number of bugs in your code.
 
 Viewing a framework as merely an autograd system coupled with a big list of layers and
-optimizers will help you learn them. I expect you’ll be able to pivot from this chapter into
+optimizers will help you learn them. I expect you’ll be able to pivot from this lab into
 almost any framework fairly quickly, although the framework that’s most similar to the API
 built here is PyTorch. Either way, for your reference, take a moment to peruse the lists of
 layers and optimizers in several of the big frameworks:
 
-•	 https://pytorch.org/docs/stable/nn.html
-
-•	 https://keras.io/layers/about-keras-layers
-
-•	 https://www.tensorflow.org/api_docs/python/tf/layers
+- https://pytorch.org/docs/stable/nn.html
+- https://keras.io/layers/about-keras-layers
+- https://www.tensorflow.org/api_docs/python/tf/layers
 
 The general workflow for learning a new framework is to find the simplest possible code
 example, tweak it and get to know the autograd system’s API, and then modify the code
@@ -807,9 +805,9 @@ return input.sigmoid()
 As you can see, you can drop the new Tanh() and Sigmoid() layers into the input
 parameters to Sequential(), and the neural network knows exactly how to use them. Easy!
 
-In the previous chapter, you learned about recurrent neural networks. In particular, you
+In the previous lab, you learned about recurrent neural networks. In particular, you
 trained a model to predict the next word, given the previous several words. Before we finish
-this chapter, I’d like for you to translate that code into the new framework. To do this, you’ll need three new layer types: an embedding layer that learns word embeddings, an RNN
+this lab, I’d like for you to translate that code into the new framework. To do this, you’ll need three new layer types: an embedding layer that learns word embeddings, an RNN
 layer that can learn to model sequences of inputs, and a softmax layer that can predict a
 probability distribution over labels.
 
@@ -973,7 +971,7 @@ This has to do with a shortcut in the gradient math.
 ## The recurrent neural network layer
 By combining several layers, you can learn over time series.
 
-As the last exercise of this chapter, let’s create one more layer that’s the composition of
+As the last exercise of this lab, let’s create one more layer that’s the composition of
 multiple smaller layer types. The point of this layer will be to learn the task you finished at
 the end of the previous chapter. This layer is the recurrent layer. You’ll construct it using
 three linear layers, and the .forward() method will take both the output from the previous
@@ -1015,7 +1013,7 @@ def init_hidden(self, batch_size=1):
 return Tensor(np.zeros((batch_size,self.n_hidden)),autograd=True)
 ```
 
-It’s out of scope for this chapter to reintroduce RNNs, but it’s worth pointing out the pieces
+It’s out of scope for this lab to reintroduce RNNs, but it’s worth pointing out the pieces
 that should be familiar already. RNNs have a state vector that passes from timestep to
 timestep. In this case, it’s the variable hidden, which is both an input parameter and output
 variable to the forward function. RNNs also have several different weight matrices: one
@@ -1165,9 +1163,9 @@ plausible location for Mary to be moving toward, much like at the end of chapter
 Frameworks are efficient, convenient abstractions of forward
 and backward logic.
 
-I hope this chapter’s exercise has given you an appreciation for how convenient frameworks
+I hope this lab’s exercise has given you an appreciation for how convenient frameworks
 can be. They can make your code more readable, faster to write, faster to execute (through
-built-in optimizations), and much less buggy. More important, this chapter will prepare
+built-in optimizations), and much less buggy. More important, this lab will prepare
 you for using and extending industry standard frameworks like PyTorch and TensorFlow.
 Whether debugging existing layer types or prototyping your own, the skills you’ve learned
 here will be some of the most important you acquire in this book, because they bridge the

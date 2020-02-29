@@ -21,7 +21,7 @@ the major parts of neural networks (nodes and weights), how datasets fit into ne
 (matching the number of datapoints coming in at one time), and how to use a neural
 network to make a prediction.
 Perhaps this process begged the question, "How do we set weight values so the network
-predicts accurately?" Answering this question is the main focus of this chapter, as we
+predicts accurately?" Answering this question is the main focus of this lab, as we
 cover the next two steps of the paradigm: compare and learn.
 
 ## Compare
@@ -374,8 +374,9 @@ bowl. You can use this slope to help the neural network reduce the error.
 
 **Will we eventually find the bottom of the bowl?**
 
-weight, goal_pred, input = (0.0, 0.8, 1.1)
 ```
+weight, goal_pred, input = (0.0, 0.8, 1.1)
+
 for iteration in range(4):
 print("-----\nWeight:" + str(weight))
 pred = input * weight
@@ -400,8 +401,10 @@ How do you understand one?
 
 Consider this function:
 
+```
 def my_function(x):
 		 return x * 2
+```
 
 A function takes some numbers as input and gives you another number as output. As you can
 imagine, this means the function defines some sort of relationship between the input number(s)
@@ -414,7 +417,9 @@ the output the function generates different. Consider my_function in the previou
 yourself, "What’s controlling the relationship between the input and the output of this function?"
 The answer is, the 2. Ask the same question about the following function:
 
+```
 error = ((input * weight) - goal_pred) ** 2
+```
 
 What’s controlling the relationship between input and the output (error)? Plenty of things
 are—this function is a bit more complicated! goal_pred, input, **2, weight, and all the
@@ -870,14 +875,14 @@ exercise: see if you can build the code from the previous section in a Jupyter n
 didn’t have my "click" moment with neural networks until I was able to perform this task.
 
 Why does this work? Well, for starters, the only way to know you’ve gleaned all the
-information necessary from this chapter is to try to produce it from your head. Neural
+information necessary from this lab is to try to produce it from your head. Neural
 networks have lots of small moving parts, and it’s easy to miss one.
 
 Why is this important for the rest of the book? In the following chapters, I’ll be referring to
 the concepts discussed in this lab at a faster pace so that I can spend plenty of time on
 the newer material. It’s vitally important that when I say something like "Add your alpha
 parameterization to the weight update," you immediately recognize which concepts from
-this chapter I’m referring to.
+this lab I’m referring to.
 
 All that is to say, memorizing small bits of neural network code has been hugely beneficial
 for me personally, as well as for many individuals who have taken my advice on this subject

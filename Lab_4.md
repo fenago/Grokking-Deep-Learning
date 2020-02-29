@@ -63,7 +63,7 @@ and searching for correlation. This is what you’re going to train a neural net
 <span style="color:red;">Preparing the data </span>
 Neural networks don’t read streetlights.
 
-In the previous chapters, you learned about supervised algorithms. You learned that they
+In the previous labs, you learned about supervised algorithms. You learned that they
 can take one dataset and turn it into another. More important, they can take a dataset of
 what you know and turn it into a dataset of what you want to know.
 
@@ -717,7 +717,7 @@ need nonlinearities.
 That last part probably felt a little abstract, and that’s totally OK.
 
 Here’s the deal. Previous chapters worked with simple algebra, so everything was ultimately
-grounded in fundamentally simple tools. This chapter started building on the premises you
+grounded in fundamentally simple tools. This lab started building on the premises you
 learned earlier. Previously, you learned lessons like this:
 
 You can compute the relationship between the error and any one of the weights so that you
@@ -726,7 +726,7 @@ to 0.
 
 That was a massive lesson. But now we’re moving past it. Because we already worked through
 why that works, you can take the statement at face value. The next big lesson came at the
-beginning of this chapter:
+beginning of this lab:
 
 Adjusting the weights to reduce the error over a series of training examples ultimately
 searches for correlation between the input and the output layers. If no correlation exists, then

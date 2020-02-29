@@ -40,21 +40,15 @@ Perhaps the best way to quickly get to know NLP is to consider a few of the many
 the NLP community seeks to solve. Here are a few types of classification problem that are
 common to NLP:
 
-•	 Using the characters of a document to predict where words start and end.
-
-•	 Using the words of a document to predict where sentences start and end.
-
-•	 Using the words in a sentence to predict the part of speech for each word.
-
-•	 Using words in a sentence to predict where phrases start and end.
-
-•	 Using words in a sentence to predict where named entity (person, place, thing) references
+- Using the characters of a document to predict where words start and end.
+- Using the words of a document to predict where sentences start and end.
+- Using the words in a sentence to predict the part of speech for each word.
+- Using words in a sentence to predict where phrases start and end.
+- Using words in a sentence to predict where named entity (person, place, thing) references
 start and end.
-
-•	 Using sentences in a document to predict which pronouns refer to the same person /
+- Using sentences in a document to predict which pronouns refer to the same person /
 place / thing.
-
-•	 Using words in a sentence to predict the sentiment of a sentence.
+- Using words in a sentence to predict the sentiment of a sentence.
 
 Generally speaking, NLP tasks seek to do one of three things: label a region of text (such as
 part-of-speech tagging, sentiment classification, or named-entity recognition); link two or
@@ -878,7 +872,7 @@ evaluation (such as mean squared error or cross entropy).
 Word analogies are an interesting consequence
 of the previously built network.
 
-Before closing out this chapter, let’s discuss what is, at the time of writing, still one of
+Before closing out this lab, let’s discuss what is, at the time of writing, still one of
 the most famous properties of neural word embeddings (word vectors like those we
 just created). The task of filling in the blank creates word embeddings with interesting
 phenomena known as word analogies, wherein you can take the vectors for different words
@@ -1023,5 +1017,5 @@ properties that are captured by word embeddings. We finished with a discussion o
 the most magical of neural phenomena in this space: word analogies.
 
 As with the other chapters, I encourage you to build the examples in this lab from
-scratch. Although it may seem as though this chapter stands on its own, the lessons in lossfunction creation and tuning are invaluable and will be extremely important as you tackle
+scratch. Although it may seem as though this lab stands on its own, the lessons in lossfunction creation and tuning are invaluable and will be extremely important as you tackle
 increasingly more complicated strategies in future chapters. Good luck!

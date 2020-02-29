@@ -20,7 +20,7 @@ Let’s model arbitrarily long sequences of data
 with neural networks!
 
 
-This chapter and chapter 11 are intertwined, and I encourage you to ensure that you’ve
+This lab and chapter 11 are intertwined, and I encourage you to ensure that you’ve
 mastered the concepts and techniques from chapter 11 before you dive into this one. In
 chapter 11, you learned about natural language processing (NLP). This included how to
 modify a loss function to learn a specific pattern of information within the weights of a
@@ -227,7 +227,7 @@ can take any sentence, scramble all the words around, and generate a sentence ve
 no matter how you scramble the words, the vector will be the same (because addition is
 associative: a + b == b + a).
 
-The real topic of this chapter is generating sentence vectors in a way where order does
+The real topic of this lab is generating sentence vectors in a way where order does
 matter. We want to create vectors such that scrambling them around changes the resulting
 vector. More important, the way in which order matters (otherwise known as the way
 in which order changes the vector) should be learned. In this way, the neural network’s

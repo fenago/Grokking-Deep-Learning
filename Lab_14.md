@@ -52,21 +52,14 @@ of a pattern between two datasets. It’s always attempting to take an input dat
 transform it into an output dataset. This can be an incredibly powerful and useful capability.
 Consider the following examples (input datasets in bold and output datasets in italic):
 
-•	 Using the pixels of an image to detect the presence or absence of a cat
-
-•	 Using the movies you’ve liked to predict more movies you may like
-
-•	 Using someone’s words to predict whether they’re happy or sad
-
-•	 Using weather sensor data to predict the probability of rain
-
-•	 Using car engine sensors to predict the optimal tuning settings
-
-•	 Using news data to predict tomorrow’s stock price
-
-•	 Using an input number to predict a number double its size
-
-•	 Using a raw audio file to predict a transcript of the audio
+- Using the pixels of an image to detect the presence or absence of a cat
+- Using the movies you’ve liked to predict more movies you may like
+- Using someone’s words to predict whether they’re happy or sad
+- Using weather sensor data to predict the probability of rain
+- Using car engine sensors to predict the optimal tuning settings
+- Using news data to predict tomorrow’s stock price
+- Using an input number to predict a number double its size
+- Using a raw audio file to predict a transcript of the audio
 
 These are all supervised machine learning tasks. In all cases, the machine learning algorithm
 is attempting to imitate the pattern between the two datasets in such a way that it can use
@@ -270,6 +263,7 @@ adjust parameters to transform the input data into its subscribing group(s).
 
 
 <span style="color:red;">Nonparametric learning </span>
+
 Oversimplified: Counting-based methods
 
 Nonparametric learning is a class of algorithm wherein the number of parameters is based
